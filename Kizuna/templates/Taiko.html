@@ -1,0 +1,793 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Taiko: El Latido del Tambor Japonés | Kizuna Venezuela</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e65100", // Sunset orange Kizuna
+                        "primary-dark": "#c64500",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { 
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem", 
+                        "3xl": "1.5rem", 
+                        "full": "9999px" 
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Fondo de página con sakura5.jpeg fijado */
+        body {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDm-oXCY4VPTPlp-k0FSrxZ1i3vjQviozIvv37dcyQDikEDz8eg6pAF6s-mGettGcDGlbxnsx3EtobOIi4KC1wAJHM70UzAPO8h2KoBNxGIqs371FjTsERWLBZC8IOl73w_OUpVlS2xTpo0nM7LPMAq3K1PrPz_Gj5_VyUhx4YNk5pxRnc7Cf8U0R_Ha8MXQAOM-wPxwOmGwfCWa1As_E1EWRhTKWTNuA5qtuxFzsiVMGsXiwCg83JusVq3HkLIxhGrQ');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #0f172a;
+        }
+
+        /* Tarjeta Sumi-e / Pizarra oscura de alto contraste traslúcida */
+        .sumi-card {
+            background: rgba(15, 23, 42, 0.93);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tarjeta clara Washi pulida con sutil acento Kizuna */
+        .washi-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(230, 81, 0, 0.18);
+            box-shadow: 0 16px 32px -10px rgba(15, 23, 42, 0.08);
+        }
+
+        .kanji-watermark {
+            font-family: serif;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-900 transition-colors duration-300 relative min-h-screen flex flex-col">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Canónico Inmovilizado / Sticky unificado según Plantilla Base -->
+<header class="sticky top-0 z-50 bg-black text-white shadow-lg border-b border-primary/20">
+<!-- Barra Principal de Navegación -->
+<div class="w-full px-6 lg:px-20 py-3.5 flex items-center justify-between border-b border-white/10">
+<!-- Logotipo tipográfico limpio a la izquierda sin íconos previos -->
+<a class="group flex items-center" href="index.html">
+<span class="text-xl font-extrabold tracking-tight text-white group-hover:opacity-90 transition-opacity">
+                    Kizuna <span class="text-primary">Venezuela</span>
+</span>
+</a>
+<div class="flex items-center gap-6">
+<!-- Botón Menú Móvil -->
+<button aria-expanded="false" aria-label="Abrir menú" class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<!-- Menú Navegación Desktop -->
+<nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+<a class="text-white hover:text-primary transition-colors flex items-center gap-1.5 py-1" href="index.html">
+<span class="material-symbols-outlined text-base">home</span>
+<span class="">Inicio</span>
+</a>
+<!-- Menú Desplegable de Directorios (6 categorías idénticas a template.html) -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-white hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">folder</span>
+<span class="">Directorios</span>
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-left">
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+<a class="block px-2 py-1 text-sm font-bold text-primary bg-primary/10 rounded transition-colors" href="D-Taiko.html">Taiko</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+<!-- Menú Desplegable Becas MEXT (7 modalidades oficiales idénticas a template.html) -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-white hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">school</span>
+<span class="">Becas MEXT</span>
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-700 z-50 text-left">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+</div>
+</div>
+<!-- Botón Contextual al Directorio de la Disciplina -->
+<a class="text-white hover:text-primary transition-colors flex items-center gap-1.5 py-1" href="D-Taiko.html">
+<span class="material-symbols-outlined text-base">stadium</span>
+<span class="">Escuelas y Agrupaciones</span>
+</a>
+<!-- Enlace Volver -->
+<a class="text-white hover:text-primary transition-colors flex items-center gap-1 py-1" href="javascript:history.back()">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span class="">Volver</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Sub-barra Limpia de Migas de Pan (Breadcrumbs) -->
+<div class="bg-black/95 text-xs text-slate-400 border-b border-white/5 py-1.5 px-6 lg:px-20 flex items-center">
+<div class="flex items-center gap-2">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
+<span class="material-symbols-outlined text-sm">home</span>
+<span class="">Inicio</span>
+</a>
+<span class="">/</span>
+<a class="hover:text-primary transition-colors" href="index.html#arte">Arte</a>
+<span class="">/</span>
+<span class="text-primary font-bold">Taiko: El Latido del Tambor Japonés</span>
+</div>
+</div>
+</header>
+<!-- Mobile Navigation Panel -->
+<div class="fixed inset-0 z-[60] hidden" id="mobileMenuPanel">
+<div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="mobileMenuOverlay"></div>
+<div class="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-slate-900 text-slate-100 overflow-y-auto shadow-2xl p-6 flex flex-col justify-between border-l border-slate-800">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-slate-800">
+<span class="font-extrabold text-lg text-white">Menú Kizuna</span>
+<button aria-label="Cerrar menú" class="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300" id="mobileMenuClose">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="py-4 space-y-3">
+<a class="flex items-center gap-2 py-2 font-bold hover:text-primary transition-colors text-white" href="index.html">
+<span class="material-symbols-outlined text-primary">home</span> Inicio
+                    </a>
+<a class="flex items-center gap-2 py-2 font-bold hover:text-primary transition-colors text-white" href="Becas_MEXT.html">
+<span class="material-symbols-outlined text-primary">school</span> Becas MEXT
+                    </a>
+<a class="flex items-center gap-2 py-2 font-bold text-primary bg-primary/10 px-3 rounded-lg" href="D-Taiko.html">
+<span class="material-symbols-outlined">stadium</span> Directorio de Taiko
+                    </a>
+<a class="flex items-center gap-2 py-2 font-bold hover:text-primary transition-colors text-slate-300" href="javascript:history.back()">
+<span class="material-symbols-outlined text-primary">arrow_back</span> Volver
+                    </a>
+<div class="pt-4 border-t border-slate-800">
+<p class="text-xs font-extrabold uppercase tracking-widest text-primary mb-3">Directorios</p>
+<div class="space-y-3 text-sm">
+<div>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Arte Tradicional</p>
+<div class="pl-2 space-y-1">
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Bonsai.html">Bonsai</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Ceramica.html">Cerámica</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Origami.html">Origami</a>
+<a class="block py-0.5 text-primary font-semibold" href="D-Taiko.html">Taiko</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-800 text-xs text-slate-500 text-center">
+                Kizuna Venezuela © 2026
+            </div>
+</div>
+</div>
+<!-- Área de Contenido Principal -->
+<main class="mx-auto w-full max-w-7xl px-6 py-8 lg:py-12 flex-grow space-y-12">
+<!-- 1. HERO SPLIT CANÓNICO -->
+<section class="sumi-card rounded-3xl p-6 md:p-10 relative overflow-hidden text-white shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<!-- Columna Izquierda: Identidad y Concepto Clave -->
+<div class="lg:col-span-7 space-y-4">
+<div class="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-md text-amber-300 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest border border-primary/40">
+<span class="material-symbols-outlined text-sm">music_note</span>
+<span class="">Arte Tradicional Japonés (和太鼓 · Wadaiko)</span>
+</div>
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight text-white">
+                        Taiko: El Arte del <span class="text-primary">Ritmo y la Resonancia</span>
+</h1>
+<p class="text-slate-300 text-base md:text-lg leading-relaxed font-normal">
+                        El estruendo milenario de la piel de vaca y el roble sagrado. Una disciplina corporal y espiritual donde cada golpe une el latido del corazón humano con las fuerzas elementales de la tierra.
+                    </p>
+<div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-300">
+<span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-primary text-sm">fitness_center</span> Postura Marcial (Kata)
+                        </span>
+<span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-primary text-sm">graphic_eq</span> El Silencio Dinámico (Ma)
+                        </span>
+<span class="inline-flex items-center gap-1 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
+<span class="material-symbols-outlined text-primary text-sm">record_voice_over</span> Voz Espiritual (Koe)
+                        </span>
+</div>
+</div>
+<!-- Columna Derecha: Tarjeta Fotográfica de Gran Formato Enmarcada -->
+<div class="lg:col-span-5 relative w-full h-[320px] lg:h-[380px] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group">
+<img alt="Presentación magistral de tambores Taiko en festival tradicional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcy1fEul8MG3NfxifPTw7KGGj6yFItQ3DPqHUifiJpsXWp7g8DT4EPr1F5t7imtuM9qRKmFdgmveWCmDJHuUCpYalasekq-cx4dWDEI0rDaCieHa4Zbbty8qyBOC-Vf8KzKBCY7wCBUfHBPlfZn5zuh4oWX_Mt_MOVOB311v6Kp2K10H4j4hLBlhtu8Ior-bdEKVrvq9dlshYTpyUjKmV2IF88NZ2TNPU-0O4g9ealDFcY6vZzst-u">
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex items-end p-5">
+<span class="text-xs font-semibold text-slate-200 bg-slate-900/80 px-3.5 py-1.5 rounded-md border border-white/10 backdrop-blur-sm">
+                            Ensamble Kumi-daiko al son del Odaiko
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. DEFINICIÓN DIDÁCTICA -->
+<section class="sumi-card rounded-3xl p-8 md:p-12 relative overflow-hidden text-white" id="definicion">
+<!-- Marca de agua kanji auténtica: 太鼓 (Taiko) -->
+<div class="kanji-watermark absolute right-6 bottom-2 text-8xl md:text-9xl font-black text-white/[0.04] pointer-events-none select-none">
+                太鼓
+            </div>
+<div class="relative z-10 max-w-4xl space-y-6">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Definición Didáctica</h2>
+</div>
+<h3 class="text-2xl md:text-4xl font-extrabold text-white leading-tight">
+                    ¿Qué es el Taiko (Wadaiko) en esencia?
+                </h3>
+<p class="text-slate-300 text-base md:text-lg leading-relaxed">
+                    La palabra <strong>Taiko (太鼓)</strong> significa literalmente <em>"gran tambor"</em> en japonés, mientras que <strong>Wadaiko (和太鼓)</strong> distingue la rica tradición percusiva originaria del archipiélago nipón. Lejos de reducirse a un acto musical convencional, el Taiko es una práctica atlética integral, coreográfica y espiritual donde no existen barreras entre el movimiento del cuerpo, la respiración compartida y la propagación de ondas sonoras que hacen vibrar el pecho del espectador.
+                </p>
+<!-- 3 Tarjetas Didácticas en Tono Claro de Alto Contraste -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+<div class="washi-card p-6 rounded-2xl text-slate-900 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-2xl">record_voice_over</span>
+</div>
+<h4 class="font-black text-lg text-slate-900">Koe (Voz y Kiai)</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                El grito gutural visceral que acompaña el redoble. No es un alarde, sino la expulsión coordinada del aire desde el Hara para sincronizar al ensamble y proyectar el espíritu.
+                            </p>
+</div>
+</div>
+<div class="washi-card p-6 rounded-2xl text-slate-900 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+<h4 class="font-black text-lg text-slate-900">Kokoro (Corazón)</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                La pureza de intención con la que se golpea la membrana. En la cosmovisión japonesa, el retumbar del tambor evoca el pulso primordial materno en el vientre antes de nacer.
+                            </p>
+</div>
+</div>
+<div class="washi-card p-6 rounded-2xl text-slate-900 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-2xl">graphic_eq</span>
+</div>
+<h4 class="font-black text-lg text-slate-900">Ma (El Silencio)</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                El vacío temporal entre golpe y golpe. El intervalo de quietud absoluta posee tanta potencia expresiva como el sonido del trueno; es donde madura la expectación rítmica.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. HISTORIA Y COSMOVISIÓN (Distribución armónica balanceada: Texto Histórico + Cuadrícula Visual con IMAGE_32 y IMAGE_33) -->
+<section class="washi-card rounded-3xl p-8 md:p-12 text-slate-900 shadow-xl" id="historia">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Columna Izquierda: Narrativa Histórica -->
+<div class="lg:col-span-7 space-y-6">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Historia y Evolución Milenaria</h2>
+</div>
+<h3 class="text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 leading-tight">
+                        De la Mitología de los Kami a la Revolución del Kumi-daiko
+                    </h3>
+<p class="text-slate-700 leading-relaxed text-sm md:text-base">
+                        Los orígenes del tambor japonés se entrelazan con el mito fundacional de <strong>Ame-no-Uzume</strong>, la diosa que bailó frenéticamente sobre un barril de madera invertido para convencer a la diosa solar Amaterasu de abandonar su cueva sagrada y devolver la luz radiante al firmamento. Desde entonces, el taiko se consagró como el instrumento ritual por excelencia en santuarios sintoístas (<em>Matsuri</em>) y templos budistas de todo Japón.
+                    </p>
+<p class="text-slate-700 leading-relaxed text-sm md:text-base">
+                        Durante las batallas feudales del período Sengoku, el tambor retumbaba en el campo marcial marcando las órdenes tácticas de marcha e infundiendo valor indomable a las tropas. Sin embargo, la forma concertística moderna nació a mediados del siglo XX: en 1951, el maestro percusionista de jazz <strong>Daihachi Oguchi</strong> concibió el estilo <strong>Kumi-daiko (組太鼓)</strong>, agrupando tambores de múltiples afinaciones y tamaños en un ensamble polirítmico dinámico que cautivó al mundo entero a través de agrupaciones como <em>Ondekoza</em> y <em>Kodo</em>.
+                    </p>
+<div class="p-5 rounded-xl bg-primary/10 border-l-4 border-primary text-slate-800 text-sm md:text-base italic font-medium">
+                        "Un solo golpe, una sola vida. No toques el tambor con los músculos de los brazos; fúndete con el tronco para que el sonido viaje hasta el confín de los cielos."
+                        <span class="block mt-2 text-xs font-bold uppercase tracking-wider text-primary">— Máxima clásica de los maestros de Wadaiko</span>
+</div>
+</div>
+<!-- Columna Derecha: Cuadrícula Visual con IMAGE_32 y IMAGE_33 con Marcos Pulidos y Epígrafes -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Tarjeta Imagen 1: Mito de Ame-no-Uzume -->
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900 group">
+<div class="h-48 sm:h-56 overflow-hidden">
+<img alt="Representación histórica ukiyo-e de la diosa Ame-no-Uzume danzando sobre el barril para despertar a Amaterasu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfN_P-HFpUW-NXrbtUDiO6ECZIQ4-cUk3oO5GRNxZQJU8mfXeTKBmbSfTkiEbRkZ8BsXjtRS7nyU77J26hdm1lS8WjLcy0c1KcGRSgVEOFfeENe9bcNZJ_hxAQ_tBHNfII8bEonVrJlH7cohr-BUiDP6ZFDEEzg6VvSUsabFE_l007AnW6Qk6ZflARASd0-bdyG4aOb62P_sdLplLoqZDxT7Rzxj-2Kg6u26MI7PgE7Kef6tMVkfgc">
+</div>
+<div class="p-3.5 bg-slate-900/95 text-white border-t border-slate-800">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-extrabold uppercase tracking-wider text-amber-400">Origen Mítico Sintoísta</span>
+<span class="text-[10px] text-slate-400 font-mono">神道起源</span>
+</div>
+<p class="text-xs text-slate-300 mt-1 leading-snug">
+                                La danza ritual de la diosa <em>Ame-no-Uzume</em> sobre el barril invertido ante Amaterasu: génesis espiritual de la percusión japonesa.
+                            </p>
+</div>
+</div>
+<!-- Tarjeta Imagen 2: Kumi-daiko Pioneros del Siglo XX -->
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900 group">
+<div class="h-48 sm:h-56 overflow-hidden">
+<img alt="Fotografía histórica vintage de pioneros del ensamble Kumi-daiko ejecutando tambores en el siglo XX" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Qg1FFII_dYtADwIMwZKt7c87XeDJgV8ZO5aYkeraheEiOdwTAPxRo_NWReSFsILtzJT1qTcJVmFmGKsT9EHmZaIw5c5HgPnGKVAgcCZbX1x91mImPr-_AcOEpj-A3uT0DHoCAj0Tr2Oq7oxDP7P5Kw4QwESq9DsEzKrF92fCHAbTsdAFOA-xDTiWWe2nr_X-A_CL43xDo4Xyv5idFJliezGGRcvf6DNUQ_98YQRboC_303Z6LmXt">
+</div>
+<div class="p-3.5 bg-slate-900/95 text-white border-t border-slate-800">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-extrabold uppercase tracking-wider text-primary">Revolución Kumi-daiko (1951)</span>
+<span class="text-[10px] text-slate-400 font-mono">組太鼓創成</span>
+</div>
+<p class="text-xs text-slate-300 mt-1 leading-snug">
+                                Fotografía de archivo de maestros percusionistas sincronizando tambores en ensamble rítmico moderno sobre tarima de madera.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. MORFOLOGÍA Y HERRAMIENTAS: LA FAMILIA DE TAMBORES (Organología Sagrada con IMAGE_34 y IMAGE_35) -->
+<section class="sumi-card rounded-3xl p-8 md:p-12 text-white space-y-8" id="instrumentos">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<div>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Morfología y Organología Sagrada</h2>
+<h3 class="text-2xl md:text-4xl font-black text-white mt-1">
+                        Los Instrumentos de la Familia Wadaiko
+                    </h3>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"><!-- 1. Nagado-daiko con Fotografía IMAGE_38 -->
+<div class="washi-card rounded-2xl overflow-hidden text-slate-900 flex flex-col justify-between hover:shadow-2xl transition-all border border-amber-900/20">
+<div class="h-48 relative overflow-hidden bg-slate-900 group">
+<img alt="Nagado-daiko tradicional de madera maciza de Keyaki con tachuelas de hierro Byo sobre soporte de madera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjrVx0A8pp2R1nRLjhBiRo5CPIt4Obi5VHg2eNursS79-ogClrLp8GNZLMmEuP5iphg4WRgRMkUMR5KGwDoWl-K-y6QeXPIJzgyihNXzn_Xz7iPA6K-5aag-DNA1YGsd2n6wXf_KIOzW8RNWOVPSEcmvWzejC-bYDgIQgNfiwOGS9BTpJy1L71WV6Qos4wH-CVrwkRFLKYu_JTi3ysBjU5tGRBU7W1K8TwDEpCPwK0vEj2vGoBo-Xs">
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase shadow">
+                            Barril Clásico
+                        </div>
+<div class="absolute bottom-2 right-2 bg-black/80 text-amber-300 text-[10px] font-mono px-2 py-0.5 rounded">
+                            長胴太鼓
+                        </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h4 class="font-black text-lg text-slate-900">Nagado-daiko (長胴)</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                El corazón de los festivales japoneses. Tallado en un único tronco de olmo japonés (<em>Keyaki</em>) y con parches de cuero de vaca fijados con clavos ornamentales de hierro (*Byo*).
+                            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between text-[11px] font-bold text-primary uppercase tracking-wider">
+<span class="">Afinación Fija</span>
+<span class="text-slate-500 font-normal">Resonancia Media</span>
+</div>
+</div>
+</div>
+<!-- 2. Shime-daiko con Fotografía IMAGE_2 -->
+<div class="washi-card rounded-2xl overflow-hidden text-slate-900 flex flex-col justify-between hover:shadow-2xl transition-all border border-amber-900/20">
+<div class="h-48 relative overflow-hidden bg-slate-900 group">
+<img alt="Primer plano de Shime-daiko tradicional con cuerdas trenzadas rojas y pernos tensores de acero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UjNSi8tUfQdpD_RWfbUOLyGogX1H7pnIE2S2annrsuV4pXH3FoDsebQjOMwBfxHvc3okpnNH7-_CZ9eGw5lC7004t2X5-2FEfCH6aD531XRKE1bnKqflZLWGy-OTwKLPdBcf9dmowJYRd_3JMf1u_iipxvmT6UYo7du7Mwbhboatym1kuPOGXQpv7W-4JkW3b2JJjmDu1O0rsVnXGw4mZWeRMcD8tR1eY3ZX6I1Or6SmHfNB_QwcXQH_k">
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase shadow">
+                            Métrica y Compás
+                        </div>
+<div class="absolute bottom-2 right-2 bg-black/80 text-amber-300 text-[10px] font-mono px-2 py-0.5 rounded">
+                            締太鼓
+                        </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h4 class="font-black text-lg text-slate-900">Shime-daiko (締太鼓)</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Tambor agudo de cuerpo estrecho tensado con cuerdas rituales trenzadas (*tsuna*) o pernos mecánicos. Es el director rítmico que mantiene el compás base (*Ji*) del ensamble.
+                            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between text-[11px] font-bold text-primary uppercase tracking-wider">
+<span class="">Tensión Regulable</span>
+<span class="text-slate-500 font-normal">Ataque Rápido</span>
+</div>
+</div>
+</div>
+<!-- 3. Odaiko con Fotografía IMAGE_3 -->
+<div class="washi-card rounded-2xl overflow-hidden text-slate-900 flex flex-col justify-between hover:shadow-2xl transition-all border border-amber-900/20">
+<div class="h-48 relative overflow-hidden bg-slate-900 group">
+<img alt="Primer plano magistral de Odaiko monumental tallado en madera de Keyaki con clavos Byo y kanjis labrados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WwkuXjkD_vdIR4fwi83GANlJ3iDvvuDwrschhevBqIiBxcnbKQoLV9-n4gaOB2THN_YrPwoDzkSgwwHTf5bfnXZ3iOkdXZEtKpGjac-8DB9tIZs4uMfOtRch-Mun2GMm_eJs-uDU35kOtLb0qp9jcgWBZCiFUu4tFdpKUF7uDyIbtJoTMhrL8zQZ54lXBJ4T678beqoRLaNfNv7FXbN7hyKZbbIPNue3DoxbnMsCm8RWtvzwnVKHU-uKs">
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase shadow">
+                            El Gran Tambor
+                        </div>
+<div class="absolute bottom-2 right-2 bg-black/80 text-amber-300 text-[10px] font-mono px-2 py-0.5 rounded">
+                            大太鼓
+                        </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h4 class="font-black text-lg text-slate-900">Odaiko (大太鼓)</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Coloso tallado de árboles centenarios con más de un metro de diámetro. Montado horizontalmente, exige una entrega física atlética y produce un estruendo sísmico que hace vibrar el pecho.
+                            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between text-[11px] font-bold text-primary uppercase tracking-wider">
+<span class="">Bajo Telúrico</span>
+<span class="text-slate-500 font-normal">Máxima Potencia</span>
+</div>
+</div>
+</div>
+<!-- 4. Okedo-daiko y Bachi con Fotografía IMAGE_39 -->
+<div class="washi-card rounded-2xl overflow-hidden text-slate-900 flex flex-col justify-between hover:shadow-2xl transition-all border border-amber-900/20">
+<div class="h-48 relative overflow-hidden bg-slate-900 group">
+<img alt="Okedo-daiko tradicional con correa, cuerdas púrpuras y baquetas bachi de ciprés hinoki" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABvBiq5Pkxy_peDsqbLC_y4q4Jn5q-HZRD2_XzTEEAz8rBjpIWZ9N-wh6KWFAt_v-eeGh9mS9YyVMsOVseLZUGwAx3Mb9JRFi1NVGXi-FFq1gDtjC7ITsd12_Z52H_IxVJUDTLU8jdW9gaZ9pup7avcM6cmW9pD4VmgSWSEJu0mgPzjZfJ4veEKZvAlbAr-iDOc4GEHmiE9Kwww6ChBs-QYzOy0MCjw1iN6ZdD98ljDORI-qOEKbHU">
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase shadow">
+                            Dinamismo y Danza
+                        </div>
+<div class="absolute bottom-2 right-2 bg-black/80 text-amber-300 text-[10px] font-mono px-2 py-0.5 rounded">
+                            桶胴 · 撥
+                        </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h4 class="font-black text-lg text-slate-900">Okedo-daiko y Bachi</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Construido con duelas de cedro ensambladas al estilo de los toneles nipones. Ligero y colgado al hombro para tocar en movimiento, junto a los <em>Bachi</em> (baquetas de roble o ciprés hinoki).
+                            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between text-[11px] font-bold text-primary uppercase tracking-wider">
+<span class="">Sonido Melódico</span>
+<span class="text-slate-500 font-normal">Portabilidad Total</span>
+</div>
+</div>
+</div></div>
+</section>
+<!-- 5. FUNDAMENTOS TÉCNICOS: LOS PILARES MARCIALES DEL TAIKO -->
+<section class="washi-card rounded-3xl p-8 md:p-12 text-slate-900 shadow-xl" id="tecnicas">
+<div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+<span class="text-primary font-extrabold uppercase tracking-widest text-xs">Fundamentos Técnicos</span>
+<h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+                    Disciplina Física y Postura Marcial
+                </h2>
+<p class="text-slate-600 text-sm sm:text-base">
+                    Al igual que en el Judo, Karate o Kendo, el Taiko exige biomecánica de precisión, enraizamiento con la tierra y armonía con el grupo.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Kata -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-primary/40 transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">sports_martial_arts</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-2">Kata (Postura Corporal)</h4>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Las piernas flexionadas en postura de jinete (*Kiba-dachi*), la columna erguida y el centro de gravedad en el vientre (*Tanden*). La fuerza se origina en las caderas y el suelo, no en los hombros.
+                        </p>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-100 text-xs font-bold text-primary uppercase">
+                        Biomecánica Anti-lesiones
+                    </div>
+</div>
+<!-- Ji-uchi -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-primary/40 transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">sync</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-2">Ji-uchi (Ritmo Base Continuo)</h4>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            El cimiento rítmico ininterrumpido sobre el cual los percusionistas solistas improvisan (*O-uchi*). Requiere concentración estoica y desapego del ego para sostener al colectivo sin desviar el pulso.
+                        </p>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-100 text-xs font-bold text-primary uppercase">
+                        Sostén Comunitario
+                    </div>
+</div>
+<!-- Ki & Kiai -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-primary/40 transition-all flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 mb-2">Kiai (Proyección de la Energía)</h4>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            La expulsión simultánea de respiración, grito y movimiento que rompe cualquier titubeo mental. El kiai despierta los sentidos de los demás compañeros y canaliza el vigor sin desgastar la garganta.
+                        </p>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-100 text-xs font-bold text-primary uppercase">
+                        Enfoque y Determinación
+                    </div>
+</div>
+</div>
+</section>
+<!-- 6. GUÍA DIDÁCTICA VISUAL PASO A PASO (Actualizada con IMAGE_36 y 4 Tarjetas Didácticas Preservadas) -->
+<section class="sumi-card rounded-3xl p-8 md:p-12 text-white space-y-8" id="taller">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<div>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Taller Práctico y Pedagógico</h2>
+<h3 class="text-2xl md:text-4xl font-black text-white mt-1">
+                        Iniciación al Taiko: Anatomía del Golpe Perfecto
+                    </h3>
+</div>
+</div>
+<!-- Nueva Guía Didáctica Secuencial en Alta Definición con Etiquetas en Español IMAGE_36 -->
+<div class="rounded-2xl overflow-hidden border border-white/10 bg-slate-950 shadow-2xl">
+<img alt="Guía secuencial auténtica en alta definición para tocar tambores Taiko: 1. POSTURA KATA, 2. AGARRE DE LOS BACHI, 3. TÉCNICA DEL GOLPE, 4. RESONANCIA Y KIAI" class="w-full h-auto block object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_FhgF2J-4sUhqE4Z3HH4W_4bRNK15gpnMXmAT7dcVF4yPszyTLWk15GL-uiw98xPYb4zkNQRoVvz65rtKtN93W43a-SShfGS0GEkSbw7rTaKqQTZm1SIvw-1qf2vj_Bfi1WuV-YqPunzq6DYrdo-riKf3bGoQOguvN_kJ4luprkyh-V3qXqyWL41XFVvz-r2bbIfwhFE70t5U8vPSLMp5ltrFZWf5BhBG6PYRkqB7GdfshSarcWkD">
+</div>
+<!-- 4 Tarjetas Didácticas Correspondientes 1:1 con las 4 Fases Didácticas Superiores -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Paso 1 -->
+<div class="washi-card p-6 rounded-2xl text-slate-900 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-primary text-white font-black text-sm flex items-center justify-center">1</span>
+<span class="text-[11px] font-bold text-primary uppercase tracking-wider">Postura Base</span>
+</div>
+<h4 class="font-black text-base text-slate-900">Kata y Enraizamiento</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Separa los pies al doble del ancho de hombros con rodillas flexionadas firmes. Siente el peso caer hacia la tierra para ganar estabilidad antes de alzar los brazos.
+                        </p>
+</div>
+</div>
+<!-- Paso 2 -->
+<div class="washi-card p-6 rounded-2xl text-slate-900 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-primary text-white font-black text-sm flex items-center justify-center">2</span>
+<span class="text-[11px] font-bold text-primary uppercase tracking-wider">Agarre Bachi</span>
+</div>
+<h4 class="font-black text-base text-slate-900">Empuñadura Correcta</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Sujeta los palillos bachi suavemente entre el pulgar y el índice, envolviendo los otros dedos con soltura para permitir que la madera vibre sin tensar las muñecas.
+                        </p>
+</div>
+</div>
+<!-- Paso 3 -->
+<div class="washi-card p-6 rounded-2xl text-slate-900 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-primary text-white font-black text-sm flex items-center justify-center">3</span>
+<span class="text-[11px] font-bold text-primary uppercase tracking-wider">Impacto Limpio</span>
+</div>
+<h4 class="font-black text-base text-slate-900">Trayectoria de Golpe</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Eleva las baquetas dibujando un semicírculo y déjalas caer aprovechando la gravedad hacia el centro exacto del cuero, rebotando al instante para liberar el sonido.
+                        </p>
+</div>
+</div>
+<!-- Paso 4 -->
+<div class="washi-card p-6 rounded-2xl text-slate-900 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-primary text-white font-black text-sm flex items-center justify-center">4</span>
+<span class="text-[11px] font-bold text-primary uppercase tracking-wider">Espíritu y Resonancia</span>
+</div>
+<h4 class="font-black text-base text-slate-900">Resonancia y Kiai</h4>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Acompaña el impacto con la respiración y un kiai sincero. Deja que el eco resuene en todo el cuerpo antes de volver a la guardia con absoluta serenidad mental.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. GALERÍA DE IMPACTO VISUAL:  (Enfoque exclusivo en Taiko y Bachi) -->
+<section class="washi-card rounded-3xl p-8 md:p-12 text-slate-900 shadow-xl" id="galeria">
+<div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-8">
+<div>
+<span class="text-primary font-extrabold uppercase tracking-widest text-xs">Inmersión Estética</span>
+<h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
+                        Galería de Expresión y Energía Escénica
+                    </h2>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Foto 1: Odaiko Monumental en Dojo -->
+<div class="group relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 h-72 bg-slate-950">
+<img alt="Madera sagrada de Keyaki y remaches Byo de un Odaiko gigante japonés" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxaGqTyBcDvaxTN18wxI9mO8I4fryjG5jkUimerSUS4FR7WFeDzN7qxgJ1jgQpfFLUpNgPCqS8CC4nRXf9hfP_IpADpXeWc3pbsaSbBeaMFSfPmfeCzhGWBmTcgboyVVCn_1VvUy4WDNcBpULv7RfaEdKOzwSGYhHB8cxUcInTBa_0XxB-71cc4V2TcVg1cIQvQ2eVrIYw2aLOQEjlCc90qOGmnZTOSt7yXMk6IEXrLgPwTD5t0KzW">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">El Coloso Sagrado</span>
+<h4 class="text-white font-bold text-base">Odaiko y Madera Keyaki</h4>
+<p class="text-slate-300 text-xs">Tronco macizo milenario con remaches y parche de cuero tensado.</p>
+</div>
+</div>
+<!-- Foto 2: Shime-daiko con Cuerdas Tradicionales -->
+<div class="group relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 h-72 bg-slate-950">
+<img alt="Detalle auténtico de Shime-daiko tradicional con cuerdas trenzadas de afinación roja y negra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6jnvjY_luKwCCMWSkOtfcTBZCzzmFWh30OWuHB8Tcv-hBNVPFiE58PV5zhOXPWB-fL3B9rLWB3WJEC3JWvIT4tEMz5zi2ovC_I7jP8CDPfWVP7J_rTOtG3tRUUCf578evA4h7C1Lhk94qWyVlG55t3YDHfp-4lIF6B7hN-wyGoVxqzlsSHeCrI2kkQdfhVF4CqwkCYUW9Idx25qOXM1FXNQHUMbcqllB2f-Sa3jBevX61EdfJ5if6">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">Afinación Ritual</span>
+<h4 class="text-white font-bold text-base">Shime-daiko y Cuerdas</h4>
+<p class="text-slate-300 text-xs">Artesanía de tensión con cuerdas tsuna para el compás exacto.</p>
+</div>
+</div>
+<!-- Foto 3: Baquetas Bachi en Acción -->
+<div class="group relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 h-72 bg-slate-950">
+<img alt="Detalle de baquetas bachi de roble y manos en pleno movimiento rítmico sobre el tambor taiko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgMOVeQ-_kaQvTzMqbA2aSuiouCVRZVh3DebX3Rv6eXaldcUjEuen4SUXj0Im8CMTvyGV2wYi6ED53D6jRY_9OtiDLBeG1n3m8ouhl7cTLjmTdXAwVTmQoYFAwQsRmCEp-Xurar5BQHdTZjgJlONc4XsZTQzoOBxYyF1GZer9L6LVcnenKrMMN_xLE8KrzXsbAHx11qyzL-EVHzf7baCfNeJBtDHYk0ee1Jpg2tlq_opvQXUgwaTj4H8dpdh5h8K74BY6fFCLsBRI">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">Herramienta Sagrada</span>
+<h4 class="text-white font-bold text-base">Precisión con los Bachi</h4>
+<p class="text-slate-300 text-xs">Extensión del brazo tallada en madera maciza de roble o ciprés.</p>
+</div>
+</div>
+<!-- Foto 4: Ensamble Kumi-daiko Histórico -->
+<div class="group relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 h-72 bg-slate-950">
+<img alt="Percusionistas japoneses sincronizados en una batería de tambores kumi-daiko tradicionales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Qg1FFII_dYtADwIMwZKt7c87XeDJgV8ZO5aYkeraheEiOdwTAPxRo_NWReSFsILtzJT1qTcJVmFmGKsT9EHmZaIw5c5HgPnGKVAgcCZbX1x91mImPr-_AcOEpj-A3uT0DHoCAj0Tr2Oq7oxDP7P5Kw4QwESq9DsEzKrF92fCHAbTsdAFOA-xDTiWWe2nr_X-A_CL43xDo4Xyv5idFJliezGGRcvf6DNUQ_98YQRboC_303Z6LmXt">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">Polirritmia Pura</span>
+<h4 class="text-white font-bold text-base">Kumi-daiko en Escena</h4>
+<p class="text-slate-300 text-xs">Sincronía colectiva donde cada tambor aporta su voz única.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. REALIDAD NACIONAL FIDEDIGNA: TAIKO EN VENEZUELA (Preservada intacta con 3 tarjetas temáticas y CTA al directorio) -->
+<section class="sumi-card rounded-3xl p-8 md:p-14 text-white shadow-2xl relative overflow-hidden" id="venezuela">
+<div class="w-full space-y-8 relative z-10">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Historia y Presencia Nacional Fidedigna</h2>
+</div>
+<div>
+<h3 class="text-3xl md:text-4xl font-black tracking-tight">
+                        Taiko en Venezuela: El Latido Japonés en Tierra Caribeña
+                    </h3>
+<p class="text-slate-300 text-base md:text-lg mt-3 leading-relaxed">
+                        La práctica del Taiko en Venezuela representa uno de los testimonios de amistad e intercambio cultural más vibrantes entre Japón y la nación venezolana. A través del apoyo constante de la <strong>Embajada del Japón en Venezuela</strong> y la dedicación de agrupaciones pioneras fundadas por miembros de la colectividad Nikkei y percusionistas venezolanos, el ritmo del tambor ha conquistado teatros, universidades y festivales públicos.
+                    </p>
+</div>
+<!-- 3 Tarjetas Temáticas de Contenido Fidedigno en Cuadrícula Equilibrada -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+<h4 class="text-lg font-bold text-white">Agrupaciones Pioneras</h4>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Proyectos emblemáticos como <strong>Nagoya Taiko</strong> y grupos adscritos a asociaciones civiles y colegios de integración han mantenido vivas las presentaciones de ensamble en Caracas, Valencia y Maracay, transmitiendo los patrones rítmicos tradicionales a nuevas generaciones.
+                        </p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">theater_comedy</span>
+<h4 class="text-lg font-bold text-white">Semanas Culturales y Festivales</h4>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Apariciones estelares en las Semanas Culturales de Japón organizadas en centros de arte emblemáticos, festivales benéficos y convenciones universitarias, donde las demostraciones de Taiko constituyen el acto de apertura más celebrado por su intensidad y emotividad.
+                        </p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">self_improvement</span>
+<h4 class="text-lg font-bold text-white">Talleres y Meditación Activa</h4>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Espacios formativos de iniciación donde niños y adultos aprenden postura (*kata*), sincronización psicomotriz y respeto marcial, convirtiendo la percusión japonesa en una forma colectiva de relajación, acondicionamiento físico y descarga saludable de estrés.
+                        </p>
+</div>
+</div>
+<!-- Llamado a la Acción Contextual hacia el Directorio Nacional D-Taiko.html -->
+<div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+<div>
+<h4 class="text-xl font-bold text-white">¿Deseas practicar o contactar agrupaciones de Taiko en Venezuela?</h4>
+<p class="text-sm text-slate-300 mt-1">Explora nuestro directorio nacional con ubicaciones, escuelas, talleres y redes verificadas.</p>
+</div>
+<a class="inline-flex items-center gap-2.5 bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:scale-105 shrink-0" href="D-Taiko.html">
+<span class="material-symbols-outlined text-lg">stadium</span>
+<span class="">Ver Directorio de Taiko</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Monolínea Canónico según Plantilla Base y Mejoras del Proyecto -->
+<footer class="bg-black text-white py-4 border-t border-slate-800 text-xs mt-auto">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Bloque Izquierdo: Marca e Identidad -->
+<div class="flex items-center">
+<span class="font-extrabold text-sm text-white">Kizuna <span class="text-primary">Venezuela</span></span>
+<span class="text-slate-400 ml-2 hidden sm:inline">| Difusión y preservación de la cultura japonesa en Venezuela.</span>
+</div>
+<!-- Bloque Centro: Enlaces Esenciales sin iconos conforme a la plantilla base -->
+<div class="flex items-center gap-6 text-slate-300 font-semibold">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="hover:text-primary transition-colors" href="Becas_MEXT.html">Becas MEXT</a>
+</div>
+<!-- Bloque Derecho: Copyright Oficial -->
+<div class="text-slate-500">
+                © 2026 Kizuna Venezuela. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+</div>
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const closeBtn = document.getElementById('mobileMenuClose');
+        const panel = document.getElementById('mobileMenuPanel');
+        const overlay = document.getElementById('mobileMenuOverlay');
+
+        function openMenu() {
+            if (panel) panel.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            if (btn) btn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenu() {
+            if (panel) panel.classList.add('hidden');
+            document.body.style.overflow = '';
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+
+        btn && btn.addEventListener('click', openMenu);
+        closeBtn && closeBtn.addEventListener('click', closeMenu);
+        overlay && overlay.addEventListener('click', closeMenu);
+    })();
+</script>
+<!-- Carga del Asistente Virtual Kizuna AI -->
+<script defer="" src="/chatbot.js"></script>
+
+
+</body></html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Shodo: El Camino de la Caligrafía | Kizuna Venezuela</title>
+    <meta content="Guía pedagógica e inmersiva sobre el Shodo (caligrafía japonesa) en Kizuna Venezuela: filosofía Mushin, los cuatro tesoros del estudio, estilos Kaisho, Gyosho y Sosho, taller práctico paso a paso y difusión en Venezuela." name="description">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e65100", // Acento naranja Kizuna canónico
+                        "primary-dark": "#b83f12",
+                        "sumi": "#0b0f17",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqrdsmaV9SQHE35vDc9CszKwXZ2yazOcHn1hPg-7oCb40P6tdVVJr_6nbinSIHTdGt7-r95jqgCwKSaVd44irUq6pNCq60P071QhDlZQtRq_qnf1C3sIS0U1AuvIXhid53HZCJSmRVBy1HjXpOpwyTx16lm1SkAnmN_kvFRJ0Tene4dRCSlUjsoxz8QEx2D2jwmYoeddNFO2t6nXGAbMN5x6eHyOTHzijlOQhG6nTKvvYrRPIdh2bfySBQ-NBaEXXDiw') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            background-size: cover !important;
+            background-attachment: fixed !important;
+            background-color: #fdfaf6 !important;
+            color: #0f172a;
+        }
+
+        /* Sección tono oscuro translúcido estilo Sumi-e */
+        .section-dark-card {
+            background-color: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sección tono claro translúcido estilo Washi */
+        .section-light-card {
+            background-color: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(230, 81, 0, 0.18);
+            box-shadow: 0 16px 32px -10px rgba(15, 23, 42, 0.08);
+        }
+
+        .kanji-watermark {
+            position: absolute;
+            right: 20px;
+            bottom: -20px;
+            font-size: 11rem;
+            line-height: 1;
+            font-weight: 900;
+            opacity: 0.04;
+            pointer-events: none;
+            user-select: none;
+            font-family: serif;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-900 dark:text-slate-100 transition-colors duration-300 relative min-h-screen">
+
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    
+    <!-- HEADER CANÓNICO KIZUNA VENEZUELA (Idéntico a template.html y Origami SCREEN_2) -->
+    <header class="sticky top-0 z-50 bg-black text-white shadow-lg border-b border-primary/20">
+        <div class="w-full px-6 lg:px-20 py-3.5 flex items-center justify-between border-b border-white/10">
+            <!-- Logotipo tipográfico limpio sin icono previo -->
+            <a class="flex items-center group" href="index.html">
+                <span class="text-xl font-extrabold tracking-tight text-white group-hover:opacity-90 transition-opacity">
+                    Kizuna <span class="text-primary">Venezuela</span>
+                </span>
+            </a>
+
+            <div class="flex items-center gap-6">
+                <!-- Botón Menú Móvil -->
+                <button aria-expanded="false" aria-label="Abrir menú" class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors text-white" id="mobileMenuBtn">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+
+                <!-- Menú Navegación Desktop -->
+                <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+                    <a class="text-white hover:text-primary transition-colors flex items-center gap-1.5 py-1" href="index.html">
+                        <span class="material-symbols-outlined text-[18px]">home</span>
+                        <span class="">Inicio</span>
+                    </a>
+
+                    <!-- Directorios Megamenú Desplegable -->
+                    <div class="group relative">
+                        <button class="flex items-center gap-1.5 text-sm font-semibold text-white hover:text-primary transition-colors py-1">
+                            <span class="material-symbols-outlined text-[18px]">folder</span>
+                            <span class="">Directorios</span>
+                            <span class="material-symbols-outlined text-xs transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-slate-900 dark:text-slate-100">
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+                                <a class="block px-2 py-1 text-sm font-bold text-primary bg-primary/10 rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Becas MEXT Desplegable -->
+                    <div class="group relative">
+                        <button class="flex items-center gap-1.5 text-sm font-semibold text-white hover:text-primary transition-colors py-1">
+                            <span class="material-symbols-outlined text-[18px]">school</span>
+                            <span class="">Becas MEXT</span>
+                            <span class="material-symbols-outlined text-xs transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-900 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-800 z-50 text-slate-900 dark:text-slate-100">
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+                            <div class="h-px bg-slate-200 dark:bg-slate-800 my-1"></div>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+                            <div class="h-px bg-slate-200 dark:bg-slate-800 my-1"></div>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+                        </div>
+                    </div>
+
+                    <!-- Botón Contextual hacia Directorio Shodo -->
+                    <a class="text-white hover:text-primary transition-colors flex items-center gap-1.5 py-1" href="D-Shodo.html">
+                        <span class="material-symbols-outlined text-[18px]">stadium</span>
+                        <span class="">Escuelas y Maestros</span>
+                    </a>
+
+                    <!-- Enlace Volver -->
+                    <a class="text-white hover:text-primary transition-colors flex items-center gap-1 py-1" href="javascript:history.back()">
+                        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                        <span class="">Volver</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Sub-barra Limpia de Migas de Pan (Breadcrumbs) -->
+        <div class="bg-black/95 text-xs text-slate-400 py-1.5 px-6 lg:px-20 border-t border-white/5 flex items-center justify-between">
+            <nav aria-label="Ruta de navegación" class="flex items-center gap-2">
+                <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <span class="text-slate-600">/</span>
+                <a class="hover:text-primary transition-colors" href="index.html#idioma">Idioma &amp; Caligrafía</a>
+                <span class="text-slate-600">/</span>
+                <span class="text-primary font-bold">Shodo: El Camino de la Caligrafía</span>
+            </nav>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 flex-col gap-3 text-slate-200" id="mobileMenuPanel">
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1.5 flex items-center gap-2" href="index.html">
+                <span class="material-symbols-outlined text-[18px]">home</span> Inicio
+            </a>
+            <a class="text-sm font-semibold text-primary py-1.5 flex items-center gap-2" href="D-Shodo.html">
+                <span class="material-symbols-outlined text-[18px]">stadium</span> Escuelas y Asociaciones de Shodo
+            </a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1.5 flex items-center gap-2" href="Becas_MEXT.html">
+                <span class="material-symbols-outlined text-[18px]">school</span> Becas MEXT
+            </a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1.5 flex items-center gap-2" href="javascript:history.back()">
+                <span class="material-symbols-outlined text-[18px]">arrow_back</span> Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-10 space-y-16 flex-grow">
+
+        <!-- 1. HERO SPLIT: Presentación canónica sin botones añadidos (Texto a la izquierda, tarjeta enmarcada a la derecha) -->
+        <section class="rounded-3xl p-6 md:p-8 bg-slate-950/90 text-white shadow-2xl border border-white/10 backdrop-blur-md overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Columna Izquierda: Texto sobre fondo de tono oscuro -->
+                <div class="lg:col-span-7 flex flex-col justify-center space-y-4">
+                    <div class="inline-flex items-center gap-2 bg-primary/20 text-primary px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border border-primary/30 w-fit">
+                        <span class="material-symbols-outlined text-sm">edit_note</span>
+                        Arte Tradicional Japonés (書道 · SHODO)
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+                        Shodo: El Arte del <span class="text-primary">Trazo</span> y el Espíritu
+                    </h1>
+                    <p class="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-normal max-w-2xl">
+                        El camino de la escritura meditativa donde la tinta negra (Sumi), el pincel de bambú (Fude) y el papel artesanal (Washi) dialogan con la respiración: una disciplina viva donde cada línea es irrepetible y refleja el estado del alma.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-semibold text-slate-300">
+                        <span class="inline-flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
+                            <span class="material-symbols-outlined text-primary text-xs">self_improvement</span> Estado Zen (Mushin)
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
+                            <span class="material-symbols-outlined text-primary text-xs">brush</span> Bunbōshihō (Cuatro Tesoros)
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
+                            <span class="material-symbols-outlined text-primary text-xs">location_on</span> Práctica en Venezuela
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta enmarcada en tono claro con fotografía hero de alta resolución -->
+                <div class="lg:col-span-5 relative w-full h-[320px] lg:h-[380px] rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-white/95 p-2 group">
+                    <div class="w-full h-full rounded-xl overflow-hidden relative">
+                        <img alt="Kanji en tinta Sumi sobre papel washi auténtico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGcEFGyNKbpj4g8NPsDSpB3MOLl0muPMA-gbVOTYrRhWU1bxZQVLjLFQeAMTqefPWc08mlp2rOh-DLMU6mFkirtUCdlbIhhKfPuIlqq2igGiBpIGWirgM50soOjSbU-0tQIO_V_cgSMthEPzjEEIyLhVl68sLTN3NuMRbXOusI6em0kvu-HjZpfw8ohpY6TW1TMjAvul9SQIYuJM3yE9_ZGl7PttnNXFoaR2FA9AZKiM7XPZHj2gLz">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+                            <span class="text-xs font-semibold text-slate-200 bg-slate-900/85 px-3 py-1 rounded-md border border-white/10 backdrop-blur-sm">
+                                "Wa" (Armonía) · Trazo de pincel tradicional
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN FILOSOFÍA Y CONCEPCIÓN: Tono Claro marfil con tarjetas oscuras (Estructura inversa Origami) -->
+        <section class="section-light-card rounded-3xl p-8 md:p-12 relative overflow-hidden" id="filosofia">
+            <!-- Kanji en marca de agua decorativa: 書道 (Shodo) -->
+            <div class="kanji-watermark text-slate-900">書道</div>
+            
+            <div class="max-w-4xl space-y-6 relative z-10">
+                <div class="flex items-center gap-3">
+                    <span class="h-8 w-1.5 bg-primary rounded-full"></span>
+                    <h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Filosofía &amp; Concepción</h2>
+                </div>
+                <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                    El Alma del Pincel: La Escritura como Meditación Activa
+                </h3>
+                <p class="text-slate-700 text-base md:text-lg leading-relaxed font-normal">
+                    El <strong>Shodo (書道)</strong> trasciende el simple acto de escribir caracteres legibles. Es una práctica espiritual y filosófica fundamentada en la armonía entre la mente y el cuerpo, donde la concentración absoluta permite que la energía vital (<strong>Ki</strong>) fluya desde el centro del cuerpo (<em>Hara</em>) a través del brazo y las cerdas del pincel hacia la fibra del papel. En el Shodo no existe la corrección ni el retoque: cada trazo es definitivo, irreversible y revela la autenticidad del instante presente.
+                </p>
+
+                <!-- 3 Tarjetas en tono oscuro carbón de alto contraste -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                    <div class="p-6 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+                                <span class="material-symbols-outlined text-2xl">self_improvement</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Mushin (Mente Vacía)</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                El estado de atención pura libre de ego y dudas. El calígrafo no "piensa" en dibujar la letra; permite que el trazo acontezca espontáneamente.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-bold text-primary uppercase tracking-wider">
+                            Presencia Zen
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+                                <span class="material-symbols-outlined text-2xl">flare</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Kiketsu (Flujo de Energía)</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                La sincronización milimétrica entre la inhalación, la exhalación y la velocidad de desplazamiento del pincel, otorgando pulso vital al pigmento.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-bold text-primary uppercase tracking-wider">
+                            Respiración y Ki
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+                                <span class="material-symbols-outlined text-2xl">ink_eraser</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Irreversibilidad Pura</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                El papel Washi absorbe la tinta en fracciones de segundo. El error no se oculta; se acepta con humildad como parte viva de la naturaleza humana.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-bold text-primary uppercase tracking-wider">
+                            Verdad Inmutable
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN HISTORIA Y EVOLUCIÓN: Tono Oscuro con Fotografía Clásica -->
+        <section class="section-dark-card rounded-3xl p-8 md:p-12 text-white shadow-2xl" id="historia">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="h-8 w-1.5 bg-primary rounded-full"></span>
+                        <h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Historia Milenaria</h2>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
+                        De la Antigua China al "Do" Espiritual Japonés
+                    </h3>
+                    <div class="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed">
+                        <p class="">
+                            El origen de los caracteres ideográficos se remonta a la antigua China, donde la caligrafía se practicaba como una de las cuatro artes sagradas del letrado junto a la música (guqin), el ajedrez (Go) y la pintura. Durante la dinastía Tang y el período Asuka/Nara, estos estilos ingresaron a Japón junto a los textos budistas.
+                        </p>
+                        <p class="">
+                            En el archipiélago nipón, el arte evolucionó profundamente: la invención de los silabarios fonéticos propios (<em>Hiragana</em> y <em>Katakana</em>) permitió trazos más fluidos, curvos y etéreos. Con el influjo del budismo Zen en el período Kamakura y Edo, la caligrafía dejó de ser un simple registro administrativo para consolidarse como un <strong>"Do" (Camino de vida)</strong>, donde cada pincelada encarna la mente silenciosa y libre de ataduras.
+                        </p>
+                    </div>
+                    <div class="bg-primary/15 border-l-4 border-primary p-5 rounded-r-xl">
+                        <p class="italic text-slate-200 text-sm md:text-base leading-relaxed">
+                            «El trazo correcto no nace de la fuerza de la mano, sino de la serenidad del corazón en reposo absoluto.»
+                        </p>
+                        <span class="block mt-2 text-xs font-bold uppercase tracking-wider text-amber-400">— Máxima clásica del Shodo Zen</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-700 aspect-square bg-slate-950 relative group">
+                        <img alt="Obra maestra de caligrafía japonesa en pergamino colgante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAIv7IN4uuI3gdd3m76BEMB4BGdJmkTlGrtgiibpA-yfQWlu__PE6VoN7aUffwlAcWwVSrpVYG_rs_MxDqw6y91YGI3ocBH-C9DshZ-lsBsz4jFVBrdzmzlZ0HBNgz8LyakoaPAWjuYhUEIvbHd_CK9OO2nOW6yayRkBCr_ZZrWZ1nxDq-ZmHD_7mei7CB77tYlZlXDYmf4AMscLudlS3pb7v941igjTXZQ5q5tt_L0a6LwzMmgDjV">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 text-white text-xs">
+                            <span class="font-bold text-primary">Kakemono Maestro:</span> Estilo Sosho con salpicaduras de tinta Sumi y sello imperial Inkan (Hanko).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN LOS CUATRO TESOROS DEL ESTUDIO (BUNBŌSHIHŌ): Tono Claro con 4 Tarjetas -->
+        <section class="section-light-card rounded-3xl p-8 md:p-12 shadow-xl" id="tesoros">
+            <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+                <span class="text-primary font-bold uppercase tracking-widest text-xs">Morfología &amp; Herramientas Sagradas</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900">
+                    Los Cuatro Tesoros del Estudio (Bunbōshihō - 文房四宝)
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Los instrumentos inseparables del calígrafo que convierten la materia física en una manifestación tangible de la conciencia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fude -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/90 flex flex-col justify-between hover:border-primary/40 transition-all">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl mb-4 shadow-md">
+                            筆
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Fude (El Pincel)</h4>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Extensión del Brazo</span>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Elaborado con cerdas naturales (caballo, cabra o tejón) y mango de bambú. Su flexibilidad y resorte permiten modular el grosor del trazo con una sensibilidad exquisita.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-slate-500">
+                        Punta dócil y viva
+                    </div>
+                </div>
+
+                <!-- Sumi -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/90 flex flex-col justify-between hover:border-primary/40 transition-all">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl mb-4 shadow-md">
+                            墨
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Sumi (La Tinta)</h4>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">Alma Negra y Fragante</span>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Barras sólidas prensadas de hollín vegetal de pino, aceite de sésamo y cola animal, a menudo aromatizadas con alcanfor. Genera negros profundos y matices cenizos.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-slate-500">
+                        Permanencia milenaria
+                    </div>
+                </div>
+
+                <!-- Suzuri -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/90 flex flex-col justify-between hover:border-primary/40 transition-all">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl mb-4 shadow-md">
+                            硯
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Suzuri (La Piedra de Tinta)</h4>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">El Crisol Alquímico</span>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Recipiente tallado en piedra volcánica pulida con una suave pendiente (Umi). Frotar el Sumi con unas gotas de agua cristalina es el prólogo meditativo obligado de la sesión.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-slate-500">
+                        Preparación meditativa
+                    </div>
+                </div>
+
+                <!-- Kami -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200/90 flex flex-col justify-between hover:border-primary/40 transition-all">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl mb-4 shadow-md">
+                            紙
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Kami / Washi (El Papel)</h4>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2 block">El Espejo Blanco</span>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Papel artesanal fabricado con fibras naturales de morera (Kozo) o Mitsumata. Su alta porosidad fija al instante la presión y humedad, capturando el pulso del autor.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 text-[11px] font-semibold text-slate-500">
+                        Absorción y textura
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN FUNDAMENTOS TÉCNICOS: Tono Oscuro con Tarjetas en Tono Claro (Estilo Origami SCREEN_2) -->
+        <section class="section-dark-card rounded-3xl p-8 md:p-12 text-white shadow-xl space-y-8" id="tecnicas">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
+                <div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="h-8 w-1.5 bg-primary rounded-full"></span>
+                        <span class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Fundamentos Técnicos</span>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-black text-white">
+                        Técnicas Clave de Pincel (Fudezukai)
+                    </h3>
+                </div>
+                <p class="text-xs md:text-sm text-slate-300 max-w-md">
+                    La ejecución precisa del Shodo combina el control anatómico del peso del brazo con principios geométricos universales.
+                </p>
+            </div>
+
+            <!-- 4 Tarjetas en Tono Claro pulido (bg-white/95) con iconos y diagramas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tarjeta 1: Tensetsu -->
+                <div class="bg-white/95 text-slate-900 p-6 rounded-2xl shadow-lg border border-primary/20 flex flex-col justify-between hover:shadow-2xl transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">turn_right</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Tensetsu (El Giro)</h4>
+                        <p class="text-xs font-bold text-primary mb-3">Cambio de Dirección Angular</p>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Técnica para articular esquinas sin perder el centro del pincel. Requiere un breve alto, elevación leve del cuerpo del fude y un cambio deliberado de presión.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-200 text-xs font-semibold text-slate-500">
+                        Estructura y solidez
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Hane -->
+                <div class="bg-white/95 text-slate-900 p-6 rounded-2xl shadow-lg border border-primary/20 flex flex-col justify-between hover:shadow-2xl transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">arrow_outward</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Hane (El Gancho)</h4>
+                        <p class="text-xs font-bold text-primary mb-3">Liberación Ascendente</p>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Movimiento rápido y controlado hacia arriba o hacia la izquierda al concluir una línea. Simboliza la energía liberada como el despegue de una flecha.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-200 text-xs font-semibold text-slate-500">
+                        Vitalidad y proyección
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Tome -->
+                <div class="bg-white/95 text-slate-900 p-6 rounded-2xl shadow-lg border border-primary/20 flex flex-col justify-between hover:shadow-2xl transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">stop_circle</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Tome (La Parada)</h4>
+                        <p class="text-xs font-bold text-primary mb-3">Fijación de la Energía</p>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Asentar el pincel al final de un trazo horizontal o vertical para recoger el pigmento y cerrar la energía antes de separar el fude del papel.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-200 text-xs font-semibold text-slate-500">
+                        Contención y remate
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Harai -->
+                <div class="bg-white/95 text-slate-900 p-6 rounded-2xl shadow-lg border border-primary/20 flex flex-col justify-between hover:shadow-2xl transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">brush</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Harai (El Barrido)</h4>
+                        <p class="text-xs font-bold text-primary mb-3">Gradación Cónica del Trazo</p>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            Deslizamiento diagonal donde el pincel se va elevando suavemente hasta que solo la punta más fina roza la fibra, creando un desvanecimiento elegante.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-200 text-xs font-semibold text-slate-500">
+                        Desvanecimiento poético
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN TALLER PRÁCTICO PASO A PASO: Tono Claro con Guía Fotográfica Didáctica y 6 Pasos Exactos -->
+        <section class="section-light-card rounded-3xl p-8 md:p-12 shadow-xl border border-primary/20" id="taller">
+            <div class="max-w-4xl space-y-4 mb-8">
+                <div class="flex items-center gap-2">
+                    <span class="h-1 w-10 bg-primary rounded-full"></span>
+                    <span class="text-primary font-bold uppercase tracking-widest text-xs">Guía Didáctica Paso a Paso</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight">
+                    Taller Práctico: Escribe tu Primer Kanji con Pincel Sumi
+                </h2>
+                <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                    Sigue la secuencia pedagógica tradicional para preparar la tinta fresca, sostener el fude con postura ortogonal y trazar con solidez tu primera caligrafía en seis etapas auténticas.
+                </p>
+            </div>
+
+            <!-- Gran Fotografía Didáctica Secuencial en 6 Viñetas -->
+            <div class="mb-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-300 bg-slate-900"><img alt="Paso a paso para escribir caligrafía Shodo en 6 etapas: Preparar tinta, cargar pincel, inicio del trazo, desarrollo, cierre y carácter completo" class="w-full h-auto block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArYr9Lb5gG8RRTIglzJSeORhBnqr4zwtUpBecQQnVDy93eJBdechJg9DrYZUyTrAbJpN1d6bEd2APj8WJs-aE9aiYV-gccGQ48jlb2MxZA6PwCKe8H4Yaz8-1b0e8Hd1bzoLrEDZ4N6-3ZCylReR4x6aNru9H2vXuf-UTGV1PKXg3oS5puAeumd0axUjNJTBxFhSxqbfFyn8cfu9SJCxCLragBdQPR4G3vzoEpqySN4aYNKo1bJuno"></div>
+
+            <!-- Consejos del Maestro Calígrafo -->
+            <div class="p-5 rounded-xl bg-primary/10 border-l-4 border-primary text-xs md:text-sm text-slate-800 mb-8 space-y-2">
+                <div class="font-bold text-primary flex items-center gap-1.5 text-sm uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-base">lightbulb</span> Consejos del Maestro Calígrafo:
+                </div>
+                <p class="leading-relaxed">
+                    • <strong>Postura Corporal:</strong> Espalda completamente recta y pies firmes en el suelo. El brazo no descansa sobre la mesa; flota suspendido desde el hombro para dar libertad al movimiento del codo y la muñeca.<br>
+                    • <strong>Inclinación del Pincel:</strong> Mantén el Fude perpendicular (a 90° respecto al papel). La punta debe viajar siempre en el centro exacto del trazo (<em>Chūhō</em>) para evitar líneas huecas o desgarradas.
+                </p>
+            </div>
+
+            <!-- Cuadrícula de 6 Pasos Didácticos Correspondientes 1:1 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Paso 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-bold text-primary uppercase tracking-wider mb-2">
+                            <span class="">Paso 1</span>
+                            <span class="text-slate-400">Prepare Ink</span>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-base mb-2">Moler la Tinta (Sumi-suri)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Coloca 10-15 gotas de agua fresca sobre el pozo de la piedra Suzuri. Frota la barra de Sumi con movimientos circulares lentos y uniformes hasta obtener un líquido negro, espeso y brillante.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-bold text-primary uppercase tracking-wider mb-2">
+                            <span class="">Paso 2</span>
+                            <span class="text-slate-400">Load Brush</span>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-base mb-2">Cargar el Pincel (Fude-ire)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Sumerge las cerdas del Fude suavemente en la tinta, asegurando que el corazón del mechón se impregne sin doblarse. Escurre el exceso en el borde pulido del Suzuri formando una punta cónica afilada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-bold text-primary uppercase tracking-wider mb-2">
+                            <span class="">Paso 3</span>
+                            <span class="text-slate-400">Starting Stroke</span>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-base mb-2">Inicio del Trazo (Kihitsu)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Respira hondo y apoya la punta del pincel a 45 grados sobre el papel washi. Siente el peso de la mano depositando la primera gota de energía con firmeza pero sin rigidez muscular.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-bold text-primary uppercase tracking-wider mb-2">
+                            <span class="">Paso 4</span>
+                            <span class="text-slate-400">Stroke Progression</span>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-base mb-2">Desarrollo y Presión (Shūhitsu)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Desplaza el pincel a lo largo de la línea manteniendo el fude vertical a 90°. Modula la presión hacia abajo para engrosar el trazo o elévalo suavemente para afilar los puentes de conexión.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-bold text-primary uppercase tracking-wider mb-2">
+                            <span class="">Paso 5</span>
+                            <span class="text-slate-400">Finishing Stroke</span>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-base mb-2">Cierre del Movimiento (Kesshitsu)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Aplica la técnica de frenado (Tome) o gancho dinámico (Hane). No despegues el pincel abruptamente: detén la inercia, asienta el pigmento y retira la punta en el aire con gracia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-bold text-primary uppercase tracking-wider mb-2">
+                            <span class="">Paso 6</span>
+                            <span class="text-slate-400">Complete Character</span>
+                        </div>
+                        <h4 class="font-black text-slate-900 text-base mb-2">Contemplación y Sello (Hanko)</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Retrocede un paso para contemplar el balance global entre el espacio ocupado por la tinta negra y el vacío luminoso del papel (<em>Yohaku</em>). Firma la obra con tu sello Inkan de bermellón.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SECCIÓN GALERÍA DE ESTILOS Y MAESTRÍA: Tono Oscuro con Tarjetas en Tono Claro (Estilo Origami SCREEN_2) -->
+        <section class="section-dark-card rounded-3xl p-8 md:p-12 text-white shadow-xl space-y-8" id="galeria">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-2xl">gallery_thumbnail</span>
+                        <h2 class="text-2xl md:text-3xl font-black text-white">Galería de Expresiones: Los Tres Estilos Canónicos</h2>
+                    </div>
+                    <p class="text-slate-300 text-xs md:text-sm mt-1">
+                        La evolución formal de los kanjis: desde la estricta geometría clásica hasta la abstracción gestual Zen.
+                    </p>
+                </div>
+                <span class="text-xs font-bold text-primary uppercase tracking-widest hidden sm:inline">Maestría Caligráfica</span>
+            </div>
+
+            <!-- 3 Tarjetas en Tono Claro pulido (bg-white/95 text-slate-900) con imágenes de alta definición -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Kaisho Card -->
+                <div class="group bg-white/95 text-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden bg-slate-900 relative">
+                            <img alt="Estilo Kaisho caligrafía formal cuadrada japonesa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDocG-WTuH4pZ9pwSMAxVQ1A025iSsUnOkaFhQeKZ2fcOr2LPcf_Kw8n5WF-79dcwINhaDkAheaRd2lm1fHtXqpj2pZFjrqPjt4o-3bY8e0LtxUarBjQfMLibH5mu4GcIGSMETFcjHo2dckHhjT9r1ujapYOGp8o6usAOQex-KIgnrxalJX-YEeIq-ME5cBaPM3s-CTag5__XDIxOLduTSAiVJiqnoNs0DWX9qgIH68UTq_9crnKfsKSZXP5MeiPMDBdFMPu9phHm4">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-white text-xs font-bold">Orden y Rectitud Clásica</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="h-1 w-6 bg-primary rounded-full"></span>
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Estilo Formal</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-900 mb-2">Kaisho (楷書)</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                El "estilo cuadrado". Cada trazo posee un principio, desarrollo y final independientes y precisos. Representa la disciplina, la rectitud moral y la base técnica indispensable que todo calígrafo domina antes de buscar la soltura.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-100">
+                        <span class="text-xs font-bold text-primary uppercase">Concepto Clave: Estructura &amp; Sinceridad</span>
+                    </div>
+                </div>
+
+                <!-- Gyosho Card -->
+                <div class="group bg-white/95 text-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden bg-slate-900 relative">
+                            <img alt="Estilo Gyosho caligrafía semicursiva japonesa fluida" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtTZcCKFlFC-ySIlFYatl0jKhyJ9HM4552ty7m5KM1qum02iFG0AqN0f_Efsi9fHvNGg9Og0RVylUcZSZHKeIXGebXPBpJbcnQhxcoZ90t_BLqeKhzA8TX1rjOP0RE_siuOV2Lbwo2tYYWQWMQj2-OqnlN_akNDibscJhdaqC2SAB0SCRTZ5SdsIE5oajjtsuapUBNJpv0GYcVCMFSS41-jJTTmBvx6ENkK7rP2nHuLPO02rbit38QI2jBX7ain9h0ookScHxb6Ps">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-white text-xs font-bold">Río de la Conciencia</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="h-1 w-6 bg-primary rounded-full"></span>
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Estilo Semicursivo</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-900 mb-2">Gyosho (行書)</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                El "estilo que camina". Los trazos se enlazan con armonía y velocidad natural, reflejando el compás orgánico de la respiración. Es el punto de equilibrio donde la rigidez de la norma se une a la sensibilidad emocional espontánea.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-100">
+                        <span class="text-xs font-bold text-primary uppercase">Concepto Clave: Movimiento &amp; Equilibrio</span>
+                    </div>
+                </div>
+
+                <!-- Sosho Card -->
+                <div class="group bg-white/95 text-slate-900 rounded-2xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between hover:shadow-2xl transition-all">
+                    <div>
+                        <div class="aspect-[4/3] overflow-hidden bg-slate-900 relative">
+                            <img alt="Estilo Sosho caligrafía cursiva de hierba abstracta japonesa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAIv7IN4uuI3gdd3m76BEMB4BGdJmkTlGrtgiibpA-yfQWlu__PE6VoN7aUffwlAcWwVSrpVYG_rs_MxDqw6y91YGI3ocBH-C9DshZ-lsBsz4jFVBrdzmzlZ0HBNgz8LyakoaPAWjuYhUEIvbHd_CK9OO2nOW6yayRkBCr_ZZrWZ1nxDq-ZmHD_7mei7CB77tYlZlXDYmf4AMscLudlS3pb7v941igjTXZQ5q5tt_L0a6LwzMmgDjV">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-white text-xs font-bold">Viento entre el Bambú</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="h-1 w-6 bg-primary rounded-full"></span>
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider">Estilo Cursivo de Hierba</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-900 mb-2">Sosho (草書)</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                El "estilo de hierba". La legibilidad literal se supedita a la máxima expresión del Ki. El pincel danza sin interrupción sobre el papel, condensando caracteres enteros en un único gesto de liberación estética y espiritual.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-100">
+                        <span class="text-xs font-bold text-primary uppercase">Concepto Clave: Libertad &amp; Abstracción Zen</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 8. SECCIÓN FINAL VERIFICADA EN VENEZUELA Y LLAMADO AL DIRECTORIO NACIONAL -->
+        <section class="section-dark-card rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden" id="venezuela"><div class="w-full space-y-8 relative z-10"><div class="flex items-center gap-3"><span class="h-8 w-1.5 bg-primary rounded-full"></span><h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Historia &amp; Realidad Nacional Fidedigna</h2></div><div class="w-full"><h3 class="text-3xl md:text-4xl font-black tracking-tight">El Shodo en Venezuela: Tradición, Disciplina y Práctica Nacional</h3><p class="text-slate-300 text-base md:text-lg mt-3 leading-relaxed w-full">En Venezuela, la difusión de la caligrafía japonesa atesora una trayectoria arraigada de intercambio cultural y espiritual impulsada por la Embajada del Japón en Venezuela, asociaciones de la colectividad Nikkei, universidades y prestigiosos centros de artes gráficas y diseño.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2 w-full"><div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 flex flex-col justify-between hover:border-primary/40 transition-all"><div class="space-y-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-3xl">account_balance</span><h4 class="text-lg font-bold text-white">Difusión Diplomática y Cultural</h4></div><p class="text-sm text-slate-300 leading-relaxed">Muestras vivas anuales durante las Semanas del Japón organizadas por la Embajada en Caracas, Valencia y Maracaibo, promoviendo la comprensión del arte caligráfico y la caligrafía tradicional.</p></div><div class="pt-3 border-t border-white/10 text-xs font-bold text-primary uppercase tracking-wider">Intercambio Cultural</div></div><div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 flex flex-col justify-between hover:border-primary/40 transition-all"><div class="space-y-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-3xl">school</span><h4 class="text-lg font-bold text-white">Presencia Académica Universitaria</h4></div><p class="text-sm text-slate-300 leading-relaxed">Universidades como la UCV, la Universidad Simón Bolívar y facultades de humanidades y arte en Mérida (ULA) han acogido talleres magistrales donde el Shodo se estudia como puente hacia la semiótica visual y psicofísica.</p></div><div class="pt-3 border-t border-white/10 text-xs font-bold text-primary uppercase tracking-wider">Cátedras y Seminarios</div></div><div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3 flex flex-col justify-between hover:border-primary/40 transition-all"><div class="space-y-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-3xl">brush</span><h4 class="text-lg font-bold text-white">Demostraciones Shodo Performance</h4></div><p class="text-sm text-slate-300 leading-relaxed">Exhibiciones de caligrafía en gran formato (Big Brush Performance) en convenciones y eventos culturales venezolanos, acercando la energía del trazo espontáneo y el vacío Zen al público general.</p></div><div class="pt-3 border-t border-white/10 text-xs font-bold text-primary uppercase tracking-wider">Práctica en Vivo</div></div></div><div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 w-full shadow-lg"><div><h4 class="text-xl font-bold text-white">¿Deseas aprender Caligrafía Japonesa en Venezuela?</h4><p class="text-sm text-slate-300 mt-1">Explora nuestro directorio nacional con profesores certificados, talleres y escuelas verificadas.</p></div><a class="inline-flex items-center gap-2.5 bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:scale-105 shrink-0" href="D-Shodo.html"><span class="material-symbols-outlined text-lg">stadium</span><span class="">Ver Directorio de Escuelas y Maestros</span></a></div></div></section>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL MONOLÍNEA (Idéntico a template.html y Origami) -->
+    <footer class="bg-black text-white py-4 border-t border-slate-800 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="text-center md:text-left">
+                <span class="font-extrabold text-sm text-white">Kizuna <span class="text-primary">Venezuela</span></span>
+                <span class="text-slate-400 ml-2 hidden sm:inline">| Difusión y preservación de la cultura japonesa en Venezuela.</span>
+            </div>
+            <div class="flex items-center gap-6 text-slate-300 font-semibold"><a class="hover:text-primary transition-colors" href="index.html">Inicio</a><a class="hover:text-primary transition-colors" href="Becas_MEXT.html">Becas MEXT</a></div>
+            <div class="text-slate-500 text-center md:text-right">
+                © 2026 Kizuna Venezuela. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const panel = document.getElementById('mobileMenuPanel');
+        if (btn && panel) {
+            btn.addEventListener('click', () => {
+                panel.classList.toggle('hidden');
+                panel.classList.toggle('flex');
+            });
+        }
+    })();
+</script>
+
+<!-- Carga del Asistente Virtual Kizuna AI -->
+<script src="/chatbot.js"></script>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Washoku: El Arte de la Gastronomía Japonesa | Kizuna Venezuela</title>
+<!-- Google Fonts: Manrope y Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Noto+Serif+JP:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<!-- Tailwind CSS CDN con plugins de formularios y container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#e65100',
+              hover: '#bf360c',
+              light: '#ff8a50'
+            },
+            sumi: '#12161f',
+            washi: '#fdfbf7'
+          },
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            serifjp: ['Noto Serif JP', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="background-and-texture">
+    body {
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjOxMGKgBu3hV74GLTmDrbJ4c1nN6FzXD5uUzpiyz034_PtElCEEp1m76LBue-lUWJzrrKWTbfgF3fOj0ZWItstDnPBbv5g-10r_6WrLlgatWPpokHeZDsMOo7xWUINuEwFP-U9WK9l1MTcD4RHMAxvZHO9imTzjLaU7WLHpRiLb2iju3FZA7iMXAJ_DGecVy_w21JxgRJTIMcUQt6XfMO89rRmMHoc0vv4HTucywzC6HzKhDN3uYQFrtzQwri5xwySbc');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+    .washi-panel {
+      background-color: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .sumi-panel {
+      background-color: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="text-slate-800 font-sans antialiased flex flex-col min-h-screen selection:bg-orange-600 selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 w-full shadow-md backdrop-blur-md bg-slate-950/95 border-b border-slate-800">
+<!-- Barra Principal -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Identidad Kizuna Venezuela -->
+<a class="flex items-center gap-2 group transition-transform duration-200 hover:scale-[1.01]" href="index.html">
+<span class="text-2xl font-black tracking-tight text-white">Kizuna <span class="text-primary font-bold">Venezuela</span></span>
+</a>
+<!-- Menú de Navegación -->
+<nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-300"><a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
+<span class="material-symbols-outlined text-[19px]">home</span> Inicio
+        </a>
+<div class="group relative">
+<button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-sm">folder_open</span>
+        Directorios
+        <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-100 dark:border-slate-700 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-left">
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+<!-- Becas MEXT -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">school</span>
+Becas MEXT
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-700 z-50">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+</div>
+</div>
+<!-- Botón Directorio Específico de la Disciplina -->
+<a class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary text-slate-200 transition-colors py-1" href="D-Gastronomia.html">
+<!--<span class="">Directorio de GO</span>-->
+<span class="material-symbols-outlined text-base">restaurant</span> Directorio Gastronómico
+</a>
+
+
+
+
+
+<!--<a class="hover:text-primary transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700/80 hover:border-slate-500 text-slate-300 hover:text-white text-xs font-semibold tracking-wide uppercase transition-all" href="D-Gastronomia">-->
+<!--<span class="material-symbols-outlined text-base">restaurant</span> Directorio Gastronómico-->
+        </a>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="javascript:history.back()">
+<span class="material-symbols-outlined text-[19px]">arrow_back</span> Volver
+        </a></nav>
+</div>
+<!-- Sub-barra de Migas de Pan (Breadcrumbs) -->
+<div class="bg-slate-900/90 border-t border-slate-800/60 px-4 sm:px-6 lg:px-8 py-2 text-xs text-slate-400">
+<div class="max-w-7xl mx-auto flex items-center gap-2">
+<a class="hover:text-slate-200" href="index.html">Inicio</a>
+<span class="">/</span>
+<a class="hover:text-slate-200" href="index.html#gastronomia">Gastronomía</a>
+<span class="">/</span>
+<span class="text-primary font-medium">Washoku: El Alma de la Gastronomía Japonesa</span>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+<!-- BEGIN: HeroSection -->
+<section class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-slate-900">
+<div class="relative h-[340px] sm:h-[400px] w-full flex items-center justify-center text-center p-8 bg-gradient-to-t from-slate-950 via-slate-900/80 to-slate-950/70" style='background-image: linear-gradient(rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.85) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwqzihWje44ZrzRRJbakOhoOnhghSVhhJQZct8KCNSl6J-F32pp5RzL8uKFsBKveQ7OffZff6oiZZeGscIV5ICdWLtxYOupGIPSI_ZyGvmW_6tl3dFMb0Rz8oZd3e8paaz8IIk1wYr6_8ONokPIzJobbKeuZD0ToFpzHCXQ-oGTC5jrlFeU3jQOSYYhqYy_UHs0ubXJSf3BqwM_mpfdtB7Fs0L1JpWq3LTP5_HD8DInQr7Xc9gGFpxfQ"); background-size: cover; background-position: center center;'>
+<!-- Decoración japonesa sutil -->
+<div class="absolute inset-0 opacity-10 flex items-center justify-center select-none pointer-events-none">
+<span class="font-serifjp text-[12rem] font-black text-white">和食</span>
+</div>
+<div class="relative z-10 max-w-3xl space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-600/20 border border-orange-500/30 text-orange-400 text-xs tracking-widest uppercase font-semibold">
+<span class="">PATRIMONIO CULTURAL INMATERIAL DE LA HUMANIDAD</span>
+<span class="">•</span>
+<span class="font-serifjp">UNESCO</span>
+</div>
+<h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+            Washoku: <span class="text-primary">El Arte y Alma</span> de la Gastronomía Japonesa
+          </h1>
+<p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Más que una técnica culinaria, el <em class="text-white font-medium">Washoku (和食)</em> es una filosofía de veneración a la naturaleza, equilibrio nutricional y armonía estética que celebra la temporalidad y pureza original de los alimentos.
+          </p>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: EssentialDefinition -->
+<section class="washi-panel rounded-3xl p-8 sm:p-10 shadow-xl border border-amber-900/10">
+<div class="text-center max-w-2xl mx-auto mb-8">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">FILOSOFÍA Y FUNDAMENTO</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">¿Qué define al Washoku en esencia?</h2>
+<div class="w-12 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+</div>
+<p class="text-slate-700 text-center max-w-3xl mx-auto mb-10 leading-relaxed">
+        Reconocido en 2013 por la UNESCO, el Washoku reposa sobre la reverencia a los ciclos naturales y el principio fundamental de <strong>Ichiju Sansai (一汁三菜)</strong>: una sopa y tres platos acompañantes, fundamentados en un cuenco de arroz cocido y encurtidos fermentados para lograr una nutrición simétrica y digestiva.
+      </p>
+<!-- Tres Pilares Didácticos -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-2xl bg-white/70 border border-slate-200/80 shadow-sm hover:shadow-md transition">
+<div class="w-12 h-12 rounded-xl bg-orange-100 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">soup_kitchen</span>
+</div>
+<h3 class="font-bold text-slate-900 text-lg mb-2">Ichiju Sansai</h3>
+<p class="text-sm text-slate-600 leading-relaxed">
+            Estructura balanceada con sopa de miso enriquecida, plato principal proteico y dos guarniciones vegetales o de algas que otorgan una densidad nutricional perfecta.
+          </p>
+</div>
+<div class="p-6 rounded-2xl bg-white/70 border border-slate-200/80 shadow-sm hover:shadow-md transition">
+<div class="w-12 h-12 rounded-xl bg-orange-100 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">spa</span>
+</div>
+<h3 class="font-bold text-slate-900 text-lg mb-2">Respeto al Ingrediente</h3>
+<p class="text-sm text-slate-600 leading-relaxed">
+            La intervención del fuego y los aderezos es comedida: se busca ensalzar la frescura intrínseca del mar y la tierra, nunca enmascarar su naturaleza con salsas invasivas.
+          </p>
+</div>
+<div class="p-6 rounded-2xl bg-white/70 border border-slate-200/80 shadow-sm hover:shadow-md transition">
+<div class="w-12 h-12 rounded-xl bg-orange-100 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<h3 class="font-bold text-slate-900 text-lg mb-2">Longevidad y Salud</h3>
+<p class="text-sm text-slate-600 leading-relaxed">
+            Abundante en ácidos grasos Omega-3, fermentos vivos prebióticos y fibra natural vegetal, base científica de la notable longevidad del archipiélago nipón.
+          </p>
+</div>
+</div>
+</section>
+<!-- END: EssentialDefinition -->
+<!-- BEGIN: TastePillars -->
+<section class="bg-slate-900/95 backdrop-blur-md rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-800 text-white">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<span class="text-xs font-bold uppercase tracking-wider text-orange-400">CIENCIA Y ESTACIONALIDAD</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Los Dos Pilares Sagrados del Sabor</h2>
+<div class="w-12 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<!-- Umami (Tarjeta en tono claro) -->
+<div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-md flex flex-col justify-between text-slate-800">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">El Quinto Sabor</span>
+<span class="text-xl font-serifjp font-bold text-amber-800">旨味</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Umami: La Esencia Profunda</h3>
+<p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Identificado por el químico Kikunae Ikeda en 1908, el Umami es producido primordialmente por el glutamato y ribonucleótidos presentes en el alga Kombu, el Katsuobushi (escamas de bonito curado), las setas Shiitake y el Miso fermentado.
+            </p>
+</div>
+<div class="pt-4 border-t border-amber-200/60 text-xs text-amber-900 font-semibold">
+            Dashi (出汁): El caldo base que une y exalta toda la cocina tradicional japonesa.
+          </div>
+</div>
+<!-- Shun (Tarjeta en tono claro) -->
+<div class="p-7 rounded-2xl bg-white border border-slate-200/80 shadow-md flex flex-col justify-between text-slate-800">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full">Estacionalidad</span>
+<span class="text-xl font-serifjp font-bold text-emerald-800">旬</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Shun: La Cúspide Temporal</h3>
+<p class="text-slate-600 text-sm leading-relaxed mb-4">
+<em class="font-medium">Shun (旬)</em> alude a la ventana de 10 a 14 días en que un vegetal, pescado o fruto alcanza su mayor dulzura, grasa y concentración organoléptica. Comer con el calendario es un acto de sintonía con la vida del cosmos.
+            </p>
+</div>
+<div class="pt-4 border-t border-emerald-200/60 text-xs text-emerald-900 font-semibold">
+            Hashiri (el inicio), Shun (el apogeo) y Nagori (la nostálgica despedida del producto).
+          </div>
+</div>
+</div>
+<!-- Las 5 Reglas del Washoku (Tarjeta en tono claro) -->
+<div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-md text-slate-800">
+<h4 class="font-bold text-slate-900 text-base mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">rule</span>
+          Las Reglas del Equilibrio Culinario (Gomi, Goshiki, Gohō)
+        </h4>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+<div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+<span class="font-bold text-primary block mb-1">Gomi (Cinco Sabores)</span>
+<p class="text-slate-600">Dulce, ácido, salado, amargo y umami para estimular armónicamente el paladar.</p>
+</div>
+<div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+<span class="font-bold text-primary block mb-1">Goshiki (Cinco Colores)</span>
+<p class="text-slate-600">Blanco, negro/oscuro, rojo, amarillo y verde para nutrir balanceadamente la vista y el cuerpo.</p>
+</div>
+<div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+<span class="font-bold text-primary block mb-1">Gohō (Cinco Técnicas)</span>
+<p class="text-slate-600">Crudo (corte), hervido al dashi, asado al carbón, frito ligero (tempura) y al vapor.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TastePillars -->
+<!-- BEGIN: CategoriesSection -->
+<section class="washi-panel rounded-3xl p-8 sm:p-10 shadow-xl border border-amber-900/10">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">TRADICIÓN Y VANGUARDIA</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Grandes Categorías Culinarias</h2>
+<div class="w-12 h-1 bg-primary mx-auto mt-3 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Sushi y Sashimi -->
+<div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg flex flex-col justify-between hover:shadow-xl transition text-white group">
+<div>
+<div class="h-48 w-full overflow-hidden">
+<img alt="Sushi y Sashimi tradicional japonés" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmFl3DHfV5_YAmylTpvlgadNLs51aj1xwyn4kV-kAp2GI79yVW--SNtwK3rCZMj2gMs9o_FkfB4wLLNw6et-pCpb0yRWgUyyJGRCFZi-3OHUq-D9V_to-dNX-xDWZFdPqNeAzJSDuzCXqOL8oD_IhZvVs7o0RkvKrMf9vISSx2QJJNbf3XrAkIwBwaHYdbOH0xDE5mruh-Vm8JAMdbeO5B1ntQs_duqJFev7DXJGvFEoTQ22MFSX_54w"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<div class="p-2 bg-orange-600/20 text-orange-400 rounded-lg">
+<span class="material-symbols-outlined text-xl">set_meal</span>
+</div>
+<span class="font-serifjp font-bold text-slate-400">寿司・刺身</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Sushi y Sashimi</h3>
+<p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              La máxima reverencia al corte. La arquitectura del Nigiri depende del <strong class="text-white">Shari</strong> (arroz sazonado a temperatura corporal) y el <strong class="text-white">Neta</strong> (pescado fresco o madurado en técnica Edomae).
+            </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-0">
+<span class="text-[11px] font-bold text-orange-400 uppercase tracking-wider block">Corte Hocho • Wasabi Fresco</span>
+</div>
+</div>
+<!-- Ramen, Soba y Udon -->
+<div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg flex flex-col justify-between hover:shadow-xl transition text-white group">
+<div>
+<div class="h-48 w-full overflow-hidden">
+<img alt="Bowl de ramen japonés apetitoso" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWffwJkRFIlZBJgLsGrJn0bn2xRL_AVvizOTZa1c7y3gIIK97Wb3nShA2PgTSTXx_fxsNHu3P4W5l2HxM9H_gxC_9JayqKIFusBFateo1qFzXWxzs9dSc7kSWHMUh1avz42bkRXYI3HSzmnDfP1c59SNtXaMq7V491-LT2jixlY4DFLgr50D__kjkB2TmgsBol98uuA3Sh3ey_31IcyNocIurz3RGc0SwTS6rUWSq56xnvsR8Av-f41A"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<div class="p-2 bg-orange-600/20 text-orange-400 rounded-lg">
+<span class="material-symbols-outlined text-xl">ramen_dining</span>
+</div>
+<span class="font-serifjp font-bold text-slate-400">拉麺・蕎麦</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Ramen, Soba y Udon</h3>
+<p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              La gran cultura del tazón. Fideos de trigo sarraceno (soba), trigo grueso (udon) y la infinita alquimia regional de caldos de ramen: Tonkotsu, Shoyu, Shio y Miso fermentado por días.
+            </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-0">
+<span class="text-[11px] font-bold text-orange-400 uppercase tracking-wider block">Tare Secreto • Cocción Lenta</span>
+</div>
+</div>
+<!-- Wagashi y Té Matcha -->
+<div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg flex flex-col justify-between hover:shadow-xl transition text-white group">
+<div>
+<div class="h-48 w-full overflow-hidden">
+<img alt="Dulces wagashi y té matcha tradicional" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw1qYpR0xZoRmN6pJJJVcgLJBkY4V-joMyI53SJHwAqssAbr_YnUs5obPIGhEj-jTmhA6DzZzXHgiTE0UyEc6-D4QeshYjhUtKIUN8DvuqG31B1n-aDzoekAZnQWAcVjD7d9SuRwwkq6FR27H8Bz_DDti1wbnjv1Yoi_j_b3kWj8GFvWkKIT4kubhM63cNX5D8C1sr7Gqp8tC7xibHgV8sNhgoeg3onLinjQWCm_aI4n62PS_twAOoLw"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<div class="p-2 bg-orange-600/20 text-orange-400 rounded-lg">
+<span class="material-symbols-outlined text-xl">bakery_dining</span>
+</div>
+<span class="font-serifjp font-bold text-slate-400">和菓子・茶</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Wagashi y Té Matcha</h3>
+<p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              Confitería tradicional moldeada a mano a base de pasta dulce de frijol azuki (anko), arroz glutinoso mochi y agar-agar, concebida para balancear el amargor botánico del té ceremonial.
+            </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-0">
+<span class="text-[11px] font-bold text-orange-400 uppercase tracking-wider block">Chanoyu • Estética Poética</span>
+</div>
+</div>
+<!-- Cultura de Izakaya -->
+<div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg flex flex-col justify-between hover:shadow-xl transition text-white group">
+<div>
+<div class="h-48 w-full overflow-hidden">
+<img alt="Taberna Izakaya tradicional con yakitori y ambiente acogedor" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIaas9dc85heQ9eVdj--fUQpITxwwk4J6Q-AynxWN2PUx2F-Vi4U5ViKkXp9bSMDgNdpzcNHNv0eJXSFHYfjNdkFRWMM_5Kc-Jy1ZEZK9KvZFNaMtQRZf9pKBBVE_NrbIgUCZyYJ6vn5hOunwTHvhJVAAYqNvyxt3wmvdqdpBybDFnLwQDf9ifgJzw8nuZJPIe9z1sp2EUV6Zu3KEeOmSNaWWmSMfTbVM7_xuvcCzQjRFbOAsLAyxdHA"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<div class="p-2 bg-orange-600/20 text-orange-400 rounded-lg">
+<span class="material-symbols-outlined text-xl">local_bar</span>
+</div>
+<span class="font-serifjp font-bold text-slate-400">居酒屋</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Cultura de Izakaya</h3>
+<p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              El corazón social nipón. Brochetas Yakitori al carbón binchotan, Karaage crujiente, Gyoza y platillos diseñados para compartir distendidamente tras la jornada de trabajo.
+            </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-0">
+<span class="text-[11px] font-bold text-orange-400 uppercase tracking-wider block">Binchotan • Confraternidad</span>
+</div>
+</div>
+<!-- El Arte del Nihonshu (Sake) -->
+<div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg flex flex-col justify-between hover:shadow-xl transition text-white group">
+<div>
+<div class="h-48 w-full overflow-hidden">
+<img alt="Servicio tradicional de Nihonshu sake con tokkuri y ochoko" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXI5BjdkXt-yeLnBokqsTixMYmJ-ekndsS9Qssfv6UfqncDwNl2ZeW9Gh6fJy6dVKDlYkKa-VqII7zMVeG7JHx1mUJbfZh7MazV7iuVLu6Wfom2FII8Lnb79Gi_NxWEnkmS5K7H7pval7Mdve-kUD_uQQFTtavKn3OAB1xm8DMFYcwCk4cllPUMTmJn5NlqOfBnHvKT6WsDS3A_1_6XbXa17gl2_-hpJ0GOE8HhFWh1y0_lTZN8VM1rA"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<div class="p-2 bg-orange-600/20 text-orange-400 rounded-lg">
+<span class="material-symbols-outlined text-xl">liquor</span>
+</div>
+<span class="font-serifjp font-bold text-slate-400">日本酒</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">El Arte del Nihonshu</h3>
+<p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              Bebida de arroz fermentado por la acción del hongo koji (Aspergillus oryzae) y agua pura de deshielo. Desde los aromas florales del Daiginjo hasta la robustez terrosa del Junmai.
+            </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-0">
+<span class="text-[11px] font-bold text-orange-400 uppercase tracking-wider block">Polimerización • Seimai Buai</span>
+</div>
+</div>
+<!-- Omotenashi en la Mesa -->
+<div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg flex flex-col justify-between hover:shadow-xl transition text-white group">
+<div>
+<div class="h-48 w-full overflow-hidden">
+<img alt="Hospitalidad tradicional Omotenashi en mesa japonesa" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBggb-zMShcvqR3awV5M-fOapZKQ7N3XIy2-Zf5zchgxR4zonopPMu9NgdkTlCpl69fmK_vft38USn6hNVVEX83YDu1jpLpnwnGsXnO9AlHLF36YhkbWvmjwBNgDqjigdr4unvJeJcgm3JV0MQPZygk8zGlCJocGltbG3ID2px7yJftatDAsVnj9CVHRbmSmBGpvEKPeXiyQyNr6kIbIHbPJxCFTTr88f80p-5Xi7371TKGe_YheNvKgA"/>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<div class="p-2 bg-orange-600/20 text-orange-400 rounded-lg">
+<span class="material-symbols-outlined text-xl">volunteer_activism</span>
+</div>
+<span class="font-serifjp font-bold text-slate-400">おもてなし</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Omotenashi en la Mesa</h3>
+<p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              La calidez de la hospitalidad nipona: anticipar cada necesidad del comensal con sincera humildad, vajillas seleccionadas para cada estación y una reverencia mutua inquebrantable.
+            </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-0">
+<span class="text-[11px] font-bold text-orange-400 uppercase tracking-wider block">Respeto Mutuo • Hospitalidad</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CategoriesSection -->
+<!-- BEGIN: VenezuelaSumiSection -->
+<section class="sumi-panel rounded-3xl p-8 sm:p-12 shadow-2xl border border-slate-800 text-white">
+<div class="max-w-4xl mx-auto space-y-8">
+<div class="text-center space-y-3">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">ENCUENTRO CULTURAL Y BILATERAL</span>
+<h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">La Cultura Gastronómica Japonesa en Venezuela</h2>
+<div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<p class="text-slate-300 text-sm sm:text-base leading-relaxed text-center">
+          La cocina japonesa en Venezuela ha vivido una fascinante transformación histórica: desde los pioneros teppanyaki y las barras de sushi de autor en los años 70 y 80, hasta la maduración de una generación que hoy valora el <strong>ramen artesanal, la pastelería Wagashi contemporánea y el auténtico espíritu Izakaya</strong>. La generosidad del Mar Caribe venezolano (atún aleta amarilla, pargo, camarón blanco) dialoga con la precisión milimétrica de las técnicas culinarias japonesas.
+        </p>
+<!-- Tarjetas de Alto Contraste -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+<div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700">
+<div class="w-10 h-10 rounded-lg bg-orange-600/20 text-orange-400 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">waves</span>
+</div>
+<h4 class="font-bold text-white text-base mb-2">Pesca Nacional y Técnica</h4>
+<p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              El excelente producto marino de las costas venezolanas cortado según las reglas maestras de sashimi por chefs formados con rigor en técnicas de Shokunin.
+            </p>
+</div>
+<div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700">
+<div class="w-10 h-10 rounded-lg bg-orange-600/20 text-orange-400 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">diversity_3</span>
+</div>
+<h4 class="font-bold text-white text-base mb-2">Comunidad Nikkei</h4>
+<p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Familias de origen japonés y profesionales binacionales que han custodiado recetas domésticas auténticas, celebraciones de año nuevo (Osechi) y ferias de Matsuri.
+            </p>
+</div>
+<div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700">
+<div class="w-10 h-10 rounded-lg bg-orange-600/20 text-orange-400 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<h4 class="font-bold text-white text-base mb-2">Vanguardia y Apertura</h4>
+<p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Crecimiento de propuestas especializadas de ramen con caldos fermentados durante 16 horas, panaderías shokupan y barras omakase en Caracas, Valencia y Maracaibo.
+            </p>
+</div>
+</div>
+<!-- Botón a Directorio -->
+<div class="pt-6 text-center">
+<a class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-bold tracking-wide transition-all shadow-lg hover:shadow-orange-900/40 hover:-translate-y-0.5" href="D-Gastronomia.html">
+<span class="material-symbols-outlined text-xl">restaurant_menu</span>
+            Explorar el Directorio Nacional de Gastronomía Japonesa
+          </a>
+</div>
+</div>
+</section>
+<!-- END: VenezuelaSumiSection -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="mt-auto bg-slate-950/95 border-t border-slate-800 text-slate-400 text-xs py-6"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="text-center sm:text-left">
+<span class="font-bold text-slate-200">Kizuna Venezuela</span> | Difusión y preservación de la cultura japonesa en Venezuela.
+</div>
+<div class="flex items-center gap-4">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<span class="text-slate-700">•</span>
+<a class="hover:text-primary transition-colors" href="Becas_MEXT.html">Becas MEXT</a>
+</div>
+<div class="text-center sm:text-right text-slate-500">
+© 2026 Kizuna Venezuela. Todos los derechos reservados.
+</div>
+</div></footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: ChatbotScript -->
+<script data-purpose="chatbot-integration" src="/chatbot.js"></script>
+<!-- END: ChatbotScript -->
+</body></html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html><html lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aikido: El Camino de la Armonía | Kizuna Venezuela</title>
+<meta content="Guía pedagógica e inmersiva sobre el Aikido en Japón y su historia fidedigna en Venezuela: orígenes, O-Sensei Morihei Ueshiba, filosofía Aiki, técnicas fundamentales, pioneros nacionales y directorio de dojos." name="description">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+<script id="tailwind-config">
+       tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d9531e",
+                        "primary-dark": "#b83f12",
+                        "ink": "#0b0f17",
+                        "sumi": "#111827",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #0f172a;
+}
+/* Estilo Sumi-e: Pizarra oscuro solemne / negro carbón traslúcido */
+.sumi-card {
+    background: rgba(11, 15, 23, 0.90);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+}
+/* Variante blanca pulida con sutil relieve táctil marcial */
+.dual-card-light {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(217, 83, 30, 0.16);
+    box-shadow: 0 16px 32px -10px rgba(15, 23, 42, 0.08);
+}
+.kanji-watermark {
+    position: absolute;
+    right: 12px;
+    bottom: -15px;
+    font-size: 10rem;
+    line-height: 1;
+    font-weight: 900;
+    opacity: 0.035;
+    pointer-events: none;
+    user-select: none;
+    font-family: serif;
+}
+</style>
+</head>
+<body class="font-display text-slate-900 transition-colors duration-300 relative min-h-screen flex flex-col" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCG7dPYox2al90GiIwq9WR7d3FstImZA8ItsUlO7g3aYXGJcPy5gsk7jsyTmwiJQTW82nYpGU589FomK_I_kp2lr9xFL2T-BvIntM7LIUj0VQeutj29W3n1QpHnymaGtK3XJEdjLE7jnL_DbLEHnYZuADya8avOV0xM34oKkNmLxYeQKlagxZ8zL6pZEc5nuPfdzbAyZhP8GT-Bowgh1KZM1vTjlr6RN_HSnazQvnosVRhDmg8gItbayEvzTKfp-mS7QEA&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Principal Sticky unificado con Kizuna Venezuela -->
+<header class="sticky top-0 z-50 bg-black text-white shadow-lg border-b border-primary/20">
+<div class="w-full px-6 lg:px-20 py-3.5 flex items-center justify-between border-b border-white/10">
+<a class="flex items-center group" href="index.html">
+<span class="text-xl font-extrabold tracking-tight">Kizuna <span class="text-primary">Venezuela</span></span>
+</a>
+<div class="flex items-center gap-6">
+<!-- Botón Menú Móvil -->
+<button aria-expanded="false" aria-label="Abrir menú" class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<!-- Menú Navegación Desktop -->
+<nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+<a class="hover:text-primary transition-colors flex items-center gap-1 py-1" href="index.html">
+<span class="material-symbols-outlined text-lg">home</span>
+<span class="">Inicio</span>
+</a>
+<!-- Directorios Megamenú -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">folder</span>
+Directorios
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50">
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+<!-- Becas MEXT -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">school</span>
+Becas MEXT
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-700 z-50">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+</div>
+</div>
+<!-- Botón Directorio Específico de la Disciplina -->
+<a class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary text-slate-200 transition-colors py-1" href="D-Aikido.html">
+<span class="material-symbols-outlined text-sm">stadium</span>
+<span class="">Dojos de Aikido</span>
+</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1" href="javascript:history.back()">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span class="">Volver</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Sub-barra de migas de pan contextuales -->
+<div class="bg-black/95 text-xs text-slate-400 border-b border-white/5 py-1.5 px-6 lg:px-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html"><span class="material-symbols-outlined text-sm">home</span><span class="">Inicio</span></a>
+<span class="">/</span>
+<a class="hover:text-primary transition-colors" href="index.html#artes-marciales">Artes Marciales</a>
+<span class="">/</span>
+<span class="text-primary font-bold">Aikido: El Camino de la Armonía</span>
+</div>
+</div>
+</header>
+<!-- Mobile Navigation Drawer -->
+<div class="fixed inset-0 z-[60] hidden" id="mobileMenuPanel">
+<div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="mobileMenuOverlay"></div>
+<div class="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-slate-900 text-slate-100 overflow-y-auto shadow-2xl p-6 flex flex-col justify-between border-l border-slate-800">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-slate-800">
+<span class="font-extrabold text-lg text-white">Menú Kizuna</span>
+<button aria-label="Cerrar menú" class="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-800 text-slate-300" id="mobileMenuClose">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="py-4 space-y-3">
+<a class="flex items-center gap-2 py-2 font-bold hover:text-primary transition-colors text-white" href="index.html">
+<span class="material-symbols-outlined text-primary">home</span> Inicio
+</a>
+<a class="flex items-center gap-2 py-2 font-bold hover:text-primary transition-colors text-white" href="Becas_MEXT.html">
+<span class="material-symbols-outlined text-primary">school</span> Becas MEXT
+</a>
+<a class="flex items-center gap-2 py-2 font-bold text-primary bg-primary/10 px-3 rounded-lg" href="D-Aikido.html">
+<span class="material-symbols-outlined">explore</span> DOJOS DE AIKIDO
+</a>
+<a class="flex items-center gap-2 py-2 font-bold hover:text-primary transition-colors text-slate-300" href="javascript:history.back()">
+<span class="material-symbols-outlined text-primary">arrow_back</span> Volver
+</a>
+<div class="pt-4 border-t border-slate-800">
+<p class="text-xs font-extrabold uppercase tracking-widest text-primary mb-3">Directorios</p>
+<div class="space-y-3 text-sm">
+<div>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Artes Marciales</p>
+<div class="pl-2 space-y-1">
+<a class="block py-0.5 text-primary font-semibold" href="D-Aikido.html">Aikido</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Judo.html">Judo</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Karate.html">Karate</a>
+</div>
+</div>
+<div>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Arte Tradicional</p>
+<div class="pl-2 space-y-1">
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Bonsai.html">Bonsai</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Ceramica.html">Cerámica</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Origami.html">Origami</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Taiko.html">Taiko</a>
+</div>
+</div>
+<div>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Idioma</p>
+<div class="pl-2 space-y-1">
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+</div>
+<div>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Cultura Pop</p>
+<div class="pl-2 space-y-1">
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Anime.html">Anime</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Cosplay.html">Cosplay</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Manga.html">Manga</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Jpop.html">J-Pop</a>
+</div>
+</div>
+<div>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Juegos de Mesa y Gastronomía</p>
+<div class="pl-2 space-y-1">
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-GO.html">Go</a>
+<a class="block py-0.5 text-slate-300 hover:text-primary" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-800">
+<p class="text-xs font-extrabold uppercase tracking-widest text-primary mb-3">Secciones de esta página</p>
+<div class="space-y-1.5 text-sm">
+<a class="block py-1 text-slate-300 hover:text-primary" href="#definicion">Definición Didáctica</a>
+<a class="block py-1 text-slate-300 hover:text-primary" href="#origenes">Historia y O-Sensei</a>
+<a class="block py-1 text-slate-300 hover:text-primary" href="#filosofia">Filosofía Aiki</a>
+<a class="block py-1 text-slate-300 hover:text-primary" href="#tecnicas">Técnicas Fundamentales</a>
+<a class="block py-1 text-slate-300 hover:text-primary" href="#galeria">Galería Técnica</a>
+<a class="block py-1 text-slate-300 hover:text-primary" href="#venezuela">Primeros Pasos en Venezuela</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-800 text-xs text-slate-500 text-center">
+    Kizuna Venezuela © 2026
+</div>
+</div>
+</div>
+<!-- Contenido Principal Inmersivo -->
+<main class="mx-auto w-full max-w-7xl px-6 py-8 lg:py-10 flex-grow space-y-12">
+<!-- 1. HERO SECTION REDUCIDO EN VERTICAL: Panorámico compacto, solemne y refinado (min-h-[240px]-[260px], py-7 a py-9) sin botones -->
+<section class="relative min-h-[240px] md:min-h-[260px] py-7 md:py-9 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden rounded-3xl text-center shadow-2xl border border-white/10" style="background-image: linear-gradient(180deg, rgba(11, 15, 23, 0.72) 0%, rgba(11, 15, 23, 0.94) 100%), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDMmbBGjdhowyDEm9vkRZefHmc3afeBBF7zrRahho8K-mjLyB9yUNLQ5VrAX3I7fFXKHknCeikQl_vkkLlBvZQ9OOBlsW2d1byFZ02nhDR2ClMkIBsHpEV94hoKcIZj0fm9x1jFTrRcUXZWlE3_MD11cPkm_52PJurH3Qm-6Aj8DPODMRSAf1lM6qQacMB8QSH0poFYK9ctMD_E4HK7RksKeR3I-Fmcd5covmOD1Z-efZyp--Rqy_DU3JTlk5mCDOihtVi-neGIYsA&quot;); background-size: cover; background-position: center;">
+<div class="max-w-3xl space-y-3 relative z-10">
+<div class="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-md text-amber-300 px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-widest border border-primary/40">
+<span class="material-symbols-outlined text-sm">sports_kabaddi</span>
+<span class="">Budo Tradicional Japonés (合気道)</span>
+</div>
+<h1 class="text-white text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight">
+Aikido: El Camino de la <span class="text-primary">Armonía</span>
+</h1>
+<p class="text-slate-200 text-sm md:text-base font-normal leading-relaxed max-w-2xl mx-auto">
+Arte marcial moderno que no compite ni destruye: transforma el impulso hostil en una danza circular de control pacífico, equilibrio psicofísico y respeto ético.
+</p>
+</div>
+</section>
+<!-- 2. SECCIÓN 1: DEFINICIÓN DIDÁCTICA CONCRETA Y BREVE (Sumi-e / Contraste Dual) -->
+<section class="sumi-card rounded-3xl p-8 md:p-12 relative overflow-hidden text-white" id="definicion">
+<div class="kanji-watermark text-white">合気道</div>
+<div class="max-w-4xl space-y-6 relative z-10">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Definición Didáctica</h2>
+</div>
+<h3 class="text-2xl md:text-4xl font-extrabold text-white leading-tight">
+¿Qué es el Aikido en esencia?
+</h3>
+<p class="text-slate-300 text-base md:text-lg leading-relaxed">
+El <strong>Aikido</strong> es un <em>Budo</em> (camino marcial japonés) de carácter puramente defensivo. A diferencia de las artes de percusión (como el karate) o de derribo con oposición de fuerza muscular directa, el practicante de aikido <strong>no choca contra el agresor</strong>: se funde con su trayectoria, redirige su inercia y lo conduce hacia proyecciones fluidas o controles articulares seguros.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+<!-- Tarjeta secundaria dual: blanco pulido / contraste Sumi-e -->
+<div class="p-5 rounded-2xl bg-white/95 text-slate-900 border border-primary/20 shadow-lg">
+<div class="flex items-center gap-2 text-primary font-bold text-sm mb-1.5">
+<span class="material-symbols-outlined text-xl">block</span>
+<span class="">Sin Competición</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">No existen torneos ni ganadores: la meta es la autosuperación y la reconciliación mutua.</p>
+</div>
+<div class="p-5 rounded-2xl bg-white/95 text-slate-900 border border-primary/20 shadow-lg">
+<div class="flex items-center gap-2 text-primary font-bold text-sm mb-1.5">
+<span class="material-symbols-outlined text-xl">all_inclusive</span>
+<span class="">Movimiento Circular</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">Transforma ataques lineales violentos en vórtices donde la gravedad y el giro neutralizan al atacante.</p>
+</div>
+<div class="p-5 rounded-2xl bg-white/95 text-slate-900 border border-primary/20 shadow-lg">
+<div class="flex items-center gap-2 text-primary font-bold text-sm mb-1.5">
+<span class="material-symbols-outlined text-xl">diversity_3</span>
+<span class="">Para Todas las Edades</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">No requiere envergadura ni vigor muscular descomunal; la física corporal y el centro (Hara) mandan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 2: HISTORIA Y FUNDADOR EN JAPÓN (Sumi-e Carbón y Acento Óxido) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center sumi-card rounded-3xl p-8 md:p-12" id="origenes">
+<div class="lg:col-span-7 space-y-6">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Historia y Fundador en Japón</h2>
+</div>
+<h3 class="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
+Morihei Ueshiba: El Gran Maestro (O-Sensei)
+</h3>
+<p class="text-slate-300 leading-relaxed text-sm md:text-base">
+Nacido en Tanabe en 1883, <strong>Morihei Ueshiba</strong> dominó disciplinas tradicionales ancestrales japonesas como el <em>Daito-ryu Aiki-jujutsu</em> bajo la tutela del legendario maestro Sokaku Takeda, así como estilos clásicos de lanza (Yari), sable (Kenjutsu) y bastón (Jojutsu).
+</p>
+<p class="text-slate-300 leading-relaxed text-sm md:text-base">
+Tras vivencias transformadoras y el influjo filosófico-espiritual de la corriente Omoto-kyo, Ueshiba comprendió que la victoria marcial obtenida mediante la aniquilación del prójimo dejaba un vacío destructivo. Durante las décadas de 1920 y 1930 destiló su sabiduría marcial en el <strong>Aikido</strong>, fundando el centro mundial <em>Aikikai Hombu Dojo</em> en Tokio.
+</p>
+<div class="bg-primary/15 border-l-4 border-primary p-5 rounded-r-xl">
+<p class="italic text-slate-200 text-sm md:text-base leading-relaxed">
+«El verdadero Budo no consiste en derrotar a un oponente en el combate físico; consiste en guiar al mundo hacia la armonía y hacer de la humanidad una gran familia.»
+</p>
+<span class="block mt-2 text-xs font-bold uppercase tracking-wider text-amber-400">— Morihei Ueshiba (O-Sensei, 1883–1969)</span>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="space-y-3">
+<div class="h-64 rounded-2xl overflow-hidden shadow-xl border border-white/10">
+<img alt="Retrato histórico de O-Sensei Morihei Ueshiba en vestimenta tradicional japonesa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAacd_sJQi7dS9Pz_gIS2tYQLdbwLO3IFQ8gSqOe4Jd7MhP1cU3itMrQ11qzP4-RTEJ4Y-04rLbrg9NimZTsVBP4IThz0fsXW7gPjCIdeuMy_-sNWrB2N2uhs-qQpACVYLDF9S7ImGJEGwiKZDHueJRW6slBqoD_kRJIPfAeFdFchHVoJOxyY1F0fx2TveSTYC-EUZi8un6a0X1IOa-zrku2JKFQyGKY5AHBzp0lKjxT4cHpWPE5RUIUHmiP1aQeXGkqUQIMIRFXss">
+</div>
+<p class="text-xs text-center text-slate-400 font-semibold">O-Sensei Morihei Ueshiba</p>
+</div>
+<div class="space-y-3 pt-6">
+<div class="h-64 rounded-2xl overflow-hidden shadow-xl border border-white/10">
+<img alt="Demostración de proyección fluida de Aikido" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhvUmvsb2hpOdiUSBkvcUekdMNpaf6APwzibtUYsh0cWTRvTWi86yWbPBOoGksHq6yF---OeZO8Hm5aK_PZBZN_esMxLV9EwUDMQNmZUlQpwj9Rre3v5L8D_7DLsbYXG3qoP1gTBnizdtIcGscNQu2DJunzrzLmmmrVAH4A4ulpqIkDKf-C5EjebpndkKPQkLs8PCtIbELHdJlHqePrjgF4FAziNn-kYw81W8LLFNygsKoJwoQVrRd-E6Dr5U8xFIWrzC8W_LwoqY">
+</div>
+<p class="text-xs text-center text-slate-400 font-semibold">Práctica tradicional de Budo</p>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 3: FILOSOFÍA: AI - KI - DO (Contraste Dual: Tarjetas blancas pulidas con acentos terracota) -->
+<section class="dual-card-light rounded-3xl p-8 md:p-12 shadow-xl" id="filosofia">
+<div class="max-w-4xl mx-auto text-center space-y-8">
+<div>
+<span class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Pilares Ontológicos</span>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-2">
+La Tríada Filosófica: Ai - Ki - Do
+</h2>
+<p class="text-slate-600 text-sm md:text-base mt-2">
+El nombre del arte encierra en tres ideogramas (Kanji) la totalidad de su código ético y práctico.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+<!-- Ai -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-md hover:border-primary/40 transition-all">
+<div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl mb-4 shadow-md">
+合
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">AI (Armonía / Unión)</h3>
+<p class="text-sm text-slate-600 leading-relaxed">
+Alineación con el universo y con el compañero. No es sumisión, sino empatía kinestésica: sentir la intención del otro para desactivar la violencia sin responder con odio.
+</p>
+</div>
+<!-- Ki -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-md hover:border-primary/40 transition-all">
+<div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl mb-4 shadow-md">
+気
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">KI (Energía Vital)</h3>
+<p class="text-sm text-slate-600 leading-relaxed">
+La corriente vital que fluye desde el centro de gravedad (<em>Seika Tanden / Hara</em>). En el tatami, el practicante canaliza tanto su propia energía como la del adversario en un circuito sin choques.
+</p>
+</div>
+<!-- Do -->
+<div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-md hover:border-primary/40 transition-all">
+<div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-2xl mb-4 shadow-md">
+道
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">DO (El Camino)</h3>
+<p class="text-sm text-slate-600 leading-relaxed">
+La vía formativa vitalicia. La práctica trasciende las cuatro paredes del dojo para transformarse en una conducta de serenidad, rectitud cívica y fraternidad diaria.
+</p>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-slate-900 text-slate-200 border border-slate-800 text-sm md:text-base leading-relaxed text-center shadow-md">
+<strong class="text-amber-400">Tori y Uke:</strong> En Aikido no hay "enemigos", sino <em>Tori</em> (quien aplica la técnica) y <em>Uke</em> (quien ataca y recibe la proyección mediante una caída fluida o <em>Ukemi</em>). Ambos cooperan activamente para aprender el balance orgánico.
+</div>
+</div>
+</section>
+<!-- SECCIÓN 4: TÉCNICAS FUNDAMENTALES (Elegancia Marcial Sumi-e) -->
+<section class="space-y-8" id="tecnicas">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Fundamentos Técnicos</h2>
+</div>
+<h3 class="text-3xl md:text-4xl font-black text-slate-900 mt-1">
+Familias de Técnicas del Aikido
+</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Tarjeta 1: Tai Sabaki -->
+<div class="sumi-card text-white p-6 rounded-2xl flex flex-col justify-between hover:border-primary/50 transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">directions_walk</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-1">Tai Sabaki</h4>
+<p class="text-xs font-bold text-primary mb-3">Movimientos Corporales y Evasiones</p>
+<p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+Patrones de giro circular (<em>Tenkan</em>) y deslizamiento hacia el frente (<em>Irimi</em>) que desalojan al practicante de la línea directa del golpe o estocada, anulando la agresión en su génesis.
+</p>
+</div>
+<div class="pt-4 mt-4 border-t border-white/10 text-xs font-semibold text-slate-400">
+Base biomecánica universal
+</div>
+</div>
+<!-- Tarjeta 2: Nage Waza -->
+<div class="sumi-card text-white p-6 rounded-2xl flex flex-col justify-between hover:border-primary/50 transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">autorenew</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-1">Nage Waza</h4>
+<p class="text-xs font-bold text-primary mb-3">Técnicas de Proyección Dinámica</p>
+<p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+Proyecciones que aprovechan la aceleración del adversario. Destacan <strong>Shiho-nage</strong> (proyección en cuatro direcciones) e <strong>Irimi-nage</strong> (proyección de entrada al centro del eje).
+</p>
+</div>
+<div class="pt-4 mt-4 border-t border-white/10 text-xs font-semibold text-slate-400">
+Fluidez y balance cinético
+</div>
+</div>
+<!-- Tarjeta 3: Katame / Kansetsu Waza -->
+<div class="sumi-card text-white p-6 rounded-2xl flex flex-col justify-between hover:border-primary/50 transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">lock_open</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-1">Katame Waza</h4>
+<p class="text-xs font-bold text-primary mb-3">Controles e Inmovilizaciones</p>
+<p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+Luxaciones controladas que fijan al suelo sin quebrar articulaciones: <strong>Ikkyo</strong> (primer principio / palanca de brazo), <strong>Nikyo</strong> (segundo principio), <strong>Sankyo</strong> y <strong>Yonkyo</strong>.
+</p>
+</div>
+<div class="pt-4 mt-4 border-t border-white/10 text-xs font-semibold text-slate-400">
+Inmovilización segura
+</div>
+</div>
+<!-- Tarjeta 4: Buki Waza -->
+<div class="sumi-card text-white p-6 rounded-2xl flex flex-col justify-between hover:border-primary/50 transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/20 text-primary border border-primary/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">sports_martial_arts</span>
+</div>
+<h4 class="text-lg font-bold text-white mb-1">Buki Waza</h4>
+<p class="text-xs font-bold text-primary mb-3">Armas Tradicionales de Madera</p>
+<p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+Estudio del <strong>Bokken</strong> (espada de madera), <strong>Jo</strong> (bastón mediano) y <strong>Tanto</strong> (cuchillo simulado). La práctica de armas refina la distancia (<em>Ma-ai</em>) y la postura.
+</p>
+</div>
+<div class="pt-4 mt-4 border-t border-white/10 text-xs font-semibold text-slate-400">
+Postura, ritmo y distancia
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 5: GALERÍA DE IMÁGENES DE TÉCNICAS -->
+<section class="space-y-6" id="galeria">
+<div>
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Inmersión Visual</h2>
+</div>
+<h3 class="text-3xl md:text-4xl font-black text-slate-900 mt-1">
+Galería de Técnicas y Práctica en el Dojo
+</h3>
+<p class="text-slate-600 text-sm max-w-2xl mt-1">
+Momentos de concentración, caída rodada, controles articulares e interacción marcial.
+</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Foto 1 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl border border-slate-800 h-72 bg-slate-950">
+<img alt="Práctica regular de Aikido en el dojo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU4zAMFI-XERJTCTA4DCYpperH2l-3Xo8dS4Q3dANbqgv_V5zoddHWmeLWXfdOcJJU4oT-gfJniAKt2KabfZeGeLlC_6KFho4EeEb2QhCdxbqd9e0YkUlbUjcrhWFaU0-v2gPTds5OHkxK7VV_XMKalTjrjY18ALA8F4gI6EWKYPAK9k_W_-pJeeuZ15wVo1bbwx3r0QHzkNRLZ35ELgF6679z_pWDw0V1ZvZMkDS1KVLvaHHlI9v2Q44rMcFWNOeXT33x1TcVi5g">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">Dojo Tradicional</span>
+<h4 class="text-white font-bold text-base">Práctica en Tatami</h4>
+<p class="text-slate-300 text-xs">Etiqueta (Reigi), concentración y estudio técnico en parejas.</p>
+</div>
+</div>
+<!-- Foto 2 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl border border-slate-800 h-72 bg-slate-950">
+<img alt="Caída Ukemi acrobática y controlada en Aikido" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_wtmE-T8dwrQk71x3QAZuMjeZUTRgI42paZHZdaQKDZl_4r8SY8sbNn6TRoksR4LQeB6BggOSmjH9utEUqPshEbvBHk3q1OBInOklAt4mzyMQ9rOSn1vnF0yIsjLc6NZc5j7fj8bRv30RVdE1hdLckcY3DWQDewA02WsRMh2t6WaFiEsZxHnJSbKUKNkk6QC8ol94KeQf9l50aJZMpyj7QD-ZAc7cLk8KqsvhysWjjhzMtZtri6Av6ii-XsPah-FkVEr012_I554">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">Ukemi Waza</span>
+<h4 class="text-white font-bold text-base">El Arte de la Caída</h4>
+<p class="text-slate-300 text-xs">Aprender a rodar y caer sin sufrir daño, preservando la anatomía.</p>
+</div>
+</div>
+<!-- Foto 3 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl border border-slate-800 h-72 bg-slate-950">
+<img alt="Control de muñeca Kotegaeshi en el tatami" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAirJP9m9azYwi-eyG1ckbaUB9z6eHNPphws4zxzgQlg8qjsv9Jr0fC_WVQBVzN1bAiP923SEoV9T9JLtrvBKqg6y1-wS4ju1XSCVhOhmqzGa6WyoPIrfgXm6RmVxgY68HtMga9eQbE8QM1TNnboxjoGTpngIBJOafDh7H_ify9nL4Oot143at9msZI8xZ0MBhIodeGSgrKl2sxWCduR2dnea57OQtsPpRJzarGz-ji4ziIzJEIcsUa0UOc8MeVgj4FhPq3ZsS8r_k">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">Kansetsu Waza</span>
+<h4 class="text-white font-bold text-base">Control y Torsión</h4>
+<p class="text-slate-300 text-xs">Redirección y control sobre la articulación de la muñeca (Kotegaeshi).</p>
+</div>
+</div>
+<!-- Foto 4 -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl border border-slate-800 h-72 bg-slate-950">
+<img alt="Practicante con Hakama y Keikogi tradicional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZg8O1aKDvJrTeIqcgVmdm4xwy2ne-bwSnWOex0LZrBH9vfzvkgJl6ZWZTwy0CYQQNnyK_eMIqYfJdU7VMmaubO8Pl2h8_z70O8VR-1gfoxdRraqecZHRcdJtRYuRm2ZZkhZn8B5dM11yBSTIT8XwotBuXVGRHaiBklb0mJpLBl8vPgr2iR_HiQBqNxsayjr3uTggve3ckHAHjgLIFsu6sM8ZMnNM_yJX7TKB8-_rrhiDjyWHVOS76EfLOMXnfM6cST5yAHfOZmLQ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent p-5 flex flex-col justify-end">
+<span class="text-xs font-extrabold uppercase tracking-widest text-primary">Keikogi y Hakama</span>
+<h4 class="text-white font-bold text-base">Indumentaria Tradicional</h4>
+<p class="text-slate-300 text-xs">El pantalón amplio (Hakama) simboliza las siete virtudes tradicionales del Budo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 6: PRIMEROS PASOS EN VENEZUELA Y MÁXIMOS EXPONENTES (Contenido Verificado Estricto con Estilo Sumi-e Refinado) -->
+<section class="sumi-card rounded-3xl p-8 md:p-14 text-white shadow-2xl relative overflow-hidden" id="venezuela">
+<div class="max-w-4xl space-y-8 relative z-10">
+<div class="flex items-center gap-3">
+<span class="h-8 w-1.5 bg-primary rounded-full"></span>
+<h2 class="text-xs md:text-sm font-extrabold uppercase tracking-widest text-primary">Historia Nacional Fidedigna</h2>
+</div>
+<div>
+<h3 class="text-3xl md:text-4xl font-black tracking-tight">Primeros Pasos del Aikido en Venezuela y sus Pioneros</h3>
+<p class="text-slate-300 text-base md:text-lg mt-3 leading-relaxed">
+La llegada del Aikido a Venezuela se remonta a finales de la década de 1960 y principios de los años 1970, cuando maestros y practicantes introdujeron las primeras enseñanzas en dojos de Caracas, Valencia, Maracaibo y Barquisimeto, cimentando una comunidad marcial profundamente seria y respetuosa.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
+<h4 class="text-lg font-bold text-white">Llegada y Primeras Escuelas</h4>
+</div>
+<p class="text-sm text-slate-300 leading-relaxed">
+Inicialmente vinculado a círculos de practicantes de Judo y Karate interesados en la defensa no lesiva, el Aikido germinó a través de pioneros nacionales que viajaron a formarse con maestros japoneses e instructores internacionales, fundando los primeros dojos reconocidos en el país.
+</p>
+</div>
+<div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h4 class="text-lg font-bold text-white">Estructura Descentralizada</h4>
+</div>
+<p class="text-sm text-slate-300 leading-relaxed">
+En Venezuela <strong>no existe una federación única centralizada</strong> de Aikido. La disciplina se preserva de manera autónoma a través de dojos tradicionales y asociaciones regionales consolidadas, articuladas directamente con reconocidas organizaciones matrices mundiales.
+</p>
+</div>
+</div>
+<div class="space-y-4 pt-4">
+<h4 class="text-xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">account_tree</span> Principales Líneas de Aval Internacional en Venezuela
+</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+<div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+<div class="text-xs font-bold uppercase tracking-wider text-primary">Línea Matriz Directa</div>
+<h5 class="text-base font-bold text-white">Aikikai Hombu Dojo</h5>
+<p class="text-xs text-slate-300 leading-relaxed">
+Fundación Aikikai (Tokio). La vertiente matriz de O-Sensei más extendida nacionalmente vía instructores certificados y ULAIAF. Destacan la <strong>Organización Venezolana de Aikido (OVA)</strong>, <strong>Dojo Zenbu / Aikikai Caracas</strong> y la <strong>Asociación Sanshinkai de Venezuela</strong>.
+</p>
+</div>
+<div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+<div class="text-xs font-bold uppercase tracking-wider text-primary">Línea Internacional</div>
+<h5 class="text-base font-bold text-white">Shin Kaze Aikido Alliance</h5>
+<p class="text-xs text-slate-300 leading-relaxed">
+Sólida presencia técnica en la región central y occidental venezolana. Destaca como bastión el <strong>Venezuela Aikido Kokyu Ho Dojo</strong> en Maracay (Edo. Aragua), enfocado en la biomecánica fluida y la pedagogía marcial integral.
+</p>
+</div>
+<div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+<div class="text-xs font-bold uppercase tracking-wider text-primary">Línea Tradicional</div>
+<h5 class="text-base font-bold text-white">Kokusai Bujin Renmei</h5>
+<p class="text-xs text-slate-300 leading-relaxed">
+Reconocida filiación técnica con presencia en la Gran Caracas, representada emblemáticamente por centros como el <strong>Aikido Dojo El Paraíso</strong>, además de clubes universitarios y regionales en Carabobo, Lara y Zulia que reciben seminarios de Shihanes.
+</p>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+<div>
+<h4 class="text-xl font-bold text-white">¿Deseas practicar Aikido en Venezuela?</h4>
+<p class="text-sm text-slate-300">Explora nuestro directorio nacional con ubicaciones, teléfonos y redes de dojos verificados.</p>
+</div>
+<a class="inline-flex items-center gap-2.5 bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:scale-105 shrink-0" href="D-Aikido.html">
+<span class="material-symbols-outlined text-lg">stadium</span>
+<span class="">Ver Directorio de Dojos</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Unificado -->
+<footer class="bg-black text-white py-4 border-t border-slate-800 text-xs mt-auto">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
+<div class="flex items-center">
+<span class="font-bold text-slate-200">Kizuna <span class="text-primary">Venezuela</span></span>
+<span class="text-slate-400 ml-2 hidden sm:inline">| Difusión y preservación de la cultura japonesa en Venezuela.</span>
+</div>
+<div class="flex items-center gap-6">
+<a href="index.html" class="hover:text-primary text-slate-300 transition-colors">Inicio</a>
+<a href="Becas_MEXT.html" class="hover:text-primary text-slate-300 transition-colors">Becas MEXT</a>
+</div>
+<span class="text-slate-500">© 2026 Kizuna Venezuela. Todos los derechos reservados.</span>
+</div>
+</footer>
+</div>
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const closeBtn = document.getElementById('mobileMenuClose');
+        const panel = document.getElementById('mobileMenuPanel');
+        const overlay = document.getElementById('mobileMenuOverlay');
+
+        function openMenu() {
+            panel.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            btn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenu() {
+            panel.classList.add('hidden');
+            document.body.style.overflow = '';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+
+        btn && btn.addEventListener('click', openMenu);
+        closeBtn && closeBtn.addEventListener('click', closeMenu);
+        overlay && overlay.addEventListener('click', closeMenu);
+    })();
+</script>
+<!-- Carga del Chatbot -->
+<script defer="" src="/static/js/chatbot.js"></script>
+
+
+
+
+</body></html>

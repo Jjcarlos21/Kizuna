@@ -1,0 +1,526 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Judo: El Camino de la Suavidad | Kizuna Venezuela</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+       tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e65100", // Kizuna Sunset Orange
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0
+    }
+body {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBAAIz3a3AHLgDy6_DjBpAAaFbb2SWS5t3-gOyFT-RLzWF6h1WKL5sNLNQHPWDib5tFx7-AZXj8pyUioQHOz64FngSs-f8vbi1z6xHNtt5-JR49cbS1tmG5NPhYbSYx2gQcU-sYb8UDtk0fNzMG20dAE0Ihjvl4KYI5P9B1RWscWMEa1qE83Qk820M1rHdC8peCm06r6fPoyFnTOpisuvje2YFadIWpdHTIoxVGasqE7AK55PvPBmCSaA);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #0f172a
+    }
+.section-card-bg {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(226, 232, 240, 0.8)
+    }
+.section-dark-card {
+    background-color: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(230, 81, 0, 0.25)
+    }</style>
+</head>
+<body class="font-display text-slate-900 dark:text-slate-100 transition-colors duration-300 relative min-h-screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHiV6Mxudxw3FX3sqTE-3ZetDup4FuQ9NN8FjG7dznNDHOYP_29YEtzcYv9DBb-KhucLNJrw3Q8AXsJzxbkJtzbKeSbYtBSCH6r9UF3qpwE0zc1QUIK6oFyMpi6SzACzT7qzyL0s0ADbh4WaiIUBZJLsSbI3SJRWjJywtnFbVlLHEqFoIeFy8XGN3CWsTq5o8u3xw0qMsYafeFqn2_nXkMeqNpQC3ebHi8YSZVhz9i0cUdy711AvZX8DmorsHGgqSgXfY'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Canónico Kizuna Venezuela -->
+<header class="sticky top-0 z-50 bg-black text-white shadow-lg border-b border-primary/20">
+<div class="w-full px-6 lg:px-20 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<a class="text-xl font-extrabold tracking-tight hover:opacity-90 transition-opacity" href="index.html">
+    Kizuna <span class="text-primary">Venezuela</span>
+</a>
+</div>
+<div class="flex items-center gap-6">
+<!-- Botón Menú Móvil -->
+<button aria-expanded="false" aria-label="Abrir menú" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-white/10 transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Menú Navegación Desktop -->
+<nav class="hidden md:flex items-center gap-7">
+<a class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1" href="index.html">
+<span class="material-symbols-outlined text-lg">home</span>
+    Inicio
+</a>
+<!-- Directorios Menu Dropdown -->
+<div class="group relative">
+<button class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-lg">folder</span>
+    Directorios
+    <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50">
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-800 pb-1">Artes Marciales</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors font-bold text-primary" href="D-Judo.html">Judo</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-800 pb-1">Arte</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-800 pb-1">Idioma</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-800 pb-1">Cultura Pop</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-800 pb-1">Juegos de Mesa</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-800 pb-1">Gastronomía</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+<!-- Becas MEXT Dropdown -->
+<div class="group relative">
+<button class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-lg">school</span>
+    Becas MEXT
+    <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-900 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-800 z-50">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+<div class="h-px bg-slate-100 dark:bg-slate-800 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+<div class="h-px bg-slate-100 dark:bg-slate-800 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+</div>
+</div>
+<a class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1" href="D-Judo.html">
+<span class="material-symbols-outlined text-lg">stadium</span>
+    Escuelas y Asociaciones
+</a>
+<a class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1 ml-2" href="javascript:history.back()">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+    Volver
+</a>
+</nav>
+</div>
+</div>
+<!-- Sub-barra Canónica de Migas de Pan (Breadcrumbs) -->
+<div class="bg-black/95 border-t border-white/10 px-6 lg:px-20 py-1.5 text-xs text-slate-400">
+<div class="max-w-7xl mx-auto flex items-center gap-2">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<span class="">/</span>
+<a class="hover:text-primary transition-colors" href="index.html#artes-marciales">Artes Marciales</a>
+<span class="">/</span>
+<span class="text-primary font-semibold">Judo: El Camino de la Suavidad</span>
+</div>
+</div>
+</header>
+<!-- Área de Contenido Principal -->
+<main class="mx-auto w-full max-w-7xl px-6 py-12 flex-grow space-y-16">
+<!-- 1. Hero Section -->
+<section class="relative min-h-[420px] md:min-h-[500px] flex flex-col items-center justify-center overflow-hidden rounded-2xl bg-cover bg-center p-8 text-center shadow-2xl border border-slate-300 dark:border-slate-800" style="background-image: linear-gradient(rgba(0, 0, 0, 0.55) 0%, rgba(15, 23, 42, 0.94) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvUbVV15aCXQayKmsGsQdZbvWQwd_PpXbR7g2EOdrwfNfvMKcX9UoF5W5ytMwbxYxsJci7wH1NwiwbGV_E4EfKYb_AV5sr1UFNwJrEaWC-xz1t2zLeshwQYfW-FdRUc3i0WQoYS37nQEi_7UbgrAivYy3_xW_8hErfcbIB6ZgH1Ye3xk06IlVImFQJihNBbfFQf77mt7CyhpNxdkbOH8sS8BHlZFSV3o0g5ScIVsAF4cmAiif4dAvs8A');">
+<div class="max-w-4xl space-y-6">
+<span class="inline-block bg-primary/20 text-primary border border-primary/40 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+    Arte Marcial Olímpico Moderno (柔道)
+</span>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+    Judo: <br class="hidden sm:inline"><span class="text-primary">El Camino de la Suavidad</span>
+</h1>
+<p class="text-slate-200 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+    Máxima eficiencia con el mínimo esfuerzo y prosperidad mutua: la revolucionaria pedagogía de Jigoro Kano que ha forjado glorias olímpicas y mundiales para Venezuela.
+</p>
+</div>
+</section>
+<!-- 2. Definición Didáctica y Principios Éticos -->
+<section class="section-dark-card rounded-2xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden"><div class="absolute right-6 bottom-4 select-none opacity-5 text-8xl font-black text-white pointer-events-none">柔道</div>
+<div class="max-w-4xl space-y-6">
+<div class="space-y-2">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Definición Didáctica</span>
+<h2 class="text-3xl md:text-4xl font-black leading-tight text-white">Esencia del Judo</h2>
+<p class="text-slate-300 text-base md:text-lg leading-relaxed pt-1">
+    El Judo (<em>Ju</em> = suavidad, flexibilidad o ceder; <em>Do</em> = camino de vida o superación moral) es un arte marcial formativo y deporte olímpico creado en Japón por el pedagogo <strong>Jigoro Kano</strong>. Enseña que ceder ante la fuerza del adversario para desequilibrarlo dinámicamente es la vía suprema de vencer, transformando el combate en un sistema educativo integral para la convivencia pacífica.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-primary/40 transition-colors flex flex-col justify-between shadow-lg">
+<div>
+<div class="size-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+    Seiryoku Zenyo
+</h3>
+<p class="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Máxima Eficacia</p>
+<p class="text-sm text-slate-300 leading-relaxed">
+    <em>"Máxima eficacia en el uso de la energía física y mental"</em>: alcanzar el mayor efecto positivo posible sin desperdicio innecesario de energía.
+</p>
+</div>
+</div>
+<div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-primary/40 transition-colors flex flex-col justify-between shadow-lg">
+<div>
+<div class="size-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+    Jita Kyoei
+</h3>
+<p class="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Prosperidad Mutua</p>
+<p class="text-sm text-slate-300 leading-relaxed">
+    <em>"Prosperidad y beneficio mutuo"</em>: la superación individual solo adquiere sentido completo cuando repercute en el enriquecimiento y bienestar de la comunidad.
+</p>
+</div>
+</div>
+<div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-primary/40 transition-colors flex flex-col justify-between shadow-lg">
+<div>
+<div class="size-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-2xl">balance</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+    Ju y Kuzushi
+</h3>
+<p class="text-xs text-primary font-semibold uppercase tracking-wider mb-2">Ceder para Desequilibrar</p>
+<p class="text-sm text-slate-300 leading-relaxed">
+    El principio de no resistir frontalmente el empuje del contrincante, sino guiar su propia inercia y fuerza motriz para romper su equilibrio postural.
+</p>
+</div>
+</div>
+</div>
+</div></section>
+<!-- 3. Historia y Orígenes: El Nacimiento del Kodokan -->
+<section class="section-card-bg p-8 md:p-12 rounded-2xl shadow-md space-y-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<div class="h-1 w-10 bg-primary"></div>
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Orígenes e Historia</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight">De las Escuelas de Jujutsu al Instituto Kodokan</h2>
+<p class="text-slate-700 leading-relaxed text-base">
+    En mayo de 1882, el maestro <strong>Jigoro Kano</strong>, tras haber estudiado intensamente las escuelas tradicionales <em>Tenjin Shin'yo-ryu</em> (experta en atemi y luxaciones) y <em>Kito-ryu</em> (maestra en proyecciones y desequilibrios), concluyó que el antiguo Jujutsu requería una profunda refundación pedagógica.
+</p>
+<div class="border-l-4 border-primary pl-6 py-2 italic text-slate-800 bg-primary/5 rounded-r-lg">
+    "El Judo no es únicamente un arte marcial o un deporte; es el principio del máximo uso eficiente del cuerpo y del espíritu, y el camino para perfeccionarse como ser humano." — Jigoro Kano (Fundador del Judo)
+</div>
+<p class="text-slate-700 leading-relaxed text-base">
+    Eliminando técnicas traumáticas y peligrosas de fractura, Kano fundó el <strong>Kodokan</strong> en el templo Eisho-ji con solo nueve alumnos. Estableció el <strong>Randori</strong> (práctica libre segura) y el <strong>Kata</strong> (formas formales) como pilares de aprendizaje, convirtiendo al Judo en la primera disciplina oriental en integrarse a los Juegos Olímpicos modernos en Tokio 1964.
+</p>
+</div>
+<div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+<img alt="Historic artistic portrait of master Jigoro Kano, founder of Judo, seated wearing traditional Japanese black montsuki kimono" class="w-full h-80 lg:h-96 object-cover transition duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD71Tq6MY8P7TgJ_CHSBHDDBMViF3nOLDTSwPyNzBsqPuATcg-06d9Iq_cKI-j7ncO86km-lj_B4e2Xyb9ZWOCMiRxFVubqkiWMi7bONsaD04EzkQ4vGnPWmfTx4p7t6dxqAHYzLQKGcKs1k4mF-dVLqY1GFZRF_g5lh13fW0O6oWn-aE2_9HxGR7coho4OHX-2nPh5LVPCHLCiBoUt-37BiNU4sRHim9qU0zWpRyyHevuGkQkW6kCxdw">
+<div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">
+    Maestro Jigoro Kano (1860 - 1938): Educador humanista y creador del Judo Kodokan
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Los Pilares Técnicos del Judo (Módulos Oscuros Carbón) -->
+<section class="space-y-6">
+<div class="text-center space-y-2">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Estructura Técnica</span>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">Los Pilares Fundamentales del Judo</h2>
+<div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Nage-waza -->
+<div class="section-dark-card p-8 rounded-2xl shadow-lg border border-slate-800 flex flex-col justify-between">
+<div>
+<div class="size-14 bg-primary/15 rounded-xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">trending_up</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Nage-waza (Proyecciones)</h3>
+<p class="text-slate-300 text-sm leading-relaxed">
+    Técnicas de pie para proyectar al rival mediante desequilibrio dinámico (Kuzushi). Se clasifican en técnicas de brazo (Te-waza como Ippon Seoi-nage), de cadera (Koshi-waza como O-goshi) y de pierna (Ashi-waza como Osoto-gari y Uchi-mata).
+</p>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-widest mt-6">Desequilibrio, Rotación &amp; Vuelo</span>
+</div>
+<!-- Katame-waza -->
+<div class="section-dark-card p-8 rounded-2xl shadow-lg border border-slate-800 flex flex-col justify-between">
+<div>
+<div class="size-14 bg-primary/15 rounded-xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">layers</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Katame-waza (Control en Suelo)</h3>
+<p class="text-slate-300 text-sm leading-relaxed">
+    Técnicas de dominio en el tatami (Ne-waza): inmovilizaciones seguras sobre la espalda (Osaekomi-waza como Kesa-gatame), estrangulaciones respiratorias o sanguíneas (Shime-waza) y palancas articulares al codo (Kansetsu-waza).
+</p>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-widest mt-6">Inmovilización, Presión &amp; Sumisión</span>
+</div>
+<!-- Ukemi & Kata -->
+<div class="section-dark-card p-8 rounded-2xl shadow-lg border border-slate-800 flex flex-col justify-between">
+<div>
+<div class="size-14 bg-primary/15 rounded-xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">sports_martial_arts</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">Ukemi &amp; Kata (Caídas y Formas)</h3>
+<p class="text-slate-300 text-sm leading-relaxed">
+    El arte de caer sin sufrir daño es la base obligatoria de todo judoka (Ushiro, Yoko y Mae Ukemi). Junto al Kata (ejecución formal preestablecida), salvaguarda la precisión técnica, la etiqueta dojo y los principios biomecánicos ancestrales.
+</p>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-widest mt-6">Seguridad Corporal &amp; Tradición</span>
+</div>
+</div>
+</section>
+<!-- 5. Galería Dinámica de Técnicas y Tatami -->
+<section class="section-card-bg p-8 md:p-10 rounded-2xl shadow-xl border border-slate-200 space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-2 border-b border-slate-200 gap-2">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Dinamismo y Precisión en el Tatami</span>
+<h2 class="text-2xl md:text-3xl font-black text-slate-900">Momentos de Nage-waza y Ne-waza</h2>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-slate-500 font-semibold">
+<span class="material-symbols-outlined text-base text-primary">photo_camera</span>
+    Galería Técnica
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="rounded-xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800 h-64 group relative">
+<img alt="Cinematic action photography of high-level dynamic Judo Ippon projection throw" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvUbVV15aCXQayKmsGsQdZbvWQwd_PpXbR7g2EOdrwfNfvMKcX9UoF5W5ytMwbxYxsJci7wH1NwiwbGV_E4EfKYb_AV5sr1UFNwJrEaWC-xz1t2zLeshwQYfW-FdRUc3i0WQoYS37nQEi_7UbgrAivYy3_xW_8hErfcbIB6ZgH1Ye3xk06IlVImFQJihNBbfFQf77mt7CyhpNxdkbOH8sS8BHlZFSV3o0g5ScIVsAF4cmAiif4dAvs8A">
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Proyección Ippon: Seoi-nage en Máxima Extensión</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800 h-64 group relative">
+<img alt="Combate Ne-waza inmovilización en suelo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU4zAMFI-XERJTCTA4DCYpperH2l-3Xo8dS4Q3dANbqgv_V5zoddHWmeLWXfdOcJJU4oT-gfJniAKt2KabfZeGeLlC_6KFho4EeEb2QhCdxbqd9e0YkUlbUjcrhWFaU0-v2gPTds5OHkxK7VV_XMKalTjrjY18ALA8F4gI6EWKYPAK9k_W_-pJeeuZ15wVo1bbwx3r0QHzkNRLZ35ELgF6679z_pWDw0V1ZvZMkDS1KVLvaHHlI9v2Q44rMcFWNOeXT33x1TcVi5g">
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Ne-waza: Transición Táctica en Suelo</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800 h-64 group relative">
+<img alt="Concentración y agarre de solapa Kumi-kata" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAirJP9m9azYwi-eyG1ckbaUB9z6eHNPphws4zxzgQlg8qjsv9Jr0fC_WVQBVzN1bAiP923SEoV9T9JLtrvBKqg6y1-wS4ju1XSCVhOhmqzGa6WyoPIrfgXm6RmVxgY68HtMga9eQbE8QM1TNnboxjoGTpngIBJOafDh7H_ify9nL4Oot143at9msZI8xZ0MBhIodeGSgrKl2sxWCduR2dnea57OQtsPpRJzarGz-ji4ziIzJEIcsUa0UOc8MeVgj4FhPq3ZsS8r_k">
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Kumi-kata: Disputa Táctica de Agarre</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800 h-64 group relative">
+<img alt="Tatami oficial de competición de Judo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIq1uZ2uUZPMVzTY0Ack8A4xvSqexqYeacQ23C9ucAeijuLH6v2YfiYwbnidyyHIcbjKBBHAHB0F8f9Rdvv0_EHUZ61XjVZyspeJoMxM7RoruFr3wqFOz5EsD7nDQ4r_4MzFmnTDWFR17Bbn3GUxy6zSaO19j5HVAfHMyv55zDrllLsQxi0R8h3eirEqeqRXCosuusP8hddcP_nxyNdcQoovS525MJ6JBM-_DpVQtrxyHMId1N-yZEPRMO4ixL8MxAN5NQyzX6vVc">
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Tatami Oficial IJF de Competición</div>
+</div>
+</div>
+</section>
+<!-- 6. Salón de la Fama y Campeones Nacionales Verificados -->
+<section class="section-dark-card p-8 md:p-12 rounded-2xl shadow-xl space-y-8">
+<div class="flex items-center justify-between border-l-4 border-primary pl-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Reconocimiento y Legado Deportivo</span>
+<h2 class="text-3xl md:text-4xl font-black text-white mt-1">Salón de la Fama del Judo Venezolano</h2>
+<p class="text-slate-300 text-sm mt-1">Homenaje riguroso a los atletas que han conquistado medallas mundiales, panamericanas y diplomas olímpicos.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Giovanna Blanco -->
+<div class="section-card-bg rounded-2xl overflow-hidden p-6 shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-shadow">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Subcampeona Mundial (+78kg)</span>
+<h3 class="text-2xl font-black text-slate-900 mt-1">Giovanna Blanco</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">award_star</span>
+</div>
+<ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Histórica Medalla de Plata en el Campeonato Mundial de Judo (El Cairo 2005).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Subcampeona en Juegos Panamericanos (Santo Domingo 2003 y Guadalajara 2011).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Doble representante olímpica (Atenas 2004 y Londres 2012).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Pionera absoluta del judo de peso pesado femenino en el continente.</li>
+</ul>
+</div>
+</div>
+<!-- Elvismar Rodríguez -->
+<div class="section-card-bg rounded-2xl overflow-hidden p-6 shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-shadow">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Campeona Panamericana (-70kg)</span>
+<h3 class="text-2xl font-black text-slate-900 mt-1">Elvismar Rodríguez</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">military_tech</span>
+</div>
+<ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Medallista de Oro en Juegos Panamericanos Lima 2019 (-70kg).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Múltiple podio en Grand Slams y World Masters de la International Judo Federation (IJF).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Doble representante olímpica por Venezuela (Río 2016 y Tokio 2020).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Top 10 consolidada del ranking mundial IJF durante múltiples temporadas.</li>
+</ul>
+</div>
+</div>
+<!-- Anriquelis Barrios -->
+<div class="section-card-bg rounded-2xl overflow-hidden p-6 shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-shadow">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Diploma Olímpico Tokio 2020 (-63kg)</span>
+<h3 class="text-2xl font-black text-slate-900 mt-1">Anriquelis Barrios</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+</div>
+<ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Diploma Olímpico Tokio 2020 (5.° lugar mundial en combate por medalla de bronce).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Subcampeona en Juegos Panamericanos Lima 2019 (-63kg).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Múltiples medallas de plata y bronce en Grand Slam Budapest, Tashkent y Antalya.</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Referente de coraje técnico y combate estratégico en la élite internacional.</li>
+</ul>
+</div>
+</div>
+<!-- Willis García -->
+<div class="section-card-bg rounded-2xl overflow-hidden p-6 shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-shadow">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Campeón Panamericano Santiago 2023</span>
+<h3 class="text-2xl font-black text-slate-900 mt-1">Willis García</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">emoji_events</span>
+</div>
+<ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Medalla de Oro en los Juegos Panamericanos Santiago 2023 (-66kg).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Heredero de linaje marcial: hijo del legendario judoka olímpico Willis García (Barcelona 1992).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Medallista panamericano sénior y líder del relevo generacional masculino.</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Consagrado entre los competidores más veloces y contundentes de América.</li>
+</ul>
+</div>
+</div>
+<!-- Ricardo Valderrama -->
+<div class="section-card-bg rounded-2xl overflow-hidden p-6 shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-shadow">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Múltiple Medallista Panamericano</span>
+<h3 class="text-2xl font-black text-slate-900 mt-1">Ricardo Valderrama</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">military_tech</span>
+</div>
+<ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Doble medalla de Bronce en Juegos Panamericanos (Guadalajara 2011 y Toronto 2015).</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Múltiple Campeón Sudamericano y Centroamericano en la categoría de -66kg.</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Representante olímpico en Londres 2012.</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Referente indiscutido de consistencia técnica y disciplina en el tatami nacional.</li>
+</ul>
+</div>
+</div>
+<!-- Ludwig Ortiz & Humberto Fuentes (Pioneros) -->
+<div class="section-card-bg rounded-2xl overflow-hidden p-6 shadow-md border border-slate-200 flex flex-col justify-between hover:shadow-xl transition-shadow">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Pioneros Históricos</span>
+<h3 class="text-2xl font-black text-slate-900 mt-1">Ludwig Ortiz &amp; Pioneros</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">stars</span>
+</div>
+<ul class="space-y-2 text-sm text-slate-700 leading-relaxed">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span><strong>Ludwig Ortiz:</strong> Diploma Olímpico (7.° lugar) en Atlanta 1996 y múltiple medallista panamericano.</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span><strong>Humberto Fuentes:</strong> Medallista histórico en Juegos Panamericanos México 1975 y pionero continental.</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span><strong>Willis García (padre):</strong> Diploma Olímpico (7.° lugar) en los Juegos Olímpicos de Barcelona 1992.</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">check_circle</span>Bases maestras que forjaron la reputación de Venezuela como potencia regional.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Judo en Venezuela e Institucionalidad -->
+<section class="section-dark-card rounded-2xl p-8 md:p-12 text-white shadow-xl">
+<div class="flex flex-col lg:flex-row gap-10 items-center justify-between">
+<div class="flex-1 space-y-4">
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined text-base">stadium</span>
+    Organización e Historia Nacional
+</div>
+<h2 class="text-3xl md:text-4xl font-black">Judo en Venezuela</h2>
+<p class="text-slate-300 text-base leading-relaxed">
+    El Judo es uno de los deportes de combate con mayor tradición de podio en la historia olímpica y panamericana de Venezuela. Desde su llegada al país en la década de 1950 y la creación de la <strong>Federación Venezolana de Judo (FEVEJUDO)</strong>, la disciplina ha mantenido una cantera ininterrumpida de talento en dojos comunitarios y selecciones nacionales.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+<span class="text-primary font-bold text-sm block mb-1">FEVEJUDO (Afiliada a IJF / COV)</span>
+<p class="text-xs text-slate-400">Ente rector oficial que coordina asociaciones estadales, ránking nacional y selecciones rumbo al ciclo olímpico.</p>
+</div>
+<div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+<span class="text-primary font-bold text-sm block mb-1">Centros de Alto Rendimiento</span>
+<p class="text-xs text-slate-400">Gimnasio Gastón Portillo (IND Caracas), Centro Nacional de Judo y dojos históricos en Bolívar, Carabobo, Lara, Zulia y Sucre.</p>
+</div>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-xl font-bold hover:bg-primary/90 transition-all shadow-lg text-sm" href="D-Judo.html">
+<span class="material-symbols-outlined">stadium</span>
+    Ver Directorio de Dojos y Asociaciones de Judo
+</a>
+</div>
+</div>
+<div class="w-full lg:w-96 rounded-xl overflow-hidden border border-slate-700 bg-slate-900/80 shadow-2xl">
+<img alt="Traditional authentic Judo dojo in Venezuela with Venezuelan and Japanese flags, athletes bowing in rei etiquette before training on tatami mats" class="w-full h-64 object-cover contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiJrVdwJqa6Lb4N2X0JULXv6NNINhmh2cVkOKKxdbdJcdFtP5-FEvRMMSriocvIck7GUIgR-W25p-eSCmBkJzDUDQZxTQJyoI2Su9_2cG3J8mjo_nI-Lh3ygEQ1-xQXeOn-xA7kbCawdyhs193JVlrKi2nMk2gtRhN4Re6miAtc3P_ChY7q2GuPEd4PX4HIkB_Q-aS5fmM0X0Lw0RKZTJkQmp4PgxuFoA9la8z5s7t3y2HrhOJ0eQCVA">
+<div class="p-4 bg-slate-950 text-slate-400 text-xs">
+    Tradición de forja deportiva y valores en los dojos venezolanos
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Canónico Kizuna Venezuela -->
+<footer class="bg-black text-white py-4 text-center border-t border-slate-800 mt-auto">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+<div class="text-slate-400 text-left">
+<span class="font-black text-white">Kizuna Venezuela</span> | Difusión y preservación de la cultura japonesa en Venezuela.
+</div>
+<!-- Navegación central sin Directorios -->
+<div class="flex items-center gap-6 text-slate-300 font-semibold">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="hover:text-primary transition-colors" href="Becas_MEXT.html">Becas MEXT</a>
+</div>
+<div class="text-slate-500">
+    © 2026 Kizuna Venezuela. Todos los derechos reservados.
+</div>
+</div>
+</footer>
+</div>
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const panel = document.getElementById('mobileMenuPanel');
+        if (btn && panel) {
+            btn.addEventListener('click', () => {
+                panel.classList.toggle('hidden');
+                panel.classList.toggle('flex');
+            });
+        }
+    })();
+</script>
+<!-- Carga del Chatbot Kizuna -->
+<script src="/chatbot.js"></script>
+
+
+
+</body></html>

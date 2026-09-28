@@ -1,0 +1,657 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Beca MEXT: Idioma y Cultura Japonesa para Nikkei | Kizuna Venezuela</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e65100",
+                        "background-light": "#fdfaf6",
+                        "background-dark": "#1a1614",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCrVn7qNbm5GtXUFylDLJ0oFvt7yvuaxfjhsvi02-xq9QymFYdKtxqDTUH41pfGftn7YUyF-Xk1bbs-9QFl5CJEpdC1I6aAZo8Wwi7aiKdGgeDR-7WyTE2e_A8Yik5XMPnu4bvfvZkvzZhK_QNSjq3uxz72XsxdxpCEJBqD3Jiq0b6QS-3QmDh8g0b9ecEY6lgP_O8v9WudKJoMRJ6ZQsmOSlIl8_hwNO69zBBG1NeJMIfIgIWrIxotZ8obvat2OcrxQ') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            background-color: transparent !important;
+            color: #0f172a;
+        }
+
+        .kanji-watermark {
+            font-family: serif;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-900 transition-colors duration-300 relative min-h-screen" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAKk5UCIHrIcsVKi-zeixZrWfFrcPzGSQyS-B_jifD-QsY9W7OdcvsoEYYOSMOycmpeR5iiiawqzvH-yvgSmu96uTEg8m-bgyjlc3LTNplrXidj-XJn5RzgcmQoKz0ql3i3X9AyLBPvbLjsY6B9U6Me3EKVZYKJr1ar_F99l5H8grrq0Hgvy_V7apPIaYbPuXfV8a4HD5yQn2MielulTzpNxUsxTSBify5Ex5NsbjgD_W0_YtPJFc91EKaPn3Q2dAjsDA&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+    <!-- Header no-fijo -->
+    <header class="bg-black text-white shadow-lg border-b border-primary/20">
+        <div class="px-6 lg:px-20 py-3 flex items-center justify-between border-b border-white/10">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center hover:opacity-90 transition-opacity">
+                    <span class="text-white text-xl font-bold tracking-tight">Kizuna <span class="text-primary">Venezuela</span></span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <!-- Botón Menú Móvil -->
+                <button id="mobileMenuBtn" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-slate-800 text-slate-200 transition-colors" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+
+                <!-- Menú Navegación Desktop -->
+                <nav class="hidden md:flex items-center gap-6 text-slate-200">
+                    <a class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1" href="index.html">
+                        <span class="material-symbols-outlined text-base">home</span>
+                        <span class="">Inicio</span>
+                    </a>
+
+                    <!-- Directorios Megamenú -->
+                    <div class="group relative">
+                        <button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+                            <span class="material-symbols-outlined text-base">folder</span>
+                            <span class="">Directorios</span>
+                            <span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-slate-900 dark:text-slate-100">
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Becas MEXT -->
+                    <div class="group relative">
+                        <button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+                            <span class="material-symbols-outlined text-base">school</span>
+                            <span class="">Becas MEXT</span>
+                            <span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-700 z-50 text-slate-900 dark:text-slate-100">
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+                            <div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+                            <div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+                            <a class="block px-4 py-2 text-sm font-bold text-primary bg-primary/10 rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+                        </div>
+                    </div>
+
+                    <!-- Enlace Volver -->
+                    <a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1 py-1" href="javascript:history.back()">
+                        <span class="material-symbols-outlined text-base">arrow_back</span>
+                        <span class="">Volver</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Migas de Pan -->
+        <div class="bg-black/95 text-xs text-slate-400 py-1.5 px-6 lg:px-20 flex items-center">
+            <nav aria-label="Migas de pan" class="flex items-center gap-1.5">
+                <a class="flex items-center gap-1 hover:text-primary transition-colors" href="index.html">
+                    <span class="material-symbols-outlined text-sm">home</span>
+                    <span class="">Inicio</span>
+                </a>
+                <span class="material-symbols-outlined text-xs text-slate-600">chevron_right</span>
+                <span class="text-primary font-bold">Idioma y Cultura Japonesa para Nikkei</span>
+            </nav>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobileMenuPanel" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 flex-col gap-3 text-slate-200">
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1 flex items-center gap-2" href="index.html">
+                <span class="material-symbols-outlined text-base">home</span> Inicio
+            </a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1 flex items-center gap-2" href="Becas_MEXT.html">
+                <span class="material-symbols-outlined text-base">school</span> Becas MEXT
+            </a>
+            <a class="text-sm font-semibold text-primary py-1 flex items-center gap-2" href="MEXT_Nikkei.html">
+                <span class="material-symbols-outlined text-base">diversity_1</span> Beca Nikkei
+            </a>
+            <div class="h-px bg-slate-800 my-1"></div>
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1 flex items-center gap-2" href="javascript:history.back()">
+                <span class="material-symbols-outlined text-base">arrow_back</span> Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-10 space-y-12 flex-grow">
+
+        <!-- 1. HERO SPLIT SECTION -->
+        <section class="rounded-3xl bg-slate-900 text-white p-6 md:p-8 shadow-2xl border border-slate-800 backdrop-blur-md overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 bg-white/95 text-slate-900 rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl border border-primary/20 backdrop-blur-md flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4 w-fit">
+                        <span class="material-symbols-outlined text-sm">diversity_1</span>
+                        Comunidad Nikkei (日系留学生 · Japanese Studies)
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight text-slate-900">
+                        Beca MEXT: <span class="text-primary">Idioma y Cultura Japonesa</span> para Nikkei
+                    </h1>
+                    <p class="mt-4 text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
+                        El Gobierno del Japón, a través del Ministerio de Educación, Cultura, Deportes, Ciencia y Tecnología (MEXT), convoca anualmente a estudiantes universitarios de la comunidad Nikkei (descendientes japoneses sin nacionalidad japonesa) para profundizar sus conocimientos de lengua, sociedad y cultura durante 1 año en prestigiosas universidades designadas en Japón.
+                    </p>
+                    <div class="mt-6 flex flex-wrap items-center gap-3 text-xs font-bold text-slate-600">
+                        <div class="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+                            <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+                            Duración: 1 Año Académico
+                        </div>
+                        <div class="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+                            <span class="material-symbols-outlined text-primary text-sm">translate</span>
+                            JLPT N4 Inicial / N3 al Viajar
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative w-full h-[320px] lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group bg-slate-800">
+                    <img alt="Estudiantes universitarios Nikkei practicando caligrafía y cultura japonesa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgXAEDOOL-fK3MQ8dx_U4cbw6sJtwd1WfYhseRwqPYvvAKiglZJsDJeswZe84anrAwoNuO7kbQon9Es5UqBE-P9nbGAtRyiMQcyWw-xMXAtJzOQh2K2NruEuGhEJdOedw9qBiu0A_HhLHYZ-PbkfeHCeKQFMvedsomcWTDZfQBWoqeRreYlvfwYnoQrOL8fc1P_lJ5-qgOINedrb92eT5l15QPU9y333zQAdVRFLsr1RkSi3vL504w">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-4">
+                        <span class="text-xs font-semibold text-slate-200 bg-slate-900/80 px-3 py-1.5 rounded-md border border-white/10 backdrop-blur-sm">
+                            Inmersión Cultural y Lingüística en Universidades de Japón
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. BENEFICIOS Y COBERTURA INTEGRAL 100% -->
+        <section class="space-y-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-primary font-bold uppercase tracking-widest text-xs">Financiamiento Total del Gobierno del Japón</span>
+                <h2 class="text-3xl font-black text-slate-900 mt-1">Beneficios y Cobertura Integral</h2>
+                <p class="text-slate-600 text-sm mt-2">Beca completa no reembolsable destinada a garantizar una estadía académica de excelencia sin preocupaciones financieras.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Estipendio -->
+                <div class="bg-white/95 rounded-2xl p-6 md:p-8 shadow-xl border border-slate-200 flex flex-col items-center text-center justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-3xl">payments</span>
+                        </div>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider">Asignación Mensual</span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-1 mb-2">~ ¥117.000 JPY</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Estipendio mensual libre de impuestos destinado a cubrir la totalidad de gastos de alimentación, alojamiento, transporte local y vida cotidiana en Japón.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 w-full text-center">
+                        <span class="text-[11px] font-bold text-slate-500 uppercase">Solvencia Económica Completa</span>
+                    </div>
+                </div>
+
+                <!-- Boletos -->
+                <div class="bg-white/95 rounded-2xl p-6 md:p-8 shadow-xl border border-slate-200 flex flex-col items-center text-center justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+                        </div>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider">Transporte Aéreo</span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-1 mb-2">Pasajes 100% Cubiertos</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Boleto aéreo internacional de ida desde Venezuela (Caracas) hasta el aeropuerto japonés asignado al inicio, y pasaje de regreso al culminar con éxito el año académico.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 w-full text-center">
+                        <span class="text-[11px] font-bold text-slate-500 uppercase">Ruta Internacional Asegurada</span>
+                    </div>
+                </div>
+
+                <!-- Matrícula -->
+                <div class="bg-white/95 rounded-2xl p-6 md:p-8 shadow-xl border border-slate-200 flex flex-col items-center text-center justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider">Costos Académicos</span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-1 mb-2">Exención de Matrícula</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Exoneración total de los derechos de examen de admisión, matrícula universitaria y cuotas mensuales de enseñanza en la universidad japonesa de acogida.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 w-full text-center">
+                        <span class="text-[11px] font-bold text-slate-500 uppercase">Cero Costos Educativos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. DEFINICIÓN DIDÁCTICA Y CONDICIÓN ESPECIAL NIKKEI -->
+        <section class="rounded-3xl bg-slate-900 text-white p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md relative overflow-hidden">
+            <div class="kanji-watermark absolute right-4 bottom-2 text-8xl md:text-9xl font-bold text-white/[0.03] select-none pointer-events-none">
+                日系
+            </div>
+
+            <div class="relative z-10 space-y-6">
+                <div class="border-l-4 border-primary pl-4">
+                    <span class="text-primary font-bold uppercase tracking-widest text-xs">Definición Didáctica y Exención Especial</span>
+                    <h2 class="text-2xl md:text-3xl font-black mt-1">¿En qué consiste el programa de Estudios Japoneses para Nikkei?</h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-sm md:text-base max-w-4xl">
+                    Este programa de <strong>1 año de duración</strong> está orientado a profundizar el dominio de la lengua japonesa y el entendimiento multidisciplinario de los aspectos sociales, históricos y culturales del archipiélago. No es un programa conducente a título de grado en Japón, sino un enriquecimiento formativo y cultural que el estudiante luego integra a su carrera universitaria en Venezuela.
+                </p>
+
+                <div class="bg-primary/10 border-l-4 border-primary p-5 rounded-r-2xl border-t border-b border-r border-primary/20">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5">verified</span>
+                        <div class="space-y-1">
+                            <h4 class="text-white font-bold text-base">Exención Académica Exclusiva para la Comunidad Nikkei</h4>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                                La beca de <em>Japanese Studies</em> está diseñada originalmente solo para estudiantes universitarios que se especializan de forma exclusiva en idioma y cultura japonesa. <strong>Sin embargo, los miembros de la comunidad Nikkei están oficialmente eximidos de este requisito.</strong>
+                            </p>
+                            <p class="text-slate-100 text-xs font-medium pt-1">
+                                Por lo tanto, como aspirante Nikkei, puedes postular aunque curses cualquier carrera universitaria (Ingeniería, Derecho, Medicina, Comunicación, etc.) y puedes omitir los numerales ② y ③ del apartado 1 (3) Antecedentes Académicos (Academic Background) de la guía de aplicación oficial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
+                    <div class="bg-white text-slate-900 p-5 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined text-2xl">translate</span>
+                            </div>
+                            <h3 class="font-black text-base text-slate-900">Perfeccionamiento Lingüístico</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Clases intensivas inmersivas en japonés adaptadas al nivel académico para elevar la competencia hasta niveles avanzados (JLPT N2/N1).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-slate-900 p-5 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined text-2xl">menu_book</span>
+                            </div>
+                            <h3 class="font-black text-base text-slate-900">Sociedad y Herencia Cultural</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Seminarios especializados en historia, literatura, política, economía y tradiciones que reconectan a los descendientes con sus raíces ancestrales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-slate-900 p-5 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined text-2xl">diversity_3</span>
+                            </div>
+                            <h3 class="font-black text-base text-slate-900">Puente Cultural Nikkei</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Formación de líderes juveniles capaces de fortalecer las relaciones bilaterales de amistad, cooperación y difusión cultural entre Venezuela y Japón.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. REQUISITOS Y CRITERIOS DE ELEGIBILIDAD -->
+        <section class="rounded-3xl bg-white/95 text-slate-900 p-8 md:p-12 shadow-xl border border-slate-200">
+            <div class="border-l-4 border-primary pl-4 mb-8">
+                <span class="text-primary font-bold uppercase tracking-widest text-xs">Convocatoria Oficial</span>
+                <h2 class="text-2xl md:text-3xl font-black mt-1">Criterios de Elegibilidad para Aspirantes Nikkei</h2>
+                <p class="text-slate-600 text-sm mt-1">Requisitos fijados por las normativas de la Embajada del Japón en Venezuela y el MEXT.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Ascendencia -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">account_circle</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900">Ser Miembro Nikkei</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Ser descendiente de japoneses (hasta cuarta generación) con residencia en Venezuela y <strong>sin nacionalidad japonesa</strong> al momento de postular.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-primary">
+                        Comunidad Nikkei venezolana
+                    </div>
+                </div>
+
+                <!-- Estatus Universitario -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">school</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900">Estudiante Universitario</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Estar actualmente matriculado como estudiante regular en una carrera de pregrado universitaria en Venezuela, debiendo retornar a culminar los estudios tras el año de beca.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-primary">
+                        Cualquier especialidad universitaria
+                    </div>
+                </div>
+
+                <!-- Nivel de Idioma Inicial -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">language</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900">Nivel de Japonés Requerido</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Poseer como mínimo <strong>un año de estudios de japonés</strong> y un nivel equivalente a <strong>JLPT N4</strong> al momento de la solicitud, dado que la mayoría de clases en Japón son en japonés.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-primary">
+                        Mínimo JLPT N4 para solicitar
+                    </div>
+                </div>
+
+                <!-- Compromiso N3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">trending_up</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900">Compromiso JLPT N3</h4>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            En caso de ser preseleccionado, el becario asume el compromiso formal de continuar estudiando intensivamente y <strong>alcanzar un nivel equivalente al N3 de JLPT</strong> al momento de viajar a Japón.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-bold text-primary">
+                        Nivel N3 requerido para viaje
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CÓDIGOS DE UNIVERSIDADES HABILITADAS PARA NIKKEI -->
+        
+
+        <!-- 6. PASOS PARA POSTULARTE A LA BECA NIKKEI -->
+        <section class="rounded-3xl bg-slate-900 text-white p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md">
+            <div class="space-y-6 mb-8">
+                <div class="border-l-4 border-primary pl-4">
+                    <span class="text-primary font-bold uppercase tracking-widest text-xs">Fase 1: Proceso Oficial ante la Embajada del Japón en Venezuela</span>
+                    <h2 class="text-2xl md:text-3xl font-black mt-1">Pasos para Postularte a la Beca Nikkei</h2>
+                </div>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    El proceso de selección consta de una primera fase local realizada por la Embajada del Japón en Caracas, seguida de una segunda fase de ratificación definitiva a través del MEXT en Tokio. Es indispensable leer íntegramente la guía oficial en inglés o japonés antes de presentar el expediente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Paso 1 -->
+                <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg">1</span>
+                            <span class="material-symbols-outlined text-primary text-2xl">description</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 mb-2">Consignación de Documentos</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Presentar en la Embajada en Caracas (personalmente o vía encomienda) todas las planillas oficiales debidamente llenadas y los recaudos exigidos en la <strong>Sección 7 (Documentos de Solicitud / Application Documents)</strong> de la guía oficial.
+                        </p>
+                        <p class="text-xs text-slate-600 mt-2">
+                            Todo debe entregarse en sobre manila identificado con nombre, apellido y copia legible de cédula. Los documentos no serán devueltos.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100">
+                        <a href="https://www.studyinjapan.go.jp/en/_mt/2025/12/1_2026Application_Guidelines_for_Japanese_Studies_Students.pdf" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline text-xs font-bold inline-flex items-center gap-1">
+                            <span class="">Ver Sección 7 de la Guía</span>
+                            <span class="material-symbols-outlined text-xs">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg">2</span>
+                            <span class="material-symbols-outlined text-primary text-2xl">mail</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 mb-2">Anuncio de Resultados</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            La Embajada revisará exhaustivamente cada expediente consignado. Se informará oportunamente sobre el resultado (si el aspirante ha aprobado la selección documental o no) directamente al correo electrónico registrado en la planilla.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-slate-500">
+                        Notificación por Correo Electrónico
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg">3</span>
+                            <span class="material-symbols-outlined text-primary text-2xl">edit_note</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 mb-2">Examen Escrito de Japonés</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Prueba presencial obligatoria (sin excepción) realizada en Caracas para evaluar el nivel y suficiencia en idioma japonés. La cita exacta se anuncia a los preseleccionados documentales.
+                        </p>
+                        <p class="text-xs text-slate-600 mt-2 font-medium">
+                            Únicamente quienes superen la fase documental podrán presentarse al examen y a la posterior entrevista.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-slate-500">
+                        Prueba Escrita Presencial
+                    </div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg">4</span>
+                            <span class="material-symbols-outlined text-primary text-2xl">record_voice_over</span>
+                        </div>
+                        <h4 class="font-bold text-base text-slate-900 mb-2">Entrevista Personal</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Entrevista presencial obligatoria (sin excepción) en la sede de la Embajada del Japón en Caracas ante el comité diplomático y cultural.
+                        </p>
+                        <p class="text-xs text-slate-600 mt-2">
+                            Los resultados de la primera fase se informarán unos días después por correo electrónico para elevar la postulación formal ante el MEXT en Tokio.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-bold text-slate-500">
+                        Sede Embajada en Caracas
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 p-5 rounded-2xl bg-slate-800/80 border border-slate-700/80 text-xs text-slate-300 flex items-start gap-3">
+                <span class="material-symbols-outlined text-amber-400 text-xl shrink-0 mt-0.5">info</span>
+                <div class="space-y-1">
+                    <strong class="text-white">Nota Importante sobre Convocatorias:</strong>
+                    <p class="leading-relaxed">
+                        Las guías de aplicación y formatos de postulación publicados sirven como referencia fundamental para que los aspirantes preparen su documentación y certificados genealógicos (como el Koseki Tohon) con la debida antelación. Se debe estar atento a la apertura oficial de cada nuevo ciclo por parte de la Embajada del Japón en Venezuela antes de consignar recaudos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. RECURSOS OFICIALES Y DESCARGAS DIRECTAS -->
+        <section class="space-y-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="text-primary font-bold uppercase tracking-widest text-xs">Portales Oficiales</span>
+                <h2 class="text-3xl font-black text-slate-900 mt-1">Recursos Oficiales de Consulta</h2>
+                <p class="text-slate-600 text-sm mt-1">Acceso directo a las fuentes gubernamentales para descargar guías, planillas y catálogos universitarios.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Portal Study in Japan Formatos -->
+                <div class="bg-white/95 rounded-2xl p-6 shadow-xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined">download</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Planillas de Solicitud (Application Forms)</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Descarga la Planilla de Solicitud (Application Form), el Formulario de Preferencia de Asignación Universitaria (Placement Preference Application) y certificados médicos oficiales en Study in Japan (MEXT).
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100">
+                        <a href="https://www.studyinjapan.go.jp/en/smap-stopj-applications-japanese.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline">
+                            <span class="">Descargar Formatos Oficiales</span>
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Application Guidelines PDF -->
+                <div class="bg-white/95 rounded-2xl p-6 shadow-xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined">menu_book</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Guía de Solicitud (Application Guidelines PDF)</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Documento normativo completo en inglés y japonés con los requisitos detallados de la Sección 7 para Japanese Studies.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100">
+                        <a href="https://www.studyinjapan.go.jp/en/_mt/2025/12/1_2026Application_Guidelines_for_Japanese_Studies_Students.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline">
+                            <span class="">Leer Guía de Solicitud</span>
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course Guide MEXT -->
+                <div class="bg-white/95 rounded-2xl p-6 shadow-xl border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined">apartment</span>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-base">Guía de Cursos de Universidades (Course Guide)</h3>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Catálogo maestro de MEXT con las especificaciones académicas de cada una de las universidades japonesas adscritas al programa.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100">
+                        <a href="https://www.mext.go.jp/a_menu/koutou/ryugaku/1423055_00023.htm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline">
+                            <span class="">Ver Universidades en MEXT</span>
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4 border-t border-slate-800 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
+            <div>
+                <span class="font-bold text-slate-200">Kizuna <span class="text-primary">Venezuela</span></span>
+                <span class="text-slate-400 ml-2 hidden sm:inline">| Difusión y preservación de la cultura japonesa en Venezuela.</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="hover:text-primary text-slate-300 transition-colors">Inicio</a>
+                <a href="Becas_MEXT.html" class="hover:text-primary text-slate-300 transition-colors">Becas MEXT</a>
+            </div>
+            <div class="text-slate-500">
+                © 2026 Kizuna Venezuela. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const panel = document.getElementById('mobileMenuPanel');
+        if (btn && panel) {
+            btn.addEventListener('click', () => {
+                panel.classList.toggle('hidden');
+                panel.classList.toggle('flex');
+            });
+        }
+    })();
+</script>
+
+
+</body></html>

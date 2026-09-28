@@ -1,0 +1,752 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Beca MEXT: Formación Especializada (STC - Senshu Gakko) | Kizuna Venezuela</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e65100",
+                        "background-light": "#fdfaf6",
+                        "background-dark": "#1a1614",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0
+    }
+body {
+    background-image: url(https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: #0f172a
+    }
+.section-card-bg {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(230, 81, 0, 0.15)
+    }
+.kanji-watermark {
+    font-family: serif;
+    user-select: none;
+    pointer-events: none
+    }</style>
+</head>
+<body class="font-display text-slate-900 dark:text-slate-100 transition-colors duration-200" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAVnJ261tGEXPfqBNoxT1XCPvtL_BwGCrnstJuKEMajKU5KuNhfpKsT8ijf1XfgzA-AN-njTOnMZXtR2lXO90jweGJYydzQ47VhCPZiqFKxWfK1753VNW4Qwxgum2zSFCH3okJm3C7f38aqhWBIz5DGBvsVqWDiRYyQdZ87kZ5M6Xi4S93jHu7gV0qA_lO4PH49vlZi5PNpGavfIXEsv35G3kranbB-SEs10YYnfdZS5mixlA9k9ouN5vI3xlUk4brpbg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header no-fijo idéntico a MEXT_Posgrado y plantilla base -->
+<header class="bg-black text-white shadow-lg border-b border-primary/20">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<a class="text-white hover:opacity-90 transition-opacity" href="index.html">
+<span class="text-white text-xl font-bold tracking-tight">Kizuna <span class="text-primary">Venezuela</span></span>
+</a>
+</div>
+<!-- Navegación alineada a la derecha -->
+<div class="flex items-center gap-6">
+<!-- Botón Menú Móvil -->
+<button aria-expanded="false" aria-label="Abrir menú" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-slate-800 transition-colors text-slate-200" id="mobileMenuBtn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<nav class="hidden md:flex items-center gap-6 text-slate-200">
+<a class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1" href="index.html">
+<span class="material-symbols-outlined text-base">home</span>
+<span class="">Inicio</span>
+</a>
+<!-- Directorios Megamenú Desplegable Oficial -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">folder</span>
+<span class="">Directorios</span>
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-left">
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+<!-- Becas MEXT Menú Desplegable Oficial -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">school</span>
+<span class="">Becas MEXT</span>
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-700 z-50 text-left">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+<a class="block px-4 py-2 text-sm font-bold text-primary bg-primary/10 rounded-lg transition-colors" href="MEXT_STC.html">STC (Formación Especializada)</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+</div>
+</div>
+<!-- Enlace Volver estándar -->
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1" href="javascript:history.back()">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span class="">Volver</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Barra de Migas de Pan (Breadcrumbs) integrada en el encabezado -->
+<div class="bg-black/95 text-xs text-slate-400 border-t border-white/5 py-1.5 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto flex items-center gap-2">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
+<span class="material-symbols-outlined text-sm">home</span>
+<span class="">Inicio</span>
+</a>
+
+
+<span class="text-slate-600">/</span>
+<span class="text-primary font-bold">Formación Especializada: STC (Senshu Gakko)</span>
+</div>
+</div>
+<!-- Menú Desplegable Móvil -->
+<div class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-6 py-4 flex-col gap-3" id="mobileMenuPanel">
+<a class="text-sm font-semibold hover:text-primary transition-colors py-1 block text-white" href="index.html">Inicio</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors py-1 block text-white" href="Becas_MEXT.html">Becas MEXT</a>
+<a class="text-sm font-semibold text-primary py-1 block" href="MEXT_STC.html">STC (Formación Especializada)</a>
+<div class="h-px bg-slate-800 my-1"></div>
+<a class="text-sm font-semibold hover:text-primary transition-colors py-1 block text-white" href="javascript:history.back()">Volver</a>
+</div>
+</header>
+<!-- Contenido Principal -->
+<main class="mx-auto w-full max-w-7xl px-6 py-10 flex-grow space-y-12">
+<!-- 1. HERO SPLIT CANÓNICO: Marco pizarra oscuro + tarjeta washi clara + fotografía de laboratorio -->
+<section class="rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl p-6 md:p-8 backdrop-blur-md overflow-hidden text-white">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Columna Izquierda: Tarjeta Washi Clara de Alto Contraste -->
+<div class="lg:col-span-7 bg-white/95 text-slate-900 rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl border border-primary/20 backdrop-blur-md flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4 w-fit">
+<span class="material-symbols-outlined text-xs">school</span>
+                        Senshu Gakko (専修学校 · STC)
+                    </div>
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight text-slate-900">
+                        Beca MEXT: <span class="text-primary">Formación Especializada</span> (STC)
+                    </h1>
+<p class="mt-4 text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
+                        Prepárate para una trayectoria profesional de vanguardia en Japón mediante educación técnica y vocacional práctica de clase mundial en Colegios de Formación Especializada (<em>Senshu Gakko</em>). Financiamiento total por el Gobierno del Japón para jóvenes venezolanos.
+                    </p>
+<div class="mt-6 flex flex-wrap items-center gap-3 text-xs font-bold text-slate-700">
+<div class="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+                            Duración: 3 Años (1 Prep. + 2 Especialidad)
+                        </div>
+<div class="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+<span class="material-symbols-outlined text-primary text-sm">translate</span>
+                            1 Año de Japonés Intensivo
+                        </div>
+
+</div>
+</div>
+<!-- Columna Derecha: Fotografía Enmarcada de Estudiantes Técnicos en Laboratorio -->
+<div class="lg:col-span-5 relative w-full h-[320px] lg:h-[380px] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group">
+<img alt="Estudiantes en Colegio de Formación Especializada (Senshu Gakko) en Japón" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeFRdvkCIhayWXnUsusjthwzAOJigY4D3uqgkXQLvwMZ7qfsf-9XFL2RitLwhlz4JlsE5HSi9SnaQPEH9ZBqsNlga-5dXem1eAfZkfVpN9WZbzudUz18ekZnZEan4wCidXghQTn8oVwyIH4T9V2Bi8Yz6VWZJBAh2pUWm0I_f2X2Xq_1Mf6NWCcAGDisgoXNWrePnel4cgO5RvwTqZkXRSf2pl1N3jvsAcayWX1DBCHSpUd0mWrNE1">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+<span class="text-xs font-semibold text-slate-200 bg-slate-900/80 px-3 py-1 rounded-md border border-white/10 backdrop-blur-sm">
+                            Laboratorio Técnico Vocacional en Japón (Senshu Gakko)
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. BENEFICIOS Y COBERTURA INTEGRAL 100% (Ubicado bajo Hero como en KOSEN) -->
+<section class="space-y-6">
+<div class="text-center max-w-3xl mx-auto">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Financiamiento Total del Gobierno del Japón</span>
+<h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Beneficios y Cobertura de la Beca STC</h2>
+<p class="text-slate-600 text-sm mt-1">El programa cubre íntegramente la formación del estudiante en Japón sin costo de reembolso.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Estipendio Mensual -->
+<div class="bg-white/95 rounded-2xl p-6 shadow-lg border border-slate-200 flex flex-col items-center text-center justify-between">
+<div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div>
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Asignación Mensual</span>
+<h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Estipendio Mensual</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                            Aproximadamente <strong>¥117.000 JPY mensuales</strong> (con suplemento regional adicional en ciertas prefecturas) para solventar gastos de alojamiento, alimentación y vida cotidiana.
+                        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 w-full text-center">
+<span class="text-primary font-bold text-xs uppercase tracking-wide">Solvencia Completa</span>
+</div>
+</div>
+<!-- Pasajes Aéreos -->
+<div class="bg-white/95 rounded-2xl p-6 shadow-lg border border-slate-200 flex flex-col items-center text-center justify-between">
+<div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+</div>
+<div>
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Transporte Internacional</span>
+<h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Pasajes Aéreos 100%</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                            Boleto aéreo internacional de ida (Venezuela - Japón) al iniciar el año preparatorio y boleto de regreso al finalizar satisfactoriamente los 3 años de permanencia.
+                        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 w-full text-center">
+<span class="text-primary font-bold text-xs uppercase tracking-wide">Ruta Internacional Cubierta</span>
+</div>
+</div>
+<!-- Matrícula y Colegiaturas -->
+<div class="bg-white/95 rounded-2xl p-6 shadow-lg border border-slate-200 flex flex-col items-center text-center justify-between">
+<div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Exención Académica</span>
+<h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Exención de Matrícula 100%</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                            Exoneración total de las cuotas del examen de admisión, matrícula formal de ingreso y todas las tasas de enseñanza práctica durante la totalidad del programa.
+                        </p>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 w-full text-center">
+<span class="text-primary font-bold text-xs uppercase tracking-wide">Cero Costos Educativos</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. DEFINICIÓN DIDÁCTICA: SENSHU GAKKO (Tarjeta Sumi-e Carbón con Kanji 専修学校) -->
+<section class="relative rounded-3xl bg-slate-900/95 text-white p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md overflow-hidden">
+<!-- Marca de agua kanji auténtica -->
+<div class="kanji-watermark absolute right-4 bottom-2 text-8xl md:text-9xl font-bold text-white/[0.04] select-none pointer-events-none">
+                専修学校
+            </div>
+<div class="relative z-10 space-y-6">
+<div class="border-l-4 border-primary pl-4">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Definición Didáctica</span>
+<h2 class="text-2xl md:text-3xl font-black mt-1">¿Qué es el Sistema Senshu Gakko (STC) en esencia?</h2>
+</div>
+<p class="text-slate-300 leading-relaxed text-base md:text-lg max-w-4xl">
+                    Los <strong>Colegios de Formación Especializada (Senshu Gakko - 専修学校)</strong> constituyen uno de los pilares del dinamismo industrial japonés. Son instituciones educativas de nivel superior orientadas a impartir capacitación técnica y vocacional avanzada directamente articulada con las demandas del mercado laboral global. Al graduarse, los becarios obtienen el título oficial de <strong>Diploma Profesional (Senmonshi - 専門士)</strong>, con una empleabilidad sobresaliente en Japón o la opción de transferirse al 3.er año de una universidad japonesa.
+                </p>
+<!-- Micro-tarjetas blancas de alto contraste -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<div class="bg-white text-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-2xl">handyman</span>
+</div>
+<h3 class="font-black text-lg text-slate-900">Enfoque 100% Práctico</h3>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Formación aplicada en talleres con equipamiento de nivel industrial, proyectos reales de empresas y simuladores de alta tecnología.
+                            </p>
+</div>
+</div>
+<div class="bg-white text-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-2xl">work</span>
+</div>
+<h3 class="font-black text-lg text-slate-900">Alta Empleabilidad en Japón</h3>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Más del 90% de inserción laboral inmediata en empresas japonesas para graduados que dominan las competencias técnicas y el idioma.
+                            </p>
+</div>
+</div>
+<div class="bg-white text-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-2xl">transfer_within_a_station</span>
+</div>
+<h3 class="font-black text-lg text-slate-900">Transferencia Universitaria</h3>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Posibilidad de convalidar los estudios técnicos y continuar hacia el 3.er año de una carrera universitaria de grado (Bachelor) en Japón.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. CRITERIOS DE ELEGIBILIDAD PARA POSTULANTES VENEZOLANOS -->
+<section class="rounded-3xl bg-white/95 text-slate-900 p-8 md:p-10 shadow-xl border border-slate-200">
+<div class="border-l-4 border-primary pl-4 mb-8">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Convocatoria Oficial</span>
+<h2 class="text-2xl md:text-3xl font-black mt-1">Criterios de Elegibilidad para Postulantes Venezolanos</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Nacionalidad y Edad -->
+<div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">badge</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-1">Nacionalidad y Edad</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                        Ser ciudadano venezolano. Por lo general, tener <strong>entre 17 y 24 años de edad</strong> al momento del viaje a Japón (consultar el rango exacto de fechas de nacimiento en la guía anual de la Embajada).
+                    </p>
+</div>
+<!-- Nivel Educativo Concluido -->
+<div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-1">Educación Secundaria Culminada</h3>
+<p class="text-xs text-slate-600 leading-relaxed">Tener Título de Bachiller con notas certificadas o estar cursando el último año antes de viajar a Japón.
+                    </p>
+</div>
+<!-- Competencia en Idiomas -->
+<div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-2xl">translate</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900 mb-1">Competencia Lingüística</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                        Conocimientos de inglés y japonés para presentar las pruebas de selección escrita. Disposición activa y compromiso para estudiar y dominar intensivamente el idioma japonés desde el día uno.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 5. LAS DOS ETAPAS FUNDAMENTALES DEL PROGRAMA STC (Contenido solicitado) -->
+<section class="rounded-3xl bg-slate-900 text-white p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md">
+<div class="border-l-4 border-primary pl-4 mb-8">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Estructura Curricular</span>
+<h2 class="text-2xl md:text-3xl font-black mt-1">STC: Las Dos Etapas Fundamentales de la Beca</h2>
+<p class="text-slate-400 text-sm mt-1">El programa de becas de Specialized Training College (STC) consta de dos etapas estructuradas:</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Etapa 1 -->
+<div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-lg">1</span>
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Duración: 1 Año</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Etapa de Preparación</h3>
+<p class="text-sm text-slate-300 leading-relaxed">
+                            Aquí el becario cursará <strong>estudios intensivos de idioma japonés por un año</strong>, mientras se prepara para presentar los exámenes de admisión en la institución en Japón. Verá clases de materias de nivelación como matemáticas que serán evaluadas rigurosamente en el examen de admisión.
+                        </p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-700/80 text-xs text-slate-400">
+<span class="text-primary font-semibold">Sede:</span> Escuela preparatoria de lengua japonesa asignada por MEXT en Tokio u Osaka.
+                    </div>
+</div>
+<!-- Etapa 2 -->
+<div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-lg">2</span>
+<span class="bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Duración: 2 Años</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Etapa de Entrenamiento Especializado</h3>
+<p class="text-sm text-slate-300 leading-relaxed">
+                            Al aprobar los exámenes de admisión, el estudiante será <strong>asignado a un instituto de entrenamiento técnico especializado (Senshu Gakko)</strong>, donde iniciará su programa de estudios en el área vocacional seleccionada hasta obtener su certificación profesional.
+                        </p>
+</div>
+<div class="mt-6 pt-4 border-t border-slate-700/80 text-xs text-slate-400">
+<span class="text-primary font-semibold">Culminación:</span> Obtención del Diploma Profesional (Senmonshi) con opción de transferencia universitaria.
+                    </div>
+</div>
+</div>
+</section>
+<!-- 6. ESQUEMA REDISEÑADO: POST-GRADUATION CAREER AND JOB SEARCH (Traducción y destaque de ingreso internacional) -->
+<section class="rounded-3xl bg-white/95 text-slate-900 p-8 md:p-12 shadow-xl border border-slate-200">
+<div class="text-center max-w-3xl mx-auto mb-10">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Trayectoria Profesional y Salida Laboral</span>
+<h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Rutas de Acceso y Opciones Laborales al Graduarse</h2>
+<p class="text-slate-500 text-xs font-semibold tracking-wider uppercase mt-1">卒業後の進路、就職 (Trayectorias y Búsqueda de Empleo tras la Graduación)</p>
+</div>
+<!-- Esquema de Flujo Visual Traducido con Ingreso desde el Extranjero Destacado -->
+<div class="max-w-4xl mx-auto bg-slate-50 p-6 md:p-10 rounded-2xl border border-slate-200 shadow-inner">
+<!-- Nivel 1: Vías de Entrada con Ingreso Internacional Resaltado -->
+<div class="mb-6">
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 text-center">Vías de Ingreso a la Formación Especializada</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Destacado: Ingreso desde otro país (Beca MEXT Venezuela) -->
+<div class="bg-gradient-to-br from-primary to-orange-600 text-white p-5 rounded-xl shadow-md border-2 border-orange-400 flex flex-col justify-between relative transform hover:-translate-y-1 transition-transform">
+<div class="absolute -top-2.5 right-3 bg-slate-900 text-amber-300 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full border border-amber-300/40">
+                                Ruta de la Beca MEXT
+                            </div>
+<div>
+<div class="flex items-center gap-2 mb-1.5 font-black text-sm">
+<span class="material-symbols-outlined text-lg">public</span>
+<span class="">Ingreso Directo desde el Extranjero</span>
+</div>
+<p class="text-xs text-white/90 leading-relaxed">
+                                    Postulación directa desde Venezuela a través del proceso de selección de la Embajada del Japón.
+                                </p>
+</div>
+</div>
+<!-- Vía 2: Desde institución de idioma en Japón -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm text-slate-800 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1.5 font-bold text-sm text-slate-900">
+<span class="material-symbols-outlined text-primary text-lg">translate</span>
+<span class="">Institución de Idioma Japonés</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                    Ingreso tras cursar estudios de japonés en una academia acreditada en Japón.
+                                </p>
+</div>
+</div>
+<!-- Vía 3: Desde universidad o junior college -->
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm text-slate-800 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1.5 font-bold text-sm text-slate-900">
+<span class="material-symbols-outlined text-primary text-lg">account_balance</span>
+<span class="">Universidad o Junior College</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                    Ingreso por redirección o complemento vocacional desde una universidad japonesa.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Flecha conectora central -->
+<div class="flex justify-center my-3 text-primary">
+<span class="material-symbols-outlined text-3xl animate-bounce">arrow_downward</span>
+</div>
+<!-- Núcleo Central: Senshu Gakko -->
+<div class="bg-slate-900 text-white p-6 rounded-2xl text-center shadow-lg border border-slate-800 max-w-xl mx-auto my-2">
+<span class="inline-block bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                        Núcleo Académico
+                    </span>
+<h3 class="text-xl md:text-2xl font-black text-white">Colegio de Formación Especializada (Senshu Gakko)</h3>
+<p class="text-xs text-slate-300 mt-1">2 Años de Formación Técnica y Práctica Intensiva · Título Oficial de Senmonshi</p>
+</div>
+<!-- Flecha conectora a destinos -->
+<div class="flex justify-center my-3 text-primary">
+<span class="material-symbols-outlined text-3xl">arrow_downward</span>
+</div>
+<!-- Nivel 3: Destinos y Futuro Profesional -->
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 text-center">Trayectorias tras la Graduación (卒業後の進路)</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-white p-5 rounded-xl border border-slate-200 text-center shadow-sm hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">work</span>
+<h4 class="font-bold text-sm text-slate-900">Empleo en Japón</h4>
+<p class="text-xs text-slate-600 mt-1">Inserción laboral inmediata en empresas japonesas en el área técnica.</p>
+</div>
+<div class="bg-white p-5 rounded-xl border border-slate-200 text-center shadow-sm hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">school</span>
+<h4 class="font-bold text-sm text-slate-900">Transferencia Universitaria</h4>
+<p class="text-xs text-slate-600 mt-1">Paso al 3.er año de una universidad en Japón para obtener la Licenciatura.</p>
+</div>
+<div class="bg-white p-5 rounded-xl border border-slate-200 text-center shadow-sm hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">business_center</span>
+<h4 class="font-bold text-sm text-slate-900">Empleo o Emprendimiento Global</h4>
+<p class="text-xs text-slate-600 mt-1">Retorno a Venezuela o proyección internacional con estándar técnico japonés.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. MÚLTIPLES FORMAS DE MATRICULARTE Y EXPANDIR TU CARRERA (4 Bloques con Imágenes Profesionales Libres y Badges) -->
+<section class="rounded-3xl bg-slate-900 text-white p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md space-y-8">
+<div class="text-center max-w-3xl mx-auto">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Áreas de Especialización Vocacional</span>
+<h2 class="text-2xl sm:text-3xl font-black text-white mt-1">
+                    Múltiples Formas de Estudiar y Expandir tus Opciones Profesionales
+                </h2>
+<p class="text-slate-300 text-sm mt-1">
+                    (Many different ways to enroll and expand your career options) · Explora las cuatro grandes familias profesionales de la formación especializada japonesa.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Bloque 1: Potenciar el Talento Artístico y Cultural -->
+<div class="bg-white/95 rounded-2xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="h-56 overflow-hidden relative">
+<img alt="Gastronomía, pastelería y artes culinarias en Japón" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAet3gBrvQebG1LeVupS6n-fa3VbPfE6cD-s1HNPT8kr5kN0sIvsNeI10YMc2E2BIxAjjSSl_f0N5LUsgfIcqhZ6SOL-c2wODuIkIMz6a1jD2ZXHA3dh_FVe0kMSr8sLRYW1QszvwMRt5_jZ25HEJj4HHdhcgUirSVa7JH6wuBRaOiSBV35T-moEmC1ArURM4_KzhKFD49PTQ8XbGOy1v2OyUguMYfooeJ7b2eSRn4dnSZO3wuUD-oZ">
+<div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full border border-white/10">
+                                Cultura, Cuidado Personal y Nutrición
+                            </div>
+</div>
+<div class="p-6 md:p-8 space-y-4">
+<h3 class="text-xl font-bold text-slate-900">¿Deseas aprovechar al máximo tu talento?</h3>
+<p class="text-xs font-bold text-primary uppercase tracking-wide">Cultura y Educación General, Cuidado Personal y Nutrición, Moda y Economía Doméstica</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                ¿Buscas un empleo relacionado con la moda, la cosmetología o las artes culinarias? ¿Deseas aplicar tu talento en música, diseño o idiomas? Los colegios de formación técnica especializada cultivan tu vocación para que adquieras competencias avanzadas y conocimientos indispensables para la industria creativa.
+                            </p>
+<!-- Badges de áreas -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Cosmetología</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Diseño</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Cocina, Pastelería y Panadería</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Música</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Idiomas</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Cuidado Animal</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Moda</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Cine y Radiodifusión</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bloque 2: Crear y Construir Tecnologías (Tecnología y Agricultura) -->
+<div class="bg-white/95 rounded-2xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="h-56 overflow-hidden relative">
+<img alt="Estudiantes de ingeniería automotriz y robótica en taller japonés" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgunAK2xC99-8Ij6nfloHFdJbuNrg-299rtndicy8jrKR5E5bsz9F1rece9mbqAw-fLcxmmDv6Z10uA3K4hEeRvULB2J2Sa1JfcXdI152gz791EAhTKWfgZQ2o5Jq7CaW4WbYrL2aJIJSu43z0FEXu9DypKFDJ8SeCIDFn3KSd5hZGGk4EtKKjz7QK3x1tSzUG1-RXX2Z4aSQf252rz3D9cDjhuVqJEnh-w3xLezA1StkbFSVBz9jB">
+<div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full border border-white/10">
+                                Tecnología y Manufactura (Monozukuri)
+                            </div>
+</div>
+<div class="p-6 md:p-8 space-y-4">
+<h3 class="text-xl font-bold text-slate-900">¿Quieres un trabajo creando cosas?</h3>
+<p class="text-xs font-bold text-primary uppercase tracking-wide">Tecnología, Ingeniería y Agricultura</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                ¿Te apasionan los automóviles? ¿Deseas fabricar robots? Esta área es perfecta para todo interesado en la electricidad, la mecatrónica o la agricultura tecnológica. Recibirás entrenamiento de última generación que te permitirá dominar habilidades de vanguardia y forjar una sólida carrera en manufactura.
+                            </p>
+<!-- Badges de áreas -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Procesamiento de Información (TI)</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Mecánica Automotriz</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Ingeniería Civil y Arquitectura</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Electricidad y Electrónica</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bloque 3: Gestión y Negocios Profesionales -->
+<div class="bg-white/95 rounded-2xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="h-56 overflow-hidden relative">
+<img alt="Estudiantes de hospitalidad y negocios en Tokio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi_e9U1UwfX4H-zIfcYXTgFBmOJBWmY5i9JpmUh0XxReFuQf8XOdd-Yq7TGTHPB1XnZnuire7X30nQ2MI4Rk-8BZzpSSuuJ3sa0WouqOxY1X-vBr1lgo8vloS9B2d1RknmO9-PsU85bh4M8dKmq0j31AJPeUTjp5QRZDiGAalimIRGXLeZ2lxo93WNXHGu-153b89wwNzlQcdRy0Crj___zbAcXq4fd5PMNGvFU61bAsj7NuxsqZyI">
+<div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full border border-white/10">
+                                Negocios y Hospitalidad
+                            </div>
+</div>
+<div class="p-6 md:p-8 space-y-4">
+<h3 class="text-xl font-bold text-slate-900">¿Quieres ser un profesional de los negocios?</h3>
+<p class="text-xs font-bold text-primary uppercase tracking-wide">Administración, Comercio y Turismo</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                Adquiere conocimientos actualizados en tecnologías de la información, contabilidad, gestión corporativa y hotelería, diseñados para formar profesionales versátiles y resolutivos para las economías globales. Un graduado técnico en negocios encontrará amplias oportunidades de empleo en corporaciones de todo el mundo.
+                            </p>
+<!-- Badges de áreas -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Negocios Internacionales</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Turismo y Hospitalidad</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Contabilidad y Teneduría</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Sistemas de Información</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Comercio</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Gestión Empresarial</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Secretariado Ejecutivo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bloque 4: Ayudar al Prójimo (Salud, Educación y Bienestar) -->
+<div class="bg-white/95 rounded-2xl overflow-hidden shadow-xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="h-56 overflow-hidden relative">
+<img alt="Estudiantes de enfermería y cuidado clínico en hospital japonés" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArswo7D6LN2-m4g5GMvmgfyvH4hKeEReH8wajkcBzbYBm8rNNe1Z1oI4zaEWavIyb7_XN8Shme1s2_C-jlNXCdh6VpiEpMakri3JypDwQHimkmSDtbeVQdlgSljEa7VZaOzncoVIDhX0oCJLxe-6D4Xy8JaUxT82RBZd28ysHYn70nJOI_k9hMRakMEGcDxmavbkT-csCgbbpjO_jevJhlQ_5g0FoILI0_KBPMeEAFlDFrM8YOKAd7">
+<div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full border border-white/10">
+                                Salud, Cuidado y Bienestar Social
+                            </div>
+</div>
+<div class="p-6 md:p-8 space-y-4">
+<h3 class="text-xl font-bold text-slate-900">¿Quieres ayudar a los demás?</h3>
+<p class="text-xs font-bold text-primary uppercase tracking-wide">Atención Médica, Educación y Bienestar Social</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                ¿Deseas apoyar a otras personas y servir a la comunidad? ¿Quieres trabajar en el campo de la atención médica o la enfermería geriátrica? Los colegios especializados te brindan las competencias necesarias para obtener certificaciones habilitantes en Japón, fomentando al mismo tiempo tu vocación de servicio y sentido de responsabilidad humana.
+                            </p>
+<!-- Badges de áreas -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Enfermería</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Terapia Física y Ocupacional</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Higiene Dental</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Terapia de Judo (Judo Seifuku)</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200">Cuidado y Bienestar Social</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. PASOS PARA POSTULARTE A LA BECA STC (Con los 4 Enlaces Oficiales) -->
+<section class="rounded-3xl bg-white/95 text-slate-900 p-8 md:p-12 shadow-xl border border-slate-200">
+<div class="border-l-4 border-primary pl-4 mb-8">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Proceso Oficial ante la Embajada del Japón en Venezuela</span>
+<h2 class="text-2xl md:text-3xl font-black mt-1">Pasos para Postularte a la Beca STC</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Paso 1: Guía de Aplicación -->
+<div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-sm">1</span>
+<span class="material-symbols-outlined text-primary text-2xl">menu_book</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2">Revisión de la Guía Oficial</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                            Revisa cuidadosamente el contenido completo de la guía de aplicación oficial (Guidelines), redactada en inglés y japonés.
+                        </p>
+</div>
+<div class="mt-6 pt-3 border-t border-slate-200">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline" href="https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_SpecializedTraining_E.pdf" target="_blank">
+<span class="">Descargar Guidelines (PDF)</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Paso 2: Planillas y Documentación -->
+<div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-sm">2</span>
+<span class="material-symbols-outlined text-primary text-2xl">description</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2">Llenado y Entrega de Planillas</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                            Presentar las planillas correspondientes debidamente llenas y la documentación requerida antes del cierre ante la Embajada (se acepta encomienda).
+                        </p>
+</div>
+<div class="mt-6 pt-3 border-t border-slate-200">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline" href="http://www.studyinjapan.go.jp/en/smap-stopj-applications-specialized.html" target="_blank">
+<span class="">Formatos y Majors MEXT</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Paso 3: Portal Informativo PTC -->
+<div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-sm">3</span>
+<span class="material-symbols-outlined text-primary text-2xl">language</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2">Portal Oficial de Colegios PTC</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                            Consulta la oferta completa de instituciones vocacionales, colegios de entrenamiento y perfiles de egreso en el portal oficial japonés.
+                        </p>
+</div>
+<div class="mt-6 pt-3 border-t border-slate-200">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline" href="https://study-japan-ptc.jp/top_en.html" target="_blank">
+<span class="">Portal Study-Japan PTC</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Paso 4: Preparación de Exámenes -->
+<div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-sm">4</span>
+<span class="material-symbols-outlined text-primary text-2xl">assignment</span>
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-2">Preparación para Exámenes</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+                            Prepararse para los exámenes escritos aplicados en Caracas (asignaturas obligatorias: japonés, inglés y matemáticas).
+                        </p>
+</div>
+<div class="mt-6 pt-3 border-t border-slate-200">
+<a class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline" href="https://www.studyinjapan.go.jp/en/planning/scholarship/application/examination/" target="_blank">
+<span class="">Exámenes Anteriores MEXT</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Nota de convocatoria oficial en tono tenue idéntica a MEXT_Posgrado y KOSEN -->
+<div class="mt-8 p-4 rounded-xl bg-primary/10 border-l-4 border-primary text-xs md:text-sm text-slate-800 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">info</span>
+<p class="">
+<strong>Nota importante sobre la convocatoria:</strong> Los formatos y directrices mostrados corresponden al período de postulación más reciente. Los aspirantes deben verificar las fechas exactas del cronograma oficial publicado anualmente por la Embajada del Japón en Venezuela (habitualmente entre abril y mayo) y esperar a que se anuncie la nueva convocatoria y se publique el nuevo material oficial antes de consignar su expediente.
+                </p>
+</div>
+</section>
+<!-- 9. TESTIMONIOS INSPIRADORES DE EX-BECARIOS VENEZOLANOS (Consistencia didáctica) -->
+
+<!-- 10. LLAMADO A LA ACCIÓN: DESCARGA DE PLANILLAS -->
+
+</main>
+<!-- Footer Monolínea Canónico idéntico a template.html y MEXT_Posgrado -->
+<footer class="bg-black text-white py-4 border-t border-slate-800 text-xs mt-auto">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Bloque Izquierdo: Marca e Identidad -->
+<div class="text-center md:text-left">
+<span class="font-extrabold text-sm text-white">Kizuna <span class="text-primary">Venezuela</span></span>
+<span class="text-slate-400 ml-2 hidden sm:inline">| Difusión y preservación de la cultura japonesa en Venezuela.</span>
+</div>
+<!-- Bloque Centro: Navegación Esencial sin iconos -->
+<div class="flex items-center gap-6 text-slate-300 font-semibold">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="hover:text-primary transition-colors" href="Becas_MEXT.html">Becas MEXT</a>
+</div>
+<!-- Bloque Derecho: Copyright Oficial -->
+<div class="text-slate-500 text-center md:text-right">
+                © 2026 Kizuna Venezuela. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+</div>
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const panel = document.getElementById('mobileMenuPanel');
+        if (btn && panel) {
+            btn.addEventListener('click', () => {
+                panel.classList.toggle('hidden');
+                panel.classList.toggle('flex');
+            });
+        }
+    })();
+</script>
+<!-- Carga del Asistente Virtual Kizuna AI -->
+<script src="/chatbot.js"></script>
+
+
+
+
+
+</body></html>

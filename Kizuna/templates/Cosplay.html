@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+<script id="tailwind-config">
+       tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f43625",
+                        "sunset": "#e65100"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0
+    }
+body {
+    background-image: url(https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #0f172a
+    }
+.section-card-bg {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(244, 54, 37, 0.15)
+    }
+.section-dark-card {
+    background-color: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    }</style>
+<title>Cosplay: El Arte de la Transformación | Kizuna Venezuela</title>
+</head>
+<body class="font-display text-slate-900 dark:text-slate-100 transition-colors duration-300 relative min-h-screen" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA4kigi8hblf1HoE8_0m-PmqliVcroVfOFacRJwyoNz66MggxV72419_BOVxegDH1-5JNe0dFlXz-xBGc9qiFcX1QJGWV796DScYVWNdqp-4YXPMpeRcxGZllHVl9jKHcCWHZ98g6Xur_O_7fhXMO923K82W6qqdwwBSPSVa3aNUhzKlkjQY9eKSBEqpWJGWQVsM_wb0KYJ2GIiswbjaeUMq-vvne90AwMUVfjvM_qrK4TvLCKjov-8KxVbJ2WyyXARf4s&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed;">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header Canónico Unificado Kizuna Venezuela -->
+<header class="sticky top-0 z-50 bg-black text-white shadow-lg border-b border-primary/20">
+<!-- Barra Principal de Navegación -->
+<div class="w-full px-6 lg:px-20 py-3 flex items-center justify-between border-b border-white/10">
+<!-- Logotipo tipográfico limpio a la izquierda sin íconos previos -->
+<a class="group flex items-center" href="index.html">
+<span class="text-xl font-extrabold tracking-tight text-white group-hover:opacity-90 transition-opacity">
+                    Kizuna <span class="text-primary">Venezuela</span>
+</span>
+</a>
+<div class="flex items-center gap-6">
+<!-- Botón Menú Móvil -->
+<button aria-expanded="false" aria-label="Abrir menú" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-white/10 transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Menú Navegación Desktop -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1.5" href="index.html">
+<span class="material-symbols-outlined text-[18px]">home</span>
+<span class="">Inicio</span>
+</a>
+<!-- Menú Desplegable de Directorios con ícono 'folder' -->
+<div class="group relative">
+<button class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-[18px]">folder</span>
+<span class="">Directorios</span>
+<span class="material-symbols-outlined text-xs transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-slate-900 dark:text-slate-100">
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html"> Cosplay</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+<!-- Menú Desplegable Becas MEXT con ícono 'school' -->
+<div class="group relative">
+<button class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span class="">Becas MEXT</span>
+<span class="material-symbols-outlined text-xs transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-900 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-800 z-50 text-slate-900 dark:text-slate-100">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+<div class="h-px bg-slate-200 dark:bg-slate-800 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+<div class="h-px bg-slate-200 dark:bg-slate-800 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+</div>
+</div>
+<!-- Botón Contextual al Directorio de la Disciplina -->
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1.5" href="D-Cosplay.html"><span class="material-symbols-outlined text-[18px]">stadium</span><span class="">Comunidades y Creadores</span></a>
+<!-- Enlace Volver -->
+<a class="text-sm font-semibold hover:text-primary transition-colors flex items-center gap-1" href="javascript:history.back()">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="">Volver</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Sub-barra Limpia de Migas de Pan (Breadcrumbs) -->
+<div class="bg-black/95 text-xs text-slate-400 py-1.5 px-6 lg:px-20 border-t border-white/5 flex items-center justify-between">
+<nav aria-label="Ruta de navegación" class="flex items-center gap-2">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<span class="text-slate-600">/</span>
+<a class="hover:text-primary transition-colors" href="index.html#cultura-pop">Cultura Pop</a>
+<span class="text-slate-600">/</span>
+<span class="text-slate-200 font-semibold">Cosplay: El Arte de la Transformación</span>
+</nav>
+</div>
+<!-- Menú Desplegable Móvil -->
+<div class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 flex-col gap-3" id="mobileMenuPanel">
+<a class="text-sm font-semibold hover:text-primary transition-colors py-1.5 flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-[18px]">home</span> Inicio
+            </a>
+<a class="text-sm font-semibold hover:text-primary transition-colors py-1.5 flex items-center gap-2" href="D-Cosplay.html">
+<span class="material-symbols-outlined text-[18px]">stadium</span> Comunidades y Creadores
+            </a>
+<a class="text-sm font-semibold hover:text-primary transition-colors py-1.5 flex items-center gap-2" href="Becas_MEXT.html">
+<span class="material-symbols-outlined text-[18px]">school</span> Becas MEXT
+            </a>
+<a class="text-sm font-semibold hover:text-primary transition-colors py-1.5 flex items-center gap-2" href="javascript:history.back()">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span> Volver
+            </a>
+</div>
+</header>
+<!-- Contenido Principal -->
+<main class="mx-auto w-full max-w-7xl px-6 py-10 flex-grow space-y-16">
+<!-- Hero Section -->
+<section class="relative min-h-[420px] md:min-h-[480px] flex flex-col justify-end overflow-hidden rounded-3xl p-8 md:p-14 shadow-2xl border border-slate-300/40 dark:border-slate-800" style="background-image: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.55) 55%, rgba(0, 0, 0, 0.3) 100%), url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCZMgGZHvOpECkhkFcMgfsh6BCgfmkgrvC0pdGVnz8MprIFHhrNhfix6RSJyQHp27H6KTBDGMto1T-N5lzb9SO3bz82EEwjf9GkArjXLEE38UgiHi3He7kgWMMefKlCGb6JCYvpq2JFIwptQFLuF4pbvzvvgKMgxcSgtZBr94r-Qr2hM1oZcosjeM5E8AQmHs8lCxtCbTGmNIt9JrB3n2vV3eLNKJwbXWTR3S3N9LsBsYYxVBs_O3majw&quot;); background-size: cover; background-position: center center;">
+<div class="max-w-3xl space-y-4 relative z-10">
+<div class="inline-flex items-center gap-2 bg-primary text-white text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-full tracking-widest shadow-md">
+<span class="material-symbols-outlined text-sm">masks</span> Cultura Geek &amp; Arte Escénico
+                </div>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                    Cosplay: El Arte de la Transformación
+                </h1>
+<p class="text-slate-200 text-lg md:text-xl font-light leading-relaxed">
+                    Un viaje a través del arte, la confección minuciosa y la interpretación teatral que une al fandom de la cultura japonesa en Venezuela y el mundo.
+                </p>
+
+</div>
+</section>
+<!-- Historia y Filosofía del Costume Play -->
+<section class="section-card-bg rounded-3xl p-8 md:p-12 shadow-lg border border-slate-300 dark:border-slate-800" id="filosofia">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 space-y-6">
+<div class="flex items-center gap-2">
+<span class="h-1 w-10 bg-primary rounded-full"></span>
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Orígenes y Filosofía</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+                        De la Confección al Escenario: El Puente de la Ficción
+                    </h2>
+<div class="space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed text-base">
+<p class="">
+                            El término <strong>Cosplay</strong> es una contracción de las palabras en inglés <em>costume</em> (disfraz) y <em>play</em> (juego/interpretación). Fue acuñado en <strong>1984 por el periodista japonés Nobuyuki Takahashi</strong> tras asistir a la convención Worldcon en Los Ángeles, maravillado por la dedicación de los fanáticos al encarnar a sus personajes predilectos.
+                        </p>
+<p class="">
+                            A diferencia del simple acto de disfrazarse en festividades tradicionales, el cosplay combina la <strong>creación artesanal de vestuarios complejos</strong> con el <strong>roleplay escénico</strong>. El practicante (<em>cosplayer</em>) recrea los ademanes, posturas y voz del personaje, estableciendo un diálogo interactivo y respetuoso con la comunidad.
+                        </p>
+<div class="border-l-4 border-primary bg-primary/5 p-5 rounded-r-xl">
+<p class="italic text-slate-800 dark:text-slate-200 text-sm md:text-base font-medium">
+                                "El cosplay no consiste únicamente en portar un traje terminado; es el proceso de resolver desafíos de ingeniería textil y convertirse en el puente vivo entre la narrativa gráfica y la realidad."
+                            </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700 relative group">
+<img alt="Cosplayer trabajando en confección de vestuario" class="w-full h-auto aspect-square object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPOs5VeBqEzl23_9N0whajOXYNyq1cv0fqRANRPEAXQI3_08jcah7JTDE6oOMhOiaXoUGposBTuRoZNFVOqjFw657VtLHIU8vLz19UtaJBS93uIOR4icLWKwguKmGZUqVC94CMasKvQtLa_XmoUTG2WeFTe2TlSv7FtthSKX20jME4GCDygED98zR-uQeSuvrqo8vKKU26t62hHvToFZqreXuqAWzDm8gQzlIsHPn8dxCaTryA2ea0g6pIEInHox6-S_g8b96nm7M">
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-4 text-white text-xs">
+<span class="font-bold text-primary">Artesanía Textil:</span> Estudio milimétrico de patrones, caídas de tela y acabados de sastrería.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Craft: Disciplinas Técnicas Fundamentales -->
+<section class="space-y-8">
+<div class="text-center max-w-3xl mx-auto space-y-3">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold uppercase px-3 py-1 rounded-full tracking-wider">
+<span class="material-symbols-outlined text-sm">handyman</span> Disciplinas Técnicas
+                </div>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">
+                    The Craft: Los Pilares de la Creación
+                </h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm md:text-base">
+                    La elaboración de un cosplay de nivel profesional integra conocimientos prácticos de múltiples oficios artísticos e industriales.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><!-- Pilar 1 --><div class="bg-slate-900/90 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-slate-800 border-t-4 border-t-primary flex flex-col justify-between"><div><div class="size-14 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4"><span class="material-symbols-outlined text-3xl">content_cut</span></div><h3 class="text-xl font-bold text-white mb-2">Sastrería y Costura</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Manejo de patrones, escalado anatómico, forrado, colocación de cremalleras invisibles, corsetería y bordado minucioso para emular vestimentas tradicionales y fantásticas.</p></div><div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-bold text-primary uppercase tracking-wider">Estructura Textil</div></div><!-- Pilar 2 --><div class="bg-slate-900/90 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-slate-800 border-t-4 border-t-primary flex flex-col justify-between"><div><div class="size-14 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4"><span class="material-symbols-outlined text-3xl">construction</span></div><h3 class="text-xl font-bold text-white mb-2">Prop Making</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Construcción de armas, escudos y armaduras empleando foamy o goma EVA de alta densidad, termoformado con calor, impresión 3D (PLA/PETG), masillas epóxicas y resina.</p></div><div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-bold text-primary uppercase tracking-wider">Utilería y Accesorios</div></div><!-- Pilar 3 --><div class="bg-slate-900/90 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-slate-800 border-t-4 border-t-primary flex flex-col justify-between"><div><div class="size-14 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4"><span class="material-symbols-outlined text-3xl">face_6</span></div><h3 class="text-xl font-bold text-white mb-2">Maquillaje y Efectos FX</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Contorno facial para redefinir facciones, simulación de envejecimiento, aplicación de prótesis de látex o silicona, cicatrices artísticas y lentes de contacto cosméticos homologados.</p></div><div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-bold text-primary uppercase tracking-wider">Caracterización Facial</div></div><!-- Pilar 4 --><div class="bg-slate-900/90 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-slate-800 border-t-4 border-t-primary flex flex-col justify-between"><div><div class="size-14 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-4"><span class="material-symbols-outlined text-3xl">brush</span></div><h3 class="text-xl font-bold text-white mb-2">Wig Styling</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Corte geométrico, crimping térmico para dar volumen, teñido con tintas alcoholadas y fijación arquitectónica con adhesivos para recrear peinados que desafían la gravedad.</p></div><div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-bold text-primary uppercase tracking-wider">Estilismo Capilar</div></div></div>
+</section>
+<!-- Interpretación y Performance Escénico -->
+<section class="section-dark-card rounded-3xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/30">
+<span class="material-symbols-outlined text-sm">theater_comedy</span> El 50% de la Experiencia
+                    </div>
+<h2 class="text-3xl md:text-4xl font-black leading-tight">
+                        Performance y Roleplay: El Personaje en Escena
+                    </h2>
+<p class="text-slate-300 leading-relaxed text-sm md:text-base">
+                        Tener el mejor traje no es suficiente para la evaluación competitiva. Un verdadero cosplayer profundiza en la personalidad, el tono vocal, la postura corporal y la psicología del personaje. Sobre la tarima, la presentación se convierte en una puesta en escena teatral donde la sincronización musical, el drama o el humor cobran vida.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+<div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">visibility</span>
+<h4 class="font-bold text-sm">Presencia Escénica</h4>
+<p class="text-xs text-slate-400 mt-1">Dominio del espacio y conexión magnética con la audiencia.</p>
+</div>
+<div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">camera_front</span>
+<h4 class="font-bold text-sm">Pose y Fotografía</h4>
+<p class="text-xs text-slate-400 mt-1">Capacidad para recrear las poses canónicas del anime o videojuego.</p>
+</div>
+<div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+<span class="material-symbols-outlined text-primary text-2xl mb-1">psychology</span>
+<h4 class="font-bold text-sm">Estudio Psicológico</h4>
+<p class="text-xs text-slate-400 mt-1">Fidelidad a las motivaciones, gestos y mirada del personaje.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="rounded-xl overflow-hidden shadow-lg border border-slate-700">
+<img alt="Cosplayer en presentación dramática" class="w-full h-full object-cover aspect-[3/4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChoMD68qHQi7f5x9hXzfT4En8WcIkfFQvmawuj-i9oojJixVHy2zXM3suID3uCT3hldgBjW2BGKza5hzPjw2ZueDnqeOV7ejL9P3vcGw16YU7u-dPhH8_qESLrzKTlGvdLGs-zptPMjnbf-0Ro_eaw-jBSK0mx953QbVE7uagXLpoGZU46xg7IfxDYLsxw9Mz_XubECznWb1xZLPsEowg2m66r5e-yl-VZnWsigEY4hUjuz4kZUb2LSg">
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg border border-slate-700 mt-6">
+<img alt="Cosplayer posando en sesión fotográfica dinámica" class="w-full h-full object-cover aspect-[3/4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzKVnKMseFuQNGN5LDJbpwNIjnYVercVhkmnZX6BejSfr2SL5YVZzUs_UpPjm5zRiSMotFH3aUtsBPrEDVA7sB7rcyAvKQBqdWSMPSDO8KGCF69RgkwcX1kB3rT_dzGataZINfXeS9jZTR8OsS95JXjV17lO7DBmJjtXGO9TyspFxjKiH7RgvO3vtYQ4C9lLanp8uuOUyizifsS_mWNhQjYyQTFhiF3VP0gQrxGN1EyPaojxswEdI_SQ">
+</div>
+</div>
+</div>
+</section>
+<!-- Criterios Internacionales y Nacionales de Evaluación Competitiva -->
+<section class="section-dark-card rounded-3xl p-8 md:p-12 shadow-xl border border-slate-800 space-y-8"><div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6"><div><div class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-2"><span class="material-symbols-outlined text-sm">military_tech</span> Estándar de Competencia</div><h2 class="text-3xl md:text-4xl font-black text-white">Criterios de Evaluación en Concursos Oficiales</h2></div><p class="text-xs md:text-sm text-slate-400 max-w-md">Los parámetros adoptados en las convenciones nacionales siguen los reglamentos globales de certámenes internacionales de cosplay.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 shadow-sm"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span><span class="text-xs font-black text-slate-400">40% APROX</span></div><h3 class="text-lg font-bold text-white mb-2">Craftsmanship</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Calidad de confección, limpieza de puntadas, ausencia de adhesivo visible, acabados de pintura, texturas aplicadas y resistencia mecánica del traje.</p></div><div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 shadow-sm"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-primary text-3xl">verified</span><span class="text-xs font-black text-slate-400">25% APROX</span></div><h3 class="text-lg font-bold text-white mb-2">Accuracy (Fidelidad)</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Cotejo directo con la imagen de referencia oficial. Proporciones exactas de accesorios, tonalidades de color y correspondencia de detalles anatómicos.</p></div><div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 shadow-sm"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-primary text-3xl">theater_comedy</span><span class="text-xs font-black text-slate-400">25% APROX</span></div><h3 class="text-lg font-bold text-white mb-2">Performance y Guion</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Calidad de la interpretación dramática, edición de audio/video de apoyo, uso de utilería interactiva y emoción transmitida durante el tiempo reglamentario.</p></div><div class="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 shadow-sm"><div class="flex items-center justify-between mb-4"><span class="material-symbols-outlined text-primary text-3xl">star</span><span class="text-xs font-black text-slate-400">10% APROX</span></div><h3 class="text-lg font-bold text-white mb-2">Impacto Visual y Wow Factor</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Innovación en soluciones técnicas (luces LED programadas, alas mecánicas desplegables, transformaciones en vivo) e impacto general ante el jurado.</p></div></div></section>
+<!-- Cosplay en Venezuela: Comunidad, Resiliencia y Eventos Clave -->
+<section class="section-card-bg rounded-3xl p-8 md:p-12 shadow-lg border border-slate-300 dark:border-slate-800 space-y-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-6">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold uppercase px-3 py-1 rounded-full tracking-wider">
+<span class="material-symbols-outlined text-sm">location_on</span> Escena Nacional
+                    </div>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+                        Cosplay en Venezuela: Ingenio, Pasión y Comunidad
+                    </h2>
+<p class="text-slate-700 dark:text-slate-300 text-sm md:text-base leading-relaxed">
+                        La comunidad cosplay en Venezuela cuenta con una trayectoria de más de dos décadas. Caracterizada por una extraordinaria capacidad inventiva ante los retos de abastecimiento de materiales especializados, los cosplayers venezolanos han sabido transformar recursos cotidianos en piezas de alta categoría estética y técnica, logrando representación destacada en competiciones latinoamericanas e internacionales.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border-l-4 border-primary shadow-sm">
+<h4 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">event_available</span>
+                                Caracas Comic Con
+                            </h4>
+<p class="text-xs text-slate-600 dark:text-slate-400">
+                                Uno de los eventos pioneros de mayor convocatoria en la capital venezolana, albergando torneos de cosplay individuales y grupales con jurados especializados.
+                            </p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border-l-4 border-primary shadow-sm">
+<h4 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-1.5 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">diversity_3</span>
+                                Encuentros Regionales y Bazares
+                            </h4>
+<p class="text-xs text-slate-600 dark:text-slate-400">
+                                Espacios comunitarios como ferias anime en Valencia, Maracaibo, Barquisimeto y reuniones fotográficas en jardines botánicos para intercambio de técnicas.
+                            </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 bg-slate-950 text-white p-7 rounded-2xl flex flex-col justify-between shadow-xl border border-slate-800">
+<div class="space-y-4">
+<div class="size-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">format_quote</span>
+</div>
+<p class="text-lg font-bold leading-relaxed text-slate-200 italic">
+                            "El creador de cosplay venezolano investiga, adapta y fabrica sus propias herramientas; no espera a que todo exista en el mercado."
+                        </p>
+</div>
+<div class="mt-8 pt-4 border-t border-slate-800">
+<p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Directorio Kizuna Venezuela</p>
+<a class="mt-3 inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-colors w-full justify-center" href="D-Cosplay.html">
+<span class="material-symbols-outlined text-sm">stadium</span>
+<span class="">Ver Comunidades de Cosplay</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Guía Didáctica para Principiantes -->
+<section class="section-dark-card rounded-3xl p-8 md:p-12 shadow-xl border border-slate-800 space-y-8"><div class="text-center max-w-3xl mx-auto space-y-2"><span class="text-primary font-bold uppercase tracking-widest text-xs">Orientación Práctica</span><h2 class="text-3xl md:text-4xl font-black text-white">Guía de Inicio: Tus Primeros Pasos en el Cosplay</h2><p class="text-slate-400 text-sm">Recomendaciones metodológicas para emprender tu primer proyecto sin abrumarte en el proceso.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4"><div class="flex flex-col items-center text-center p-6 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-sm"><div class="size-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 font-black text-2xl">01</div><h3 class="text-lg font-bold text-white mb-2">Selección Estratégica</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Elige un personaje con el que tengas conexión emocional y cuyo diseño base permita un aprendizaje gradual (ropa cotidiana intervenida antes de armaduras complejas).</p></div><div class="flex flex-col items-center text-center p-6 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-sm"><div class="size-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 font-black text-2xl">02</div><h3 class="text-lg font-bold text-white mb-2">Kit Básico de Taller</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">Pistola de silicón caliente, pegamento de contacto transparente, cúter de precisión con repuestos afilados, cinta métrica de sastre y pinturas acrílicas al agua.</p></div><div class="flex flex-col items-center text-center p-6 bg-slate-900/90 rounded-2xl border border-slate-800 shadow-sm"><div class="size-16 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-4 font-black text-2xl">03</div><h3 class="text-lg font-bold text-white mb-2">Comunidad y Respeto</h3><p class="text-xs md:text-sm text-slate-300 leading-relaxed">El lema esencial de la comunidad global es: <em>"El cosplay es para todos, y cosplay no es consentimiento"</em>. Pide siempre permiso antes de tomar fotografías.</p></div></div></section>
+<!-- Galería de Impacto Visual -->
+<section class="space-y-6">
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">photo_library</span>
+<h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white">Galería de Impacto</h2>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-widest hidden sm:inline">Excelencia Visual</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4"><div class="group relative overflow-hidden rounded-2xl aspect-[3/4] shadow-md border border-slate-800"><img alt="Cinematic fantasy armor cosplay with LED elements" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRDJ4Z8sIjnAhLWjP18y_4FuM36ZcoO1Agyk8mHfcEDTCwaFzD-_2XCbsFygB7Fld3RwTvYZREj8U5mFtMhX59zNfp30ZqFAuqutnomAl3Lv_7J5FJKkEj7OCswGilyqeTMKkKtQtPU0Xn96KuqeIpm8xC723cfAIzXn-jBvmkP7MMjJNQm2TcOnWXexYruJ561MmSE1YpTA-GN2O2rKZNKt3fdfdsjsJ5lHz5C7JjQ4wX9-RI_SV7_g"><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-xs font-bold">Armaduras &amp; Utilería</p></div></div><div class="group relative overflow-hidden rounded-2xl aspect-[3/4] shadow-md border border-slate-800"><img alt="High-end artistic cosplay makeup and prosthetics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR0WEQpxH94gkYK7oKhtu9xaszXeXk9_KVPrk3YNxTOjD2rmImHD6jiB1_a2DKrRc0uYigH5LHFnsfPR3tgoeM-_8svl5zd99Dg8THUN9VeeF1K5NDFWQyXYxDy2Q_h-AfPWK94-LbrN09skEVBu0t2GGM3owrKPafDgsoxe1g974HRLzPr_Ihb3sFrf8McqhqYRcpC2pgE2Vgo71HO_tpYzrJJyg63w1w7mq7gRR2dnah85I3kLzWFw"><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-xs font-bold">Maquillaje de Caracterización</p></div></div><div class="group relative overflow-hidden rounded-2xl aspect-[3/4] shadow-md border border-slate-800"><img alt="Dynamic theater stage cosplay performance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGDYAuH2Lo7xYDLuXrSB6-sXb-36f8usi59TK1RaxfM29RVwYbskfX_ZqYt2sX_dfKKHEqEfdk_-C9ffHZmtGGFyVk_C9imB_KURiNtzrKegmGIaeUclDqSZlwsv_FcqMvpVr8R8MKBtABM4bDoInzhetLlT6OFqOQap-LvrEXoBCWnzmH8oMfB3L84Mvkd-mfcu1sGMkaOCeGjY_Xyp3hjPbT7dxDA54-95zjAlXPHq_oLcSTM0FQjg"><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-xs font-bold">Performance &amp; Escena</p></div></div><div class="group relative overflow-hidden rounded-2xl aspect-[3/4] shadow-md border border-slate-800"><img alt="Magnificent flowing silk and brocade fantasy cosplay costume" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeMBLSSNZAO4nnLVBXGjfl70E--sHdw4yTSzVCnAYy9xbg-MB-KoSkS7miLmcoIZHfay-eSQ2_0nNQRwVtdk8rocWzgsRhOgp-LP155tE9xk5-Z1B1ccMo-1d3e_-nFtCfuT3E6uZAuTGoRGgpbjXT38i8Tb6-kGM9W7kweUEYOEMiSmYdJHBxH_YaUW-fXZYGHD9lZpCHQOTxG44Dz8E72FpO7Mi2bb95xlJrr6dAcvkz3TvyrlMbqQ"><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white text-xs font-bold">Texturas Textiles &amp; Confección</p></div></div></div>
+</section>
+</main>
+<!-- Footer Canónico Unificado Kizuna Venezuela -->
+<footer class="bg-black text-white py-4 border-t border-slate-800 text-xs mt-auto">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Bloque Izquierdo: Marca e Identidad -->
+<div class="text-center md:text-left">
+<span class="font-extrabold text-sm text-white">Kizuna <span class="text-primary">Venezuela</span></span>
+<span class="text-slate-400 ml-2 hidden sm:inline">| Difusión y preservación de la cultura japonesa en Venezuela.</span>
+</div>
+<!-- Bloque Centro: Navegación Esencial Reorganizada (Sin Directorios) -->
+<div class="flex items-center gap-6 text-slate-300 font-semibold">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
+<span class="material-symbols-outlined text-[15px]">home</span> Inicio
+                </a>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="Becas_MEXT.html">
+<span class="material-symbols-outlined text-[15px]">school</span> Becas MEXT
+                </a>
+</div>
+<!-- Bloque Derecho: Copyright Oficial -->
+<div class="text-slate-500 text-center md:text-right">
+                © 2026 Kizuna Venezuela. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+</div>
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const panel = document.getElementById('mobileMenuPanel');
+        if (btn && panel) {
+            btn.addEventListener('click', () => {
+                panel.classList.toggle('hidden');
+                panel.classList.toggle('flex');
+            });
+        }
+    })();
+</script>
+<!-- Carga del Asistente Virtual Kizuna AI -->
+<script src="/chatbot.js"></script>
+
+
+
+
+
+
+
+</body></html>

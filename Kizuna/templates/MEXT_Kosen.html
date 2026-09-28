@@ -1,0 +1,487 @@
+<!DOCTYPE html><html lang="es" class="light" style=""><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Beca MEXT: KOSEN (Colegios Tecnológicos) | Kizuna Venezuela</title>
+    <meta content="Guía completa sobre la Beca MEXT KOSEN para estudiantes venezolanos: formación técnica de vanguardia, requisitos, etapas del programa, pasos para postularte y enlaces oficiales." name="description">
+    
+    <!-- Tailwind CSS con plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e65100", // Naranja sunset oficial Kizuna
+                        "background-light": "#fdfaf6",
+                        "background-dark": "#1a1614",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7cG2F3p0eR69Q-6CuPK333KkV93EkjoULxywN3QP-j9Bj2X9I69MctuZnZYIKjmD-72FG_IJI3SIk40zCepSA-lqmfgWv7sf8FtUQLjQdy5sF3UZwVb-suuWIQHuMdesUals4WFgXC2zPOxE_ErCM2z9bYANKOD9Q56-cwtzNTTQ6A852qZGsgeZ1AutlL3Kuqjf49bzLB4zMAq6UwQcW5SWgT5z_zDeOdFA6T2NtkCU_TqjLoT-Pcfwug4uWjHwgiA') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            background-color: #fdfaf6 !important;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body class="font-display text-slate-900 transition-colors duration-300 relative min-h-screen flex flex-col">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+    <!-- Header Flotante No-Fijo, idéntico en color y estructura con MEXT_Posgrado y Pregrado -->
+    <header class="relative w-full bg-black text-white shadow-lg border-b border-primary/20">
+        <div class="px-6 lg:px-20 py-4 border-b border-white/10">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="flex items-center hover:opacity-90 transition-opacity">
+                        <span class="text-white text-xl font-bold tracking-tight">Kizuna <span class="text-primary">Venezuela</span></span>
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <button id="mobileMenuBtn" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-slate-800 text-slate-200 transition-colors" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+
+                <!-- Menú Navegación Desktop alineado a la derecha -->
+                <nav class="hidden md:flex items-center gap-7 text-white text-sm font-semibold">
+                    <a class="hover:text-primary transition-colors flex items-center gap-1" href="index.html">
+                        <span class="material-symbols-outlined text-base">home</span>
+                        <span class="">Inicio</span>
+                    </a>
+
+                    <!-- Directorios Menu Desplegable -->
+                    <div class="group relative">
+                        <button class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1">
+                            <span class="material-symbols-outlined text-base">folder</span>
+                            <span class="">Directorios</span>
+                            <span class="material-symbols-outlined text-xs transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-slate-900 dark:text-slate-100">
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Origami.html">Origami</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+                                <a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Becas MEXT Menu Desplegable -->
+                    <div class="group relative">
+                        <button class="flex items-center gap-1.5 text-sm font-semibold hover:text-primary transition-colors py-1">
+                            <span class="material-symbols-outlined text-base">school</span>
+                            <span class="">Becas MEXT</span>
+                            <span class="material-symbols-outlined text-xs transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-900 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-800 z-50 text-slate-900 dark:text-slate-100">
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+                            <div class="h-px bg-slate-200 dark:bg-slate-800 my-1"></div>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+                            <a class="block px-4 py-2 text-sm font-bold text-primary bg-primary/10 rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+                            <div class="h-px bg-slate-200 dark:bg-slate-800 my-1"></div>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+                            <a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+                        </div>
+                    </div>
+
+                    <a class="hover:text-primary transition-colors flex items-center gap-1" href="MEXT_Descargas.html">
+                        
+                        
+                    </a>
+
+                    <a class="hover:text-primary transition-colors flex items-center gap-1" href="javascript:history.back()">
+                        <span class="material-symbols-outlined text-base">arrow_back</span>
+                        <span class="">Volver</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Barra de Migas de Pan (Breadcrumbs) integrada como parte del Header -->
+        <div class="bg-black/95 text-xs text-slate-400 border-b border-white/5 py-1.5 px-6 lg:px-20">
+            <div class="max-w-7xl mx-auto flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-1 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-sm">home</span> Inicio
+                </a>
+                
+                
+                <span class="material-symbols-outlined text-xs text-slate-600">chevron_right</span>
+                <span class="text-primary font-bold">KOSEN (Colegios Tecnológicos)</span>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobileMenuPanel" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 flex-col gap-3 text-slate-200">
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1 flex items-center gap-2" href="index.html">
+                <span class="material-symbols-outlined text-base">home</span> Inicio
+            </a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1 flex items-center gap-2" href="Becas_MEXT.html">
+                <span class="material-symbols-outlined text-base">school</span> Becas MEXT
+            </a>
+            <a class="text-sm font-semibold text-primary py-1 flex items-center gap-2" href="MEXT_Kosen.html">
+                <span class="material-symbols-outlined text-base">precision_manufacturing</span> Kosen
+            </a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1 flex items-center gap-2" href="MEXT_Descargas.html">
+                <span class="material-symbols-outlined text-base">download</span> Descargar planillas
+            </a>
+            <div class="h-px bg-slate-800 my-1"></div>
+            <a class="text-sm font-semibold hover:text-primary transition-colors py-1 flex items-center gap-2" href="javascript:history.back()">
+                <span class="material-symbols-outlined text-base">arrow_back</span> Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="mx-auto w-full max-w-7xl px-6 py-10 flex-grow space-y-12">
+
+        <!-- HERO SPLIT: Tono oscuro de fondo + Tarjeta washi clara para el título + Imagen Enmarcada -->
+        <section class="rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl p-6 md:p-8 backdrop-blur-md overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <!-- Columna Izquierda: Tarjeta Washi Clara de Alto Contraste con Acento Kizuna -->
+                <div class="lg:col-span-7 bg-white/95 text-slate-900 rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl border border-primary/20 backdrop-blur-md flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4 w-fit">
+                        <span class="material-symbols-outlined text-xs">precision_manufacturing</span>
+                        Ingeniería y Tecnología Avanzada (高等専門学校)
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight text-slate-900">
+                        Beca MEXT: <span class="text-primary">KOSEN</span> (Colegios Tecnológicos)
+                    </h1>
+                    <p class="mt-4 text-slate-700 text-sm sm:text-base leading-relaxed font-medium">
+                        Formación técnica de élite y práctica experimental en el corazón de la innovación japonesa. Desarrolla soluciones de ingeniería con tecnología de clase mundial, laboratorios de vanguardia y financiamiento total del Gobierno de Japón.
+                    </p>
+                    <div class="mt-6 flex flex-wrap items-center gap-3 text-xs font-bold text-slate-600">
+                        <div class="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+                            <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+                            4 Años (1 Preparatorio + 3 Especialidad)
+                        </div>
+                        <div class="flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+                            <span class="material-symbols-outlined text-primary text-sm">translate</span>
+                            Inmersión Intensiva en Japonés
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Fotografía Enmarcada de Laboratorio / Campus Kosen -->
+                <div class="lg:col-span-5 relative w-full h-[320px] lg:h-[380px] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group bg-slate-950">
+                    <img alt="Estudiantes en laboratorio de ingeniería robótica y mecatrónica japonesa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1X_PlPMz9BywI9MGAJ7k6TVoiYMlkZi9tbL2FtXwQf4S_Q1btm12Ilr40kmV_pc9ae6CiLfoAxSQNWkwsjzm6ZjxGkOD4onBmXbXyotnNWHnmo9U27zjtp8LaQkFJZ7ml0f83Al1JD2YftSwJDatPWb5ut21B2tnunpLdXnL6gPjkvUqQ-llJwYk5R5U7kwbC_-CzUzGidcZJkanI-rmNh17bftLnWWTOU0BIylwFy-3UOflChvIMGYbA">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex items-end p-5">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400 block mb-1">Modelo Educativo KOSEN</span>
+                            <p class="text-xs font-medium text-slate-200">
+                                Pionero en robótica, inteligencia artificial, sistemas mecánicos y tecnología aplicada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: DEFINICIÓN DIDÁCTICA (Tarjeta Sumi-e Pizarra Oscura de Alto Contraste) -->
+        <section class="rounded-3xl bg-white/95 text-slate-900 p-8 md:p-12 shadow-xl border border-slate-200">
+            <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+                <span class="text-primary font-bold uppercase tracking-widest text-xs">Financiamiento Total</span>
+                <h2 class="text-3xl font-black">Beneficios y Cobertura de la Beca</h2>
+                <p class="text-slate-600 text-sm">El programa cubre íntegramente la formación del estudiante en Japón sin costo de reembolso.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col items-center">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
+                        <span class="material-symbols-outlined text-3xl">payments</span>
+                    </div>
+                    <h3 class="font-black text-lg text-slate-900 mb-1">Estipendio Mensual</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Aproximadamente 117.000 JPY mensuales (con suplemento regional adicional) para solventar gastos de vivienda, alimentación y transporte local.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col items-center">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
+                        <span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+                    </div>
+                    <h3 class="font-black text-lg text-slate-900 mb-1">Pasajes Aéreos</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Boleto aéreo internacional de ida (Venezuela - Japón) al iniciar los estudios y boleto de regreso al finalizar satisfactoriamente el período de la beca.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col items-center">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-4">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
+                    <h3 class="font-black text-lg text-slate-900 mb-1">Exención de Matrícula 100%</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Exoneración total de las cuotas de examen de admisión, inscripción formal y costos de enseñanza durante los 4 años de permanencia en Japón.
+                    </p>
+                </div>
+            </div>
+        </section><section class="rounded-3xl bg-slate-900/90 text-white p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md relative overflow-hidden">
+            <div class="absolute right-4 bottom-2 text-8xl md:text-9xl font-bold text-white/[0.03] select-none pointer-events-none font-serif">
+                高専
+            </div>
+            <div class="relative z-10 space-y-6">
+                <div class="border-l-4 border-primary pl-4">
+                    <span class="text-primary font-bold uppercase tracking-widest text-xs">Definición Didáctica</span>
+                    <h2 class="text-2xl md:text-3xl font-black mt-1">&nbsp;Programa College of Technology: KOSEN&nbsp;</h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed text-base md:text-lg max-w-4xl">
+                    El sistema <strong>KOSEN (高等専門学校 - Kōtō Senmon Gakkō)</strong> es un modelo educativo exclusivo de Japón reconocido globalmente por su excelencia. A diferencia de las universidades puramente teóricas, los KOSEN están diseñados para convertir a jóvenes apasionados por la ciencia en <strong>ingenieros prácticos de primer orden</strong>, mediante una formación 100% aplicada, proyectos industriales en tiempo real y laboratorios experimentales de clase mundial.
+                </p>
+
+                <!-- Micro-tarjetas didácticas en blanco de alto contraste -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+                    <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+                            </div>
+                            <h3 class="font-black text-lg text-slate-900">Enfoque STEM Puro</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Robótica, mecatrónica, telecomunicaciones, biotecnología, inteligencia artificial, química industrial y arquitectura sustentable.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined text-2xl">build</span>
+                            </div>
+                            <h3 class="font-black text-lg text-slate-900">Monozukuri (Práctica Total)</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                El arte japonés de la manufactura y creación técnica: prácticas intensivas en talleres con maquinaria industrial real desde el primer ciclo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-3">
+                                <span class="material-symbols-outlined text-2xl">trending_up</span>
+                            </div>
+                            <h3 class="font-black text-lg text-slate-900">Proyección y Transferencia</h3>
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                Tras culminar el programa de 4 años, el graduado puede insertarse laboralmente de inmediato o transferirse al 3.er año de una universidad japonesa para obtener el título de Licenciatura en Ingeniería.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><section class="rounded-3xl bg-white/95 text-slate-900 p-8 md:p-12 shadow-xl border border-slate-200">
+            <div class="border-l-4 border-primary pl-4 mb-8">
+                <span class="text-primary font-bold uppercase tracking-widest text-xs">Convocatoria Oficial</span>
+                <h2 class="text-2xl md:text-3xl font-black mt-1">Criterios de Elegibilidad para Postulantes Venezolanos</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Nacionalidad y Edad -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">badge</span>
+                        </div>
+                        <h3 class="font-black text-lg text-slate-900">Nacionalidad y Edad</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Ser ciudadano venezolano. Por lo general, tener entre 17 y 24 años de edad cumplidos al momento de viajar a Japón (consultar el rango específico de fecha de nacimiento en las directrices del año vigente).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Nivel Académico -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">school</span>
+                        </div>
+                        <h3 class="font-black text-lg text-slate-900">Nivel Educativo Concluido</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Haber culminado con éxito la educación media general o técnica (Bachillerato concluido con notas certificadas) o estar cursando el último año antes de viajar a Japón.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dominio de Idiomas y Vocación -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                            <span class="material-symbols-outlined text-2xl">translate</span>
+                        </div>
+                        <h3 class="font-black text-lg text-slate-900">Competencia en Idiomas</h3>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                            Sólido dominio del inglés para presentar las pruebas de selección escrita. Disposición activa y compromiso para estudiar y dominar el idioma japonés desde el día uno.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ESTRUCTURA Y ETAPAS FUNDAMENTALES DEL PROGRAMA KOSEN -->
+        <section class="rounded-3xl bg-slate-900/90 text-white p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md">
+            <div class="space-y-6">
+                <div class="border-l-4 border-primary pl-4">
+                    <span class="text-primary font-bold uppercase tracking-widest text-xs">Estructura Curricular</span>
+                    <h2 class="text-2xl md:text-3xl font-black mt-1">Kosen: Las Dos Etapas Fundamentales de la Beca</h2>
+                    <p class="text-slate-400 text-sm mt-1">El programa de becas de KOSEN consta de dos etapas claramente estructuradas para garantizar el éxito académico del becario:</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                    <!-- Etapa 1 -->
+                    <div class="p-8 rounded-2xl bg-slate-800/90 border border-slate-700 shadow-xl flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="size-12 rounded-xl bg-primary text-white flex items-center justify-center font-black text-xl shadow-md">1</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">Duración: 1 Año</span>
+                            </div>
+                            <h3 class="text-xl font-black text-white mb-2">Etapa de Preparación</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Aquí el becario cursará <strong>estudios intensivos de idioma japonés</strong> por un año. Mientras adquiere fluidez idiomática, se prepara para presentar los exámenes de admisión en la universidad o instituto en Japón, viendo clases de materias clave como matemáticas y otras materias de ciencias que serán evaluadas rigurosamente en el examen de admisión.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center gap-2 text-xs text-slate-400">
+                            <span class="material-symbols-outlined text-primary text-base">school</span>
+                            <span class="">Sede preparatoria: Escuela de Lengua Japonesa asignada por MEXT en Tokio</span>
+                        </div>
+                    </div>
+
+                    <!-- Etapa 2 -->
+                    <div class="p-8 rounded-2xl bg-slate-800/90 border border-slate-700 shadow-xl flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -mr-10 -mt-10 pointer-events-none"></div>
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="size-12 rounded-xl bg-primary text-white flex items-center justify-center font-black text-xl shadow-md">2</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">Duración: 3 Años</span>
+                            </div>
+                            <h3 class="text-xl font-black text-white mb-2">Etapa de Especialidad Técnica</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Al aprobar los exámenes de admisión, el estudiante será asignado a un <strong>instituto de tecnología (KOSEN)</strong>, donde iniciará formalmente su programa técnico del currículo nacional japonés. Cursará materias avanzadas, laboratorios industriales y su proyecto de graduación técnica (Associate Degree).
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center gap-2 text-xs text-slate-400">
+                            <span class="material-symbols-outlined text-primary text-base">verified</span>
+                            <span class="">Integración directa a la red de los 51 KOSEN nacionales en Japón</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nota complementaria de valor curricular -->
+                <div class="p-5 rounded-2xl bg-primary/10 border-l-4 border-primary flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">info</span>
+                    <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                        <strong>Opción de Continuidad a Grado Universitario:</strong> Al culminar exitosamente los 3 años en el KOSEN con un promedio destacado, el estudiante tiene la posibilidad de postular a una <em>extensión de la beca MEXT</em> para transferirse al 3.er año de una universidad nacional japonesa y graduarse con título completo de Licenciatura en Ingeniería (Bachelor's Degree).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: REQUISITOS ACADÉMICOS Y CRITERIOS DE ELEGIBILIDAD (Tarjetas Blancas Pulidas de Alto Contraste) -->
+        
+
+        <!-- SECCIÓN 4: PASOS PARA POSTULARTE (INSTRUCCIÓN DETALLADA CON ENLACES OFICIALES) -->
+        
+
+        <!-- SECCIÓN 5: BENEFICIOS INTEGRALES DE LA BECA MEXT -->
+        
+
+        <!-- SECCIÓN 6: TESTIMONIO INSPIRADOR -->
+        
+
+        <!-- SECCIÓN 7: LLAMADO A LA ACCIÓN (DESCARGAS) -->
+        <section class="rounded-3xl bg-white/95 text-slate-900 p-8 md:p-12 shadow-xl border border-slate-200"><div class="border-l-4 border-primary pl-4 mb-8"><span class="text-primary font-bold uppercase tracking-widest text-xs">Proceso oficial de postulación ante la Embajada del Japón en Venezuela</span><h2 class="text-2xl md:text-3xl font-black mt-1">Pasos para Postularte a KOSEN</h2></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between"><div><div class="flex items-center justify-between mb-4"><span class="size-10 rounded-xl bg-primary text-white flex items-center justify-center font-black text-lg shadow-sm">1</span><span class="material-symbols-outlined text-primary text-2xl">menu_book</span></div><h3 class="font-black text-lg text-slate-900 mb-2">Revisión de la Guía de Aplicación (Guidelines)</h3><p class="text-xs text-slate-600 leading-relaxed">Revisa cuidadosamente el contenido completo de la guía oficial de aplicación para Kosen (College of Technology), escrita en inglés o japonés.</p></div><div class="mt-6 pt-4 border-t border-slate-200"><a href="https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_CofTechnology_E.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-colors"><span class="material-symbols-outlined text-sm">download</span><span class="">Descargar Guidelines Oficiales (PDF)</span></a></div></div><div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between"><div><div class="flex items-center justify-between mb-4"><span class="size-10 rounded-xl bg-primary text-white flex items-center justify-center font-black text-lg shadow-sm">2</span><span class="material-symbols-outlined text-primary text-2xl">edit_document</span></div><h3 class="font-black text-lg text-slate-900 mb-2">Llenado y Entrega de Planillas y Documentación</h3><p class="text-xs text-slate-600 leading-relaxed">Presentar las planillas correspondientes debidamente llenas junto con la documentación necesaria antes de la fecha de cierre de entrega de documentos a la Embajada del Japón en Venezuela (se acepta también el envío de documentos por servicio de encomienda). Puede descargar los formatos de postulación en el siguiente enlace:</p></div><div class="mt-6 pt-4 border-t border-slate-200"><a href="http://www.studyinjapan.go.jp/en/smap-stopj-applications-technology.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-colors"><span class="material-symbols-outlined text-sm">open_in_new</span><span class="">Descargar Formatos de Postulación y Majors</span></a></div></div><div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm flex flex-col justify-between"><div><div class="flex items-center justify-between mb-4"><span class="size-10 rounded-xl bg-primary text-white flex items-center justify-center font-black text-lg shadow-sm">3</span><span class="material-symbols-outlined text-primary text-2xl">history_edu</span></div><h3 class="font-black text-lg text-slate-900 mb-2">Preparación para los Exámenes Escritos</h3><p class="text-xs text-slate-600 leading-relaxed">Prepararse para los exámenes escritos que se aplicarán durante el proceso de selección en Caracas. Las asignaturas serán japonés, inglés, matemáticas, química y física. Se recomienda consultar los ejemplos de exámenes pasados en el siguiente enlace:</p></div><div class="mt-6 pt-4 border-t border-slate-200"><a href="https://www.studyinjapan.go.jp/en/planning/scholarship/application/examination/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-colors"><span class="material-symbols-outlined text-sm">open_in_new</span><span class="">Ver Exámenes Anteriores MEXT</span></a></div></div></div><div class="mt-8 p-5 rounded-2xl bg-amber-400/10 border border-amber-400/20 text-slate-700 flex items-start gap-4"><span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">info</span><p class="text-xs sm:text-sm leading-relaxed"><strong class="text-slate-900">Nota importante sobre la convocatoria:</strong> Los formatos y directrices mostrados corresponden al periodo de postulación más reciente. Los aspirantes deben verificar las fechas exactas del cronograma oficial publicado anualmente por la Embajada del Japón en Venezuela (habitualmente entre abril y mayo) y esperar a que se anuncie la nueva convocatoria y se publique el nuevo material oficial antes de consignar su expediente.</p></div></section>
+
+    </main>
+
+    <!-- Footer Monolínea oficial idéntico a base.html, MEXT_Posgrado y Pregrado -->
+    <footer class="bg-black text-white py-4 border-t border-slate-800 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
+            <div>
+                <span class="font-bold text-slate-200">Kizuna <span class="text-primary">Venezuela</span></span>
+                <span class="text-slate-400 ml-2 hidden sm:inline">| Difusión y preservación de la cultura japonesa en Venezuela.</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="hover:text-primary text-slate-300 transition-colors">Inicio</a>
+                <a href="Becas_MEXT.html" class="hover:text-primary text-slate-300 transition-colors">Becas MEXT</a>
+            </div>
+            <div class="text-slate-500">
+                © 2026 Kizuna Venezuela. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Script del Menú Móvil -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const panel = document.getElementById('mobileMenuPanel');
+        if (btn && panel) {
+            btn.addEventListener('click', () => {
+                panel.classList.toggle('hidden');
+                panel.classList.toggle('flex');
+            });
+        }
+    })();
+</script>
+
+<!-- Carga del Asistente Kizuna AI -->
+<script src="/chatbot.js"></script>
+
+
+
+
+
+
+</body></html>

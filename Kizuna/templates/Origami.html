@@ -1,0 +1,641 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kizuna Venezuela - Origami: El Arte del Plegado de Papel</title>
+<meta content="Descubre la tradición milenaria del origami, su filosofía zen, técnicas de plegado y la activa comunidad de origami en Venezuela." name="description">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e65100",
+                        "background-light": "#fdfaf6",
+                        "background-dark": "#1a1614",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs7YkMPk1cWyL5iMp4pAL02lmg2lFRe5M_o0o7qQXE2eVUVBiaF3aXSeCGlm-bNjElCljUbAoIFkNIDy23yofJItsKre2qCFNdKOOD1DQ9vileoJ0J4O2Zwpt7e3ppUDjYfUgSA_25Rz_WbljNhvuRshlVdl4Q0M7w5VplUttQ2UJpWi51votU_yjLQpz-PgkPOEzfDZfOogSG95kTYGAd36D5baarCPiA1CvSm54rdAos7jGHpSsflnPOEdrNuyV42w') !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            background-size: cover !important;
+            background-attachment: fixed !important;
+            color: #0f172a;
+        }
+
+        .card-interactive {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-interactive:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(230, 81, 0, 0.2);
+            border-color: rgba(230, 81, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="font-display text-slate-900 transition-colors duration-300 relative min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- 1. HEADER Y NAVEGACIÓN COMPLETA SEGÚN PLANTILLA BASE SCREEN_8 -->
+<header class="sticky top-0 z-50 bg-black text-white shadow-lg border-b border-primary/20">
+<div class="w-full max-w-7xl mx-auto px-6 lg:px-20 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<a class="flex items-center hover:opacity-90 transition-opacity" href="index.html">
+<span class="text-white text-xl font-bold">Kizuna <span class="text-primary">Venezuela</span></span>
+</a>
+</div>
+<div class="flex items-center gap-6">
+<button aria-expanded="false" aria-label="Abrir menú" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-white/10 transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<nav class="hidden md:flex items-center gap-6"><a class="hover:text-primary transition-colors flex items-center gap-1.5 py-1 text-white text-sm font-semibold" href="index.html">
+<span class="material-symbols-outlined text-base">home</span>
+<span class="">Inicio</span>
+</a>
+<!-- Megamenú Desplegable: Directorios -->
+<div class="group relative">
+<button class="flex items-center gap-1.5 text-sm font-semibold text-white hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">folder</span>
+<span class="">Directorios</span>
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-[680px] max-w-[92vw] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-6 border border-slate-200 dark:border-slate-800 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[80vh] overflow-y-auto z-50 text-slate-900 dark:text-slate-100 text-left">
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Artes Marciales</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Aikido.html">Aikido</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Judo.html">Judo</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Karate.html">Karate</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Arte</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Bonsai.html">Bonsai</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceramica.html">Cerámica</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Ceremonia_Te.html">Ceremonia del Té</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Danza_Butoh.html">Danza Butoh</a>
+<a class="block px-2 py-1 text-sm text-primary font-bold bg-primary/10 rounded transition-colors" href="D-Origami.html">Origami</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Taiko.html">Taiko</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Idioma</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Idioma_Japones.html">Idioma Japonés</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Shodo.html">Caligrafía Japonesa</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Cultura Pop</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Anime.html">Anime</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Cosplay.html">Cosplay</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Manga.html">Manga</a>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Jpop.html">J-Pop</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Juegos de Mesa</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-GO.html">Go</a>
+</div>
+<div>
+<h3 class="text-xs font-bold text-primary uppercase tracking-wider mb-2 border-b border-slate-200 dark:border-slate-700 pb-1">Gastronomía</h3>
+<a class="block px-2 py-1 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded transition-colors" href="D-Gastronomia.html">Gastronomía</a>
+</div>
+</div>
+</div>
+<!-- Menú Desplegable: Becas MEXT -->
+<div class="group relative">
+<button class="flex items-center gap-1 text-sm font-semibold text-white hover:text-primary transition-colors py-1">
+<span class="material-symbols-outlined text-base">school</span>
+<span class="">Becas MEXT</span>
+<span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2 border border-slate-200 dark:border-slate-700 z-50 text-slate-900 dark:text-slate-100 text-left">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="Becas_MEXT.html">Resumen General</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Pregrado.html">Pregrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Posgrado.html">Postgrado</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Kosen.html">Kosen</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_STC.html">STC</a>
+<div class="h-px bg-slate-100 dark:bg-slate-700 my-1"></div>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Docente.html">Formación Docente</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-primary/10 rounded-lg transition-colors" href="MEXT_Nikkei.html">Nikkei</a>
+</div>
+</div>
+<!-- Botón Contextual Directorio Nacional -->
+<a class="flex items-center gap-1.5 text-sm font-semibold text-white hover:text-primary transition-colors py-1" href="D-Origami.html">
+<span class="material-symbols-outlined text-sm">stadium</span>
+<span class="">Directorio Nacional</span>
+</a>
+<!-- Enlace Volver -->
+<a class="text-sm font-semibold text-white hover:text-primary transition-colors flex items-center gap-1" href="javascript:history.back()">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span class="">Volver</span>
+</a></nav>
+</div>
+</div>
+<!-- Breadcrumbs bar -->
+<div class="bg-black/95 border-t border-slate-800/80 px-6 lg:px-20 py-2 text-xs text-slate-400">
+<div class="max-w-7xl mx-auto flex items-center gap-2">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="D-Arte.html">Arte</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Origami: El Arte del Plegado</span>
+</div>
+</div>
+</header>
+<!-- Mobile Navigation Panel -->
+<div class="fixed inset-0 z-[60] hidden" id="mobileMenuPanel">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="mobileMenuOverlay"></div>
+<div class="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-slate-900 text-white overflow-y-auto shadow-2xl p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-slate-800">
+<span class="text-white text-lg font-bold">Kizuna <span class="text-primary">Venezuela</span></span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-800 text-slate-300" id="mobileMenuClose">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-3 mt-6">
+<a class="py-2 font-semibold text-white hover:text-primary flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-base">home</span> Inicio
+                    </a>
+<a class="py-2 font-semibold text-white hover:text-primary flex items-center gap-2" href="D-Origami.html">
+<span class="material-symbols-outlined text-base text-primary">filter_vintage</span> Directorio Origami
+                    </a>
+<a class="py-2 font-semibold text-white hover:text-primary flex items-center gap-2" href="MEXT.html">
+<span class="material-symbols-outlined text-base">school</span> Becas MEXT
+                    </a>
+<button class="py-2 text-left font-semibold text-slate-300 hover:text-primary flex items-center gap-2" onclick="javascript:history.back()">
+<span class="material-symbols-outlined text-base">arrow_back</span> Volver a la página anterior
+                    </button>
+</div>
+</div>
+<div class="text-xs text-slate-500 border-t border-slate-800 pt-4">
+                Preservación y difusión de la cultura japonesa en Venezuela
+            </div>
+</div>
+</div>
+<main class="mx-auto w-full max-w-7xl px-6 lg:px-20 py-8 lg:py-12 flex-grow space-y-16">
+<!-- 3. HERO SECTION (SPLIT 2 COLUMNAS) -->
+<section class="relative bg-slate-900/90 border border-slate-800 shadow-2xl p-6 md:p-8 lg:p-10 rounded-3xl backdrop-blur-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Columna Izquierda: Texto sobre fondo oscuro -->
+<div class="lg:col-span-7 space-y-4">
+<div class="inline-flex items-center gap-2 bg-primary/20 text-primary px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-primary/30">
+<span class="material-symbols-outlined text-sm">filter_vintage</span> Arte Tradicional Japonés (折り紙 · Origami)
+                    </div>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white">
+                        Origami: El Arte del <span class="text-primary">Plegado y la Paciencia</span>
+</h1>
+<p class="text-base lg:text-lg text-slate-300 font-medium leading-relaxed max-w-2xl">
+                        La alquimia serena de conceder volumen, vida y alma a un pliego cuadrangular sin cortes ni adhesivos: la geometría transformada en veneración poética del instante.
+                    </p>
+</div>
+<!-- Columna Derecha: Tarjeta clara con la imagen heroica enmarcada -->
+<div class="lg:col-span-5">
+<div class="bg-white/95 p-3 rounded-2xl shadow-xl border border-primary/20">
+<div class="rounded-xl overflow-hidden h-[300px] lg:h-[340px] w-full">
+<img alt="Cinematic artistic origami hero banner crane" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1VfaUGWlM3q8fRIRODwXzYHXFVqv2tpup2YQYLiBJ0mGSCZF_OiV_MZkPmaj9wQtoTQAuiqxHhUGUpyDLW0tYEfaZE2WoxejPjdcuJRVXC4ONp8n1jzP2EYqg-WNERbiJhxBEpAkGihWiWSc4ieBFJF-NoSWLnE0YNCehYydlCcpmr8ONg4iGK-ZW3Vlf-vy1dbth69RwPZwPHAeuvCkzVg-HuDiIhRqgWLoaUmfFfaM6T-zIqsKY9RpKU">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECCIÓN "¿QUÉ ES EL ORIGAMI EN ESENCIA?" (TONO CLARO Y TÍTULO NUEVO) -->
+<section class="bg-white/95 text-slate-900 rounded-3xl p-8 md:p-12 shadow-xl border border-primary/20 backdrop-blur-md space-y-8">
+<div class="border-l-4 border-primary pl-4">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Filosofía &amp; Concepción</span>
+<h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Filosofía y Concepción: El Alma del Papel Plegado</h2>
+</div>
+<p class="text-base lg:text-lg text-slate-700 leading-relaxed font-medium max-w-4xl">
+                Nacido de la unión fonética de <em>ori</em> (doblar o plegar) y <em>kami</em> (papel), el origami constituye una meditación activa sobre la permanencia y la mutabilidad. Cada línea trazada en el papel es un pacto indeleble: en lugar de sustraer o pegar materia, el origami revela las infinitas posibilidades latentes que habitan en la superficie bidimensional de un cuadrado.
+            </p>
+<!-- 3 Tarjetas en TONO OSCURO -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<div class="bg-slate-900 text-white p-6 rounded-2xl shadow-lg border border-slate-800 card-interactive">
+<div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">note_stack</span>
+</div>
+<h3 class="text-lg font-black text-white mb-2">Kami y Washi</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+                        La reverencia por las fibras naturales de morera (Kozo) que componen el papel artesanal japonés: resistente, dúctil y dotado de memoria ante cada plegado.
+                    </p>
+</div>
+<div class="bg-slate-900 text-white p-6 rounded-2xl shadow-lg border border-slate-800 card-interactive">
+<div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">square_foot</span>
+</div>
+<h3 class="text-lg font-black text-white mb-2">Geometría Zen</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+                        Encontrar el orden en el caos aparente. Axiomas matemáticos ancestrales y ángulos precisos que canalizan la atención plena y el silencio mental.
+                    </p>
+</div>
+<div class="bg-slate-900 text-white p-6 rounded-2xl shadow-lg border border-slate-800 card-interactive">
+<div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+</div>
+<h3 class="text-lg font-black text-white mb-2">Transformación Pura</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+                        Sin tijeras (<em>kirigami</em>) ni pegamento. La integridad estructural del pliego se mantiene intacta, honrando el principio de pureza sin artificios.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 5. SECCIÓN HISTORIA Y SIMBOLISMO: EL LEGADO DE LAS MIL GRULLAS (TONO OSCURO) -->
+<section class="bg-slate-900/90 text-white rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-800 backdrop-blur-md space-y-8">
+<div class="border-l-4 border-primary pl-4">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Senbazuru &amp; Memoria Histórica</span>
+<h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Historia y Simbolismo: El Legado de las Mil Grullas</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-5 text-slate-300 leading-relaxed font-medium">
+<p class="">
+                        El arte del plegado ingresó a Japón en el siglo VI junto al budismo y la fabricación del papel. En los períodos Heian y Kamakura, el papel era un bien sagrado reservado para la corte imperial y ritos shintoístas, manifestado en ofrendas ceremoniales (<em>noshi</em>).
+                    </p>
+<p class="">
+                        Con la democratización del papel <em>washi</em> durante el período Edo (1603-1867), nació el origami recreativo y se popularizó la creencia del <strong class="text-white">Senbazuru (千羽鶴)</strong>: quien ensamble mil grullas de papel unidas por hilos recibirá salud, recuperación y la bendición de los dioses.
+                    </p>
+<div class="p-5 rounded-2xl bg-primary/10 border border-primary/30 space-y-2">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">peace</span>
+<h4 class="text-base text-white">Sadako Sasaki y el Símbolo Global de Paz</h4>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed">
+                            Afectada por la radiación de Hiroshima a sus doce años, Sadako Sasaki se propuso doblar mil grullas como plegaria de vida. Su valentía trascendió fronteras y convirtió la grulla de origami (<em>Orizuru</em>) en el emblema imperecedero de la paz mundial, el desarme y la fraternidad humana.
+                        </p>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-700 group relative aspect-[4/3]">
+<img alt="Zorro y ave origami en papel duotono" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XSQ09flSCAxaykM9958N06-zWS3p8YSYZyL13IaDLtEWbmffRiHsG3wQ_xPeSYIlgB5ugMPISsLubfulaCpmvntuKP3VLCKAHzfqiQfPxkvLTUqGoM_K2DTmRGBiDI4sIflrObnnIkOF8nHGWEIdRZqVY8hJdvpIWHJB3y4YYlqOgWZAe4w-16A6ZORME1iYziYVs_c7EuuLXt_6RIdcYRWzyMXGctK-0MydbAjBCAVGStlZ8zsY7jE-I">
+<div class="absolute bottom-0 inset-x-0 bg-slate-950/80 p-2.5 text-center text-white text-xs font-semibold">
+                            Escultura tradicional japonesa en papel washi
+                        </div>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-lg border border-slate-700 group relative aspect-[4/3]">
+<img alt="Guirnaldas de senbazuru con mil grullas multicolores" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvEg0GlY8okUKkBFzcmEbfDNiyritRLfiuy9jkwQdn-sB2ON3Mr8OtqR7yZTkWs0YEWnwVV0zEGzIMCWq2WO1aOMErS16Liejxjqy2Ja7KPYR842G8T6tx75DyZiImKFkkf4ICk6eDNDJ471py5GLfFKM4e31gRaO58GUOak1pbFtBTO3FSTKPTyIFAlKc91-XY3W7aV7qjIqqOsjegxGcc4N-rahG2vPzgpF1tDqh2GDq08vFrBfadZ_qyHNV627cqVdZBxUw4FY">
+<div class="absolute bottom-0 inset-x-0 bg-slate-950/80 p-2.5 text-center text-white text-xs font-semibold">
+                            Senbazuru: Mil grullas por la salud y la paz mundial
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SECCIÓN FUNDAMENTOS TÉCNICOS (TARJETAS EN TONO CLARO) -->
+
+<!-- 7. SECCIÓN TALLER PRÁCTICO (8 PASOS EXACTOS CON IMAGEN IMAGE_19) -->
+<section class="bg-white/95 text-slate-900 rounded-3xl p-8 md:p-10 border border-slate-200 shadow-lg space-y-8 backdrop-blur-md"><div class="border-l-4 border-primary pl-4">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Guía Didáctica Paso a Paso</span>
+<h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Taller Práctico: Crea tu Zorro Japonés de Origami (Kitsune)</h2>
+</div>
+<p class="text-slate-700 font-medium text-sm sm:text-base leading-relaxed max-w-3xl">
+El zorro o <em>Kitsune</em> es el emblemático mensajero de Inari, símbolo de sabiduría, fertilidad y protección espiritual en Japón. Sigue esta refinada secuencia fotográfica paso a paso con las técnicas ancestrales de doblado para modelar el estilizado rostro del Kitsune.
+</p>
+<div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-600/30 text-xs text-slate-800">
+<p class="font-bold text-primary flex items-center gap-1.5 text-sm mb-2">
+<span class="material-symbols-outlined text-base">tips_and_updates</span> Consejos del Artesano Plegador:
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-700 leading-relaxed">
+<div class="flex items-start gap-2">
+<span class="text-primary font-bold text-base">•</span>
+<span class=""><strong>Gramaje y dimensión:</strong> Selecciona papel kami u origami de <strong>70 a 80 g/m²</strong> (15×15 cm), idóneo para lograr aristas nítidas sin abultamientos.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-primary font-bold text-base">•</span>
+<span class=""><strong>Marcación de aristas:</strong> Desliza la uña, una regla o plegadera de hueso firmemente en cada doblez para conferir rigidez y exacta simetría.</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 1: Inicio con pliego cuadrado de origami" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUC3DjBDpgsWMapg1QVg-9xp3HuPkr1IB869FtInfhaO2-SF9_E33sGZtOFbCCb75T2lfZ8GWqpQCwEIf75U1a8hLkEt9elMUQP9RIeMY_yCCWbH-Ykuv4o9FCIFnzgyMyJoZ1DBhjR9UNo6sB2Yuc3ptt3n8-acJptWxissE2OmIC6AbWN6UJdIF4vwdKFau_sNDKSuf3kIJ9ZLJyQ5Pn_e-alnrfbsVXflDThF8pupK22QUVXzwM">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 1</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">1</span>
+<h3 class="text-base font-bold text-slate-900">Inicio con Cuadrado</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Coloca el pliego cuadrado sobre una superficie lisa, con el lado coloreado en tu plano de trabajo.
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+START WITH SQUARE
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 2: Pliegue diagonal simétrico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XtZRFa1FSZAV65nGdEb7ffQUcRgdYgaDteOZ1j1IkrwKDYLUV7c7653eiIuExkIk9jWKc81kSg8bLoFnPDX4zDnM7tYE_4_me11dMt1i5g8Cieo4GfBG3QR8asJojUfN1fx_AJB4xftguOgpONFm7TYaVxwQOZvxidEknlNTYRusn0UyzUFO-0y5-x5O1O9N_1L-zjcd2jvb-bOYS9nvPrZUDbv7zZix76qhB4vfEtqZr_gdaXiczKK6A">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 2</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">2</span>
+<h3 class="text-base font-bold text-slate-900">Pliegue Diagonal</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Dobla por la diagonal uniendo la esquina opuesta para formar un triángulo simétrico y asentar el eje central.
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+FOLD DIAGONAL
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 3: Esquinas laterales al ápice superior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XFEsgEtdnfqiN3g8Tywo2gOHz0NElh1jUbTPq0b3LxhpT1jePi5-urNyevWydFpdtZahcxJuEPWVDAioDbqZaoBPJYtZ2DuiDoYPmM1uhjC1MZTawqQI37rQd5D5UQiuA3dpKOzWdaC2oDJ_WuEJyUQtq4PGhVA8QXQs0rdA9ID8feJzWzw5XcPIXKqrYIUqVWEGJXyCnsEymh8J-y-wQphaItpFHdSkz0IV9ndoymaYZIPcfLBtxB0hY">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 3</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">3</span>
+<h3 class="text-base font-bold text-slate-900">Puntas Superiores</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Lleva las dos esquinas laterales hacia el vértice superior central, estructurando un rombo equilátero.
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+FOLD CORNERS UP
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 4: Doblar la solapa inferior hacia arriba" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UJZkWIqpJgFeib2n48OampjUHjGwz9yi-MtgAjdja1-qT_ZgrbHgw0HEkqYyZ_SyoVElKDPBEcIGMWilIwmU7LInTG0pvGx4rQ6uXxHiBdjJmvhwtVtDwZF-yVH2mZ9iU23GNDFYnCH_z1ROQ50MqgnTv3JJTUJ2LkbhpD0qDS0gqfFbrePeCY3M6EC2O6QrVPYWxytqm7YkOS93OHY4vM-MZdI0U_UkYkAs3IYKI0UKdzuQlaWPIZC9U">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 4</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">4</span>
+<h3 class="text-base font-bold text-slate-900">Pliegue Inferior</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Dobla la solapa triangular inferior hacia arriba en sentido horizontal para fijar la base del hocico.
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+FOLD BOTTOM UP
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 5: Formación de orejas erguidas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1ULrq_Csojk4yI_Bts442Cei56VeL0Euie815FYYFUYdcsMBXHOld9_2tGLIbr8ZttxIsB_WLD6ZKV2O1CAdRycPiked7_jbpvloaXcKZnNou9PTtrHBC3vZp9Exij1mWRxjSAjn5d_UWk-2S8X0ajrrRVyQpZRMLTk2WWQ4OCatd5GhPAjfbNF75__D9wtv4jop_8vp5sjSlo7MePrwG7CkUYSr0TaGFA6wi31-d7LoUXvq_UQMfkJvKc">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 5</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">5</span>
+<h3 class="text-base font-bold text-slate-900">Plegado de Orejas</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Pliega las solapas superiores hacia abajo y en diagonal hacia los lados, proyectando las orejas erguidas.
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+FOLD EAR FLAPS
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 6: Modelado tridimensional del hocico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoPdoL8aMlRkymGln9WiVfnUjnnHKkMl1A0xFnREpTaw5qeskzsUBy6B7B5TNmUKsag2Yss5C-etel6hWPyWSNuAe3A24UGHZLZD6vy5Zkms8ZEX_UC00hQtyqI8er4lBnihLrRi2ygWdg7Ay2_oX9Q06GLQH358MP_UOVzEciuHaAvQg86PKopNA5caSylnwCGxdiTOiXp_kQ0coFzHAg7iWxpC0TatPg0X5Ke8ZB1JRIB2rQ7CaG">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 6</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">6</span>
+<h3 class="text-base font-bold text-slate-900">Definición del Hocico</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Levanta la pequeña punta inferior ligeramente hacia arriba para esculpir el volumen del hocico y mentón.
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+FOLD NOSE UP
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 7: Girar la figura hacia el reverso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkij3bBhbJNpdQXET7J66TeE_nvs6jOPhOXBV2RNENXoOa_xPRxInt13pxd9MU5NavRMJLsFcEFiKkvaspmL9uw-ZQIZFIQwKHDHHKNMwD4UUmB8H0JdPpAwdWxzYf_h25loTBdWGmhomx_n7WUUfngIya45AtrylwjwH655hAAkcEQaTvP9jSqicTXZu-JpkdLCQfKfn2e-_TBKLW-uoIalB1zqaSj5qAIr-cXa-00u3z_OKIQmOH">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 7</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">7</span>
+<h3 class="text-base font-bold text-slate-900">Girar la Pieza</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Voltea la figura hacia el reverso (turn over) para apreciar el plano frontal nítido y la forma del zorro.
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+TURN OVER
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-lg border border-slate-200 backdrop-blur-md flex flex-col justify-between card-interactive group">
+<div>
+<div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 relative bg-slate-100 border border-slate-200/60">
+<img alt="Paso 8: Zorro Kitsune de origami terminado con detalles expresivos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFNFfH3RGvAqEsQH0D8fJRMWVK1NRA1J0KhDndw0cE-fDoJ8tSRus-2P9ERZbPAoDdbfvf7TafmOGhjm1_Fj1KIn7PL90T8ovHZkcgol8whZEZ0TjCKOtIT6AtSpF7Gf59TGVwwUCJ-JrCAhtGDhfWuZWNvTkn-MdzPgWNK0P8l1aX4TDLfG3BMr1_99bTxH8yFnZ4-_9hl3q4scHUOsNwsuOArc76Zo5RrWgJFhRGrHLjw6oadvPg">
+<span class="absolute top-2.5 left-2.5 bg-slate-950/80 backdrop-blur-md text-white text-[11px] font-black px-2.5 py-1 rounded-full border border-white/10 uppercase tracking-wider">Paso 8</span>
+</div>
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary/10 text-primary font-black text-xs flex items-center justify-center border border-primary/20">8</span>
+<h3 class="text-base font-bold text-slate-900">Toque Expresivo Final</h3>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1.5">
+Marca las aristas y dibuja la punta de la nariz negra y los ojos rasgados. ¡Tu Kitsune está completo!
+</p>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 text-[11px] font-semibold text-primary uppercase tracking-wider">
+FINISHED FOX FACE
+</div>
+</div>
+</div></section>
+<!-- 8. SECCIÓN GALERÍA DE EXPRESIONES Y MAESTRÍA (TARJETAS CLARAS CON IMÁGENES MUY VISTOSAS) -->
+<section class="space-y-8">
+<div class="border-l-4 border-primary pl-4">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Vanguardia &amp; Complejidad</span>
+<h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">Galería de Expresiones y Maestría</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Tarjeta 1: Dragón de Fantasía (IMAGE_3) -->
+<div class="bg-white/95 text-slate-900 p-4 rounded-2xl border border-slate-200 shadow-xl overflow-hidden flex flex-col card-interactive">
+<div class="rounded-xl overflow-hidden h-48 w-full mb-4 bg-slate-100">
+<img alt="Stunning colorful origami dragon masterpiece folded from metallic iridescent foil and patterned Japanese chiyogami paper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlC8ezfyY6jhl7G8_1JdW5gjJ5HV4mihwjMQm2T4Lrvn0NrwOckUo9qLtmpJBYWSpzjELk6M8lRQsme60MYB8dnEuoCNjN9RJ0umhzv2vmFTQ6okHSIQYIl0JdZuxPzMkVSOalLZEAWqbLIDt_x3z8hn9Wt26tivm03XoVvRd8yrD0nyDvyYa6lbaJ_FTBI2o_oeKIvkXvUA0JxiAo29inJMUXCab_0BNqRLH-1diLcj4Nw7I0ynfN">
+</div>
+<span class="text-primary text-[11px] font-bold uppercase tracking-widest">Estilo Fantasía &amp; Foil</span>
+<h4 class="text-slate-900 text-lg font-black mt-1">Origami Figurativo y Fantasía</h4>
+<p class="text-slate-600 text-xs mt-2 leading-relaxed flex-grow">
+                        Dragón milenario plegado a partir de papel tornasol metálico e impresiones tradicionales chiyogami con escalas y alas facetadas.
+                    </p>
+</div>
+<!-- Tarjeta 2: Teselaciones y Geometría Modular (IMAGE_2) -->
+<div class="bg-white/95 text-slate-900 p-4 rounded-2xl border border-slate-200 shadow-xl overflow-hidden flex flex-col card-interactive">
+<div class="rounded-xl overflow-hidden h-48 w-full mb-4 bg-slate-100">
+<img alt="Complex mathematical geometric origami tessellation polyhedra clean modern paper art sculpture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZxwzUKzg3K58LXh4CzMmm5iM34tzmMotA4ECYcbDE3VZD9bWKdDN3MisYTFVfDzOZXPyo8fHEXEQ8TlhCdStjWRklwSHfNESvbNiCQ5UiQQfhUQ4xtyQ3vsQbi6WkmncN94MGQdXUv3pjBKQjpCyvMW77YlpkmX2fBZCmbPGkWVj2KWrjcxkQjDLKri_fEFk2JvLmy5gs4arOQIjsy2TbqdwXFrIN0aTfNTVitBOzFsUieeedSOu3">
+</div>
+<span class="text-primary text-[11px] font-bold uppercase tracking-widest">Geometría &amp; Arquitectura</span>
+<h4 class="text-slate-900 text-lg font-black mt-1">Teselaciones y Modular</h4>
+<p class="text-slate-600 text-xs mt-2 leading-relaxed flex-grow">
+                        Poliedros estrellados y teselaciones periódicas cuya lógica matemática inspira diseños aeroespaciales y nanoestructuras modernas.
+                    </p>
+</div>
+<!-- Tarjeta 3: Escultura Minimalista y Washi Tradicional (IMAGE_5) -->
+<div class="bg-white/95 text-slate-900 p-4 rounded-2xl border border-slate-200 shadow-xl overflow-hidden flex flex-col card-interactive">
+<div class="rounded-xl overflow-hidden h-48 w-full mb-4 bg-slate-100">
+<img alt="Cute origami fox and bird folded from vibrant orange and cream duotone paper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XSQ09flSCAxaykM9958N06-zWS3p8YSYZyL13IaDLtEWbmffRiHsG3wQ_xPeSYIlgB5ugMPISsLubfulaCpmvntuKP3VLCKAHzfqiQfPxkvLTUqGoM_K2DTmRGBiDI4sIflrObnnIkOF8nHGWEIdRZqVY8hJdvpIWHJB3y4YYlqOgWZAe4w-16A6ZORME1iYziYVs_c7EuuLXt_6RIdcYRWzyMXGctK-0MydbAjBCAVGStlZ8zsY7jE-I">
+</div>
+<span class="text-primary text-[11px] font-bold uppercase tracking-widest">Minimalismo Zen</span>
+<h4 class="text-slate-900 text-lg font-black mt-1">Washi Tradicional Duotono</h4>
+<p class="text-slate-600 text-xs mt-2 leading-relaxed flex-grow">
+                        Figuras escultóricas de zorro y ave plegadas con exactitud geométrica en pliegos duotono, reflejando serenidad y sobriedad japonesa.
+                    </p>
+</div>
+<!-- Tarjeta 4: El Vuelo del Orizuru (IMAGE_7) -->
+<div class="bg-white/95 text-slate-900 p-4 rounded-2xl border border-slate-200 shadow-xl overflow-hidden flex flex-col card-interactive">
+<div class="rounded-xl overflow-hidden h-48 w-full mb-4 bg-slate-100">
+<img alt="Cinematic artistic origami crane floating over dark misty sumi-e wash background" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VfaUGWlM3q8fRIRODwXzYHXFVqv2tpup2YQYLiBJ0mGSCZF_OiV_MZkPmaj9wQtoTQAuiqxHhUGUpyDLW0tYEfaZE2WoxejPjdcuJRVXC4ONp8n1jzP2EYqg-WNERbiJhxBEpAkGihWiWSc4ieBFJF-NoSWLnE0YNCehYydlCcpmr8ONg4iGK-ZW3Vlf-vy1dbth69RwPZwPHAeuvCkzVg-HuDiIhRqgWLoaUmfFfaM6T-zIqsKY9RpKU">
+</div>
+<span class="text-primary text-[11px] font-bold uppercase tracking-widest">Símbolo Universal</span>
+<h4 class="text-slate-900 text-lg font-black mt-1">El Vuelo del Orizuru</h4>
+<p class="text-slate-600 text-xs mt-2 leading-relaxed flex-grow">
+                        La grulla clásica que emerge del silencio sobre fondo Sumi-e: pureza, equilibrio y consagración espiritual del arte en papel.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 9. SECCIÓN FINAL: ORIGAMI EN VENEZUELA -->
+<section class="bg-slate-900/95 text-white p-8 md:p-12 rounded-3xl border border-slate-800 shadow-2xl space-y-8 backdrop-blur-md scroll-mt-24" id="origami-venezuela">
+<div class="border-l-4 border-primary pl-4">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Comunidad &amp; Difusión Nacional</span>
+<h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Origami en Venezuela: Comunidad, Pedagogía y Expresión</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 space-y-5 text-slate-300 leading-relaxed font-medium">
+<p class="">
+                        Venezuela atesora una vibrante tradición del origami respaldada durante décadas por la <strong class="text-white">Embajada del Japón en Venezuela</strong>, asociaciones culturales y la colectividad nikkei. Desde las Semanas Culturales del Japón hasta convenciones especializadas, el arte del papel ha congregado a generaciones de creadores venezolanos.
+                    </p>
+<p class="">
+                        Universidades prestigiosas como la <strong class="text-white">Universidad Central de Venezuela (UCV)</strong>, la <strong class="text-white">Universidad Simón Bolívar (USB)</strong> y la <strong class="text-white">Universidad de Los Andes (ULA)</strong> han albergado talleres universitarios, integrando el origami con el diseño geométrico, la arquitectura y la pedagogía.
+                    </p>
+<p class="">
+                        Los origamistas venezolanos han creado modelos autóctonos inspirados en la rica biodiversidad nacional: el emblemático <span class="text-primary font-bold">turpial</span>, la <span class="text-primary font-bold">guacamaya bandera</span> y la delicada <span class="text-primary font-bold">orquídea de papel</span>, adaptando técnicas japonesas a nuestra identidad.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-1">
+<div class="flex items-center gap-2 text-primary font-bold text-sm">
+<span class="material-symbols-outlined text-lg">school</span>
+<h5 class="text-white">Pedagogía Escolar y Motricidad</h5>
+</div>
+<p class="text-xs text-slate-400 leading-normal">
+                                Empleado en escuelas venezolanas para estimular psicomotricidad fina, concentración matemática y terapia de relajación.
+                            </p>
+</div>
+<div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-1">
+<div class="flex items-center gap-2 text-primary font-bold text-sm">
+<span class="material-symbols-outlined text-lg">diversity_3</span>
+<h5 class="text-white">Talleres Comunitarios Abiertos</h5>
+</div>
+<p class="text-xs text-slate-400 leading-normal">
+                                Espacios inclusivos y gratuitos en centros de arte y bibliotecas públicas para todas las edades.
+                            </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 group aspect-[4/3]">
+<img alt="Taller de origami en Venezuela" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy6Mi32OHc9BQ3Ouh05Ix8pIJC34c0pYAP8cM1oOdiq8hDuBHXtb_B3YzfvPXoDztBW4lmtu_Gu-y3cubS6WXAyaQymyGrwicp7TvPdLpLSuSUK5p--xcVJBuXiDSQ2fP3DqDUHTqrdHhqv3rXUROJ-zJPu31tIELE04aSdpexDCw7gZbbCYzNQt-1NctWZl2qivTsYH0LpfgGuzFgEzKiETvxknyZZ4HB-rNAvV6WhDgiA51WGN9SowHVAO7wtNoqgQPGHkk0sdw">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex items-end p-4">
+<p class="text-white text-xs font-semibold">Encuentros y talleres comunitarios de origami en Venezuela</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Botón hacia el Directorio Nacional -->
+<div class="bg-primary/10 border border-primary/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="space-y-1 text-center sm:text-left">
+<h4 class="font-bold text-white text-base">¿Quieres aprender o conectar con origamistas en Venezuela?</h4>
+<p class="text-xs text-slate-300">Accede al registro de profesores, clubes, talleres y eventos activos en todo el país.</p>
+</div>
+<a class="bg-primary text-white hover:bg-orange-700 px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-transform whitespace-nowrap flex items-center gap-2" href="D-Origami.html">
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+<span class="">VER DIRECTORIO NACIONAL</span>
+</a>
+</div>
+</section>
+</main>
+<!-- 10. FOOTER MONOLÍNEA IDÉNTICO A TEMPLATE.HTML -->
+<footer class="bg-black text-white py-4 border-t border-slate-800 text-xs">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="font-black text-sm text-white">Kizuna Venezuela</span>
+<span class="text-slate-500">|</span>
+<span class="text-slate-400">Difusión y preservación de la cultura japonesa en Venezuela</span>
+</div>
+<div class="flex items-center gap-4 text-slate-400">
+<a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="hover:text-primary transition-colors" href="MEXT.html">Becas MEXT</a>
+
+</div>
+<div class="text-slate-500">
+                © 2026 Kizuna Venezuela. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+</div>
+<!-- Mobile menu toggle script -->
+<script>
+    (function(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const closeBtn = document.getElementById('mobileMenuClose');
+        const panel = document.getElementById('mobileMenuPanel');
+        const overlay = document.getElementById('mobileMenuOverlay');
+        function openMenu(){ panel.classList.remove('hidden'); document.body.style.overflow='hidden'; btn.setAttribute('aria-expanded','true'); }
+        function closeMenu(){ panel.classList.add('hidden'); document.body.style.overflow=''; btn.setAttribute('aria-expanded','false'); }
+        btn && btn.addEventListener('click', openMenu);
+        closeBtn && closeBtn.addEventListener('click', closeMenu);
+        overlay && overlay.addEventListener('click', closeMenu);
+    })();
+</script>
+<!-- Kizuna AI Chatbot -->
+<script defer="" src="/chatbot.js"></script>
+
+
+
+
+</body></html>
